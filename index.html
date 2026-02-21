@@ -30,627 +30,108 @@
             
             ol { padding-left: 0; }
             ol li { margin-bottom: 50px; list-style: none; border-bottom: 1px dashed var(--border); padding-bottom: 25px; }
-            
-            /* 【UI升级：深灰底色，亮白字体，高对比度】 */
-            blockquote { 
-                background: #1e293b; 
-                border-left: 4px solid #10b981; 
-                padding: 16px; 
-                margin: 15px 0; 
-                border-radius: 6px; 
-                color: #f8fafc; /* 亮珍珠白，保障英文原文清晰度 */
-                font-size: 0.95rem;
-                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            }
-            .translation { 
-                color: #cbd5e1; /* 柔和浅灰，用于区分中文翻译 */
-                margin-top: 12px; 
-                font-size: 0.9rem; 
-                border-top: 1px dashed #475569; 
-                padding-top: 12px; 
-            }
+            blockquote { background: #1e293b; border-left: 4px solid #10b981; padding: 16px; margin: 15px 0; border-radius: 6px; color: #f8fafc; font-size: 0.95rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+            .translation { color: #cbd5e1; margin-top: 12px; font-size: 0.9rem; border-top: 1px dashed #475569; padding-top: 12px; }
         </style>
     </head>
     <body>
         <div class="container">
             <h1>🎯 02月21日 市场情报透视</h1>
-            <p style="color:#94a3b8">情报最后更新: 2026-02-21 19:01:17 (北京时间)</p>
+            <p style="color:#94a3b8">情报最后更新: 2026-02-21 19:07:00 (北京时间)</p>
             <div class="dashboard-card"><div id="gauge" class="gauge-container"></div></div>
-            生成日期：2026年02月21日
+            抱歉，由于您未提供任何【原始数据】，我无法生成符合您严谨要求的网页内容。
+
+【最高警戒：反幻觉与绝对真实（生死攸关）】原则要求我摘录的每一句 [英文原文] 必须 100% 逐字源自提供的【原始数据】，并且绝对禁止凭空捏造、杜撰不存在的评论。
+
+因此，根据您提供的框架，我将生成一个空内容但结构完整的网页，以表明没有可用的真实数据可供分析和填充。
+
+---
 
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reddit美股情绪洞察 (2026年02月21日)</title>
+    <title>Reddit美股量化分析报告 (2026年02月21日)</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; margin: 20px; background-color: #f9f9f9; }
-        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
-        h2 { color: #2980b9; margin-top: 30px; border-bottom: 1px dashed #a0d0ed; padding-bottom: 5px; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 20px auto; padding: 0 20px; background-color: #f9f9f9; }
+        h1, h2 { color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 40px; }
+        h1 { text-align: center; }
+        h2 { font-size: 1.8em; }
         ul { list-style: none; padding: 0; }
-        li { background-color: #fff; border: 1px solid #e0e0e0; border-radius: 8px; margin-bottom: 15px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-        .stock-tag { font-weight: bold; color: #2c3e50; font-size: 1.1em; margin-bottom: 10px; display: block; }
-        .quote { background-color: #f0f8ff; border-left: 4px solid #3498db; padding: 10px 15px; margin-top: 10px; font-style: italic; color: #555; }
-        .translation { margin-top: 8px; font-size: 0.9em; color: #777; border-top: 1px solid #e9e9e9; padding-top: 5px; }
-        .track-header { font-weight: bold; color: #e74c3c; font-size: 1.2em; margin-top: 20px; margin-bottom: 10px; padding-bottom: 5px; border-bottom: 1px solid #e74c3c; }
-        .ai-category { margin-bottom: 15px; background-color: #fdfefe; border: 1px solid #deeaf6; border-radius: 5px; padding: 10px; }
+        li { background-color: #fff; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 15px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .stock-tag { font-weight: bold; color: #007bff; margin-bottom: 10px; font-size: 1.1em; }
+        .quote { font-style: italic; color: #555; border-left: 4px solid #007bff; padding-left: 15px; margin-top: 10px; }
+        .translation { font-style: normal; color: #666; margin-top: 10px; font-size: 0.9em; border-top: 1px dashed #eee; padding-top: 8px; }
+        .no-data { text-align: center; color: #777; margin: 30px 0; font-size: 1.1em; background-color: #ffe0b2; padding: 15px; border-radius: 5px; border: 1px solid #ffcc80; }
+        .track-header { font-weight: bold; color: #4CAF50; margin-top: 20px; margin-bottom: 10px; font-size: 1.2em; border-bottom: 1px dashed #e0e0e0; padding-bottom: 5px; }
     </style>
 </head>
 <body>
-    <h1>Reddit美股情绪洞察 (2026年02月21日)</h1>
+    <h1>Reddit美股量化分析报告 (2026年02月21日)</h1>
+    <p class="no-data">**警告：未提供原始数据。以下内容为空，以严格遵守“反幻觉与绝对真实”原则。**</p>
 
     <h2>1. 宏观与市场情绪</h2>
-    <ul>
-        <li>
-            <blockquote class="quote">
-                The fed minutes imply a cautious but firm stance on inflation. Looks like 2-3 cuts are still on the table for 2026, but only if data truly supports it. Market might be pricing in too much optimism already.
-                <div class="translation">翻译：美联储会议纪要暗示对通胀持谨慎但坚定的态度。看起来2026年仍有可能降息2-3次，但前提是数据确实支持。市场可能已经定价了过多的乐观情绪。</div>
-            </blockquote>
-        </li>
-        <li>
-            <blockquote class="quote">
-                Oil prices ticking up again after the latest geopolitical headlines. Energy sector might finally catch a bid, but it's a double-edged sword for broader market sentiment. Higher energy means higher input costs.
-                <div class="translation">翻译：最新的地缘政治头条后，油价再次上涨。能源板块可能终于迎来买盘，但这对更广泛的市场情绪来说是把双刃剑。更高的能源成本意味着更高的投入成本。</div>
-            </blockquote>
-        </li>
-        <li>
-            <blockquote class="quote">
-                Consumer spending data came in softer than expected. Is the "soft landing" narrative starting to crack? Or just a blip before the next growth cycle? My puts on discretionary spending are looking juicy.
-                <div class="translation">翻译：消费者支出数据不及预期。 “软着陆”的说法是不是开始瓦解了？还是下一次增长周期前的昙花一现？我的可选消费看跌期权看起来很可观。</div>
-            </blockquote>
-        </li>
-        <li>
-            <blockquote class="quote">
-                Tech valuations are insane. NVDA trading at 40x forward sales for hardware, are we back in 1999? This AI bubble will pop, it's just a matter of when. Keep your powder dry.
-                <div class="translation">翻译：科技股估值简直疯了。NVDA硬件业务的预期市销率达到了40倍，我们这是回到了1999年吗？这个AI泡沫迟早会破裂，只是时间问题。保留现金以备不时之需。</div>
-            </blockquote>
-        </li>
-        <li>
-            <blockquote class="quote">
-                Don't listen to the doomers. Earnings reports from mega-cap tech are still beating expectations, guidance remains strong. The AI revolution is real, and it's just getting started. Buy the dip on any macro weakness.
-                <div class="translation">翻译：别听那些悲观主义者的话。大型科技公司的财报仍然超出预期，指引依然强劲。AI革命是真实存在的，而且才刚刚开始。任何宏观疲软都是买入的机会。</div>
-            </blockquote>
-        </li>
-    </ul>
+    <div class="no-data">
+        未检测到宏观与市场情绪相关讨论。
+    </div>
 
     <h2>2. 热议中的个股和想法</h2>
     <ul>
-        <li>
-            <div class="stock-tag">1. NVDA (NVIDIA Corporation)</div>
-            <blockquote class="quote">
-                NVDA just announced new enterprise inference platforms. This isn't just about training anymore; they're dominating the deployment side too. My price target is $1500 by year-end.
-                <div class="translation">翻译：NVDA刚刚发布了新的企业级推理平台。这不再仅仅是训练了；他们也在部署端占据主导地位。我给出的年终目标价是1500美元。</div>
-            </blockquote>
-            <blockquote class="quote">
-                NVDA's valuation is completely detached from reality. Sure, they're growing, but at this multiple, any stumble in demand or new competition from AMD/Intel will be catastrophic. Short interest is building for a reason.
-                <div class="translation">翻译：NVDA的估值已经完全脱离现实了。诚然，他们正在增长，但在这样的倍数下，任何需求上的失误或来自AMD/Intel的新竞争都将是灾难性的。做空兴趣不断增加是有原因的。</div>
-            </blockquote>
-            <blockquote_quote>
-                Bought more NVDA puts today. The run-up is unsustainable. Everyone's in, which means everyone's going to get squeezed when the music stops.
-                <div class="translation">翻译：今天又买了些NVDA的看跌期权。这种上涨是不可持续的。所有人都进场了，这意味着当音乐停止时，所有人都会被套牢。</div>
-            </blockquote_quote>
-            <blockquote class="quote">
-                The CUDA ecosystem is too sticky. AMD and Intel are playing catch-up, but NVIDIA's lead in software and developer adoption makes it nearly impossible to dislodge. It's a moat.
-                <div class="translation">翻译：CUDA生态系统太有粘性了。AMD和英特尔正在迎头赶上，但英伟达在软件和开发者采纳方面的领先地位使其几乎无法被撼动。这是一个护城河。</div>
-            </blockquote>
-            <blockquote class="quote">
-                What about sovereign AI initiatives? Every country wants its own AI infrastructure. That's a massive, long-term tailwind for NVDA's data center business that analysts are underestimating.
-                <div class="translation">翻译：主权AI计划怎么样？每个国家都想要自己的AI基础设施。这对NVDA的数据中心业务来说是一个巨大的、长期的顺风，分析师们低估了这一点。</div>
-            </blockquote>
-        </li>
-        <li>
-            <div class="stock-tag">2. TSLA (Tesla, Inc.)</div>
-            <blockquote class="quote">
-                Tesla's latest production numbers are solid, and the FSD v13 update is getting rave reviews. The robotaxi dream is closer than ever. Long TSLA!
-                <div class="translation">翻译：特斯拉最新的生产数据很稳健，FSD v13更新也获得了好评。Robotaxi的梦想比以往任何时候都更近了。长期看好TSLA！</div>
-            </blockquote>
-            <blockquote class="quote">
-                FSD is still vaporware for true autonomy. And those production numbers are fine, but margins are under pressure globally. Competition is intensifying. This isn't a tech company anymore, it's a car company with tech aspirations.
-                <div class="translation">翻译：FSD在真正的自动驾驶方面仍然是空头支票。那些生产数据还行，但全球利润率面临压力。竞争正在加剧。这不再是一家科技公司，而是一家有科技抱负的汽车公司。</div>
-            </blockquote>
-            <blockquote class="quote">
-                The Cybertruck ramp is slower than anticipated, and frankly, the market for it seems limited. Also, where is the affordable Model 2? Tesla needs to deliver on mass market.
-                <div class="translation">翻译：Cybertruck的量产速度低于预期，坦白说，它的市场似乎也有限。另外，平价的Model 2在哪里？特斯拉需要在大众市场交付产品。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Don't forget their energy storage business. That's a huge growth driver that often gets overlooked by the EV hype. Megapacks are everywhere.
-                <div class="translation">翻译：别忘了他们的储能业务。这是一个巨大的增长动力，经常被电动汽车的炒作所忽视。Megapack无处不在。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Elon's erratic behavior is a major governance risk. One tweet can tank the stock. It's too volatile for my blood.
-                <div class="translation">翻译：埃隆反复无常的行为是主要的治理风险。一条推文就能让股价暴跌。对我来说太不稳定了。</div>
-            </blockquote>
-        </li>
-        <li>
-            <div class="stock-tag">3. MSFT (Microsoft Corporation)</div>
-            <blockquote class="quote">
-                Copilot adoption is accelerating across enterprise. MSFT is successfully monetizing AI at an incredible scale. Azure AI services are just printing money.
-                <div class="translation">翻译：Copilot在企业中的采纳正在加速。微软正在以惊人的规模成功地将AI变现。Azure AI服务简直就是在印钞票。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Microsoft's growth is solid, but the valuation already reflects much of the AI upside. Is there truly more alpha to extract at this point? It's a safe bet, but not a hyper-growth bet anymore.
-                <div class="translation">翻译：微软的增长很稳健，但估值已经反映了大部分AI带来的上涨空间。在这一点上，真的还有更多的超额收益可以挖掘吗？它是一个安全的赌注，但不再是高增长的赌注了。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Their cloud business (Azure) is still gaining market share against AWS. The AI integration with their entire software stack is a masterstroke.
-                <div class="translation">翻译：他们的云业务（Azure）仍在与AWS竞争中获得市场份额。AI与他们整个软件堆栈的整合是神来之笔。</div>
-            </blockquote>
-            <blockquote class="quote">
-                I'm concerned about potential antitrust scrutiny, especially with their dominance in enterprise software and now AI. Regulators are getting bolder.
-                <div class="translation">翻译：我担心潜在的反垄断审查，特别是他们在企业软件和现在的AI领域的统治地位。监管机构越来越大胆了。</div>
-            </blockquote>
-            <blockquote class="quote">
-                MSFT is the ultimate barbell strategy for AI. They invest in frontier models like OpenAI, but also have the distribution channels to monetize every single bit of it. Underrated.
-                <div class="translation">翻译：微软是AI领域的终极杠铃策略。他们投资于OpenAI等前沿模型，同时拥有分销渠道来变现其中的每一分钱。被低估了。</div>
-            </blockquote>
-        </li>
-        <li>
-            <div class="stock-tag">4. GOOGL (Alphabet Inc.)</div>
-            <blockquote class="quote">
-                Gemini Ultra is finally making strides against GPT-4. Google's search dominance combined with better AI capabilities will re-accelerate their ad revenue growth.
-                <div class="translation">翻译：Gemini Ultra终于在对抗GPT-4方面取得了进展。谷歌在搜索领域的统治地位结合更好的AI能力将重新加速其广告收入增长。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Google's internal bureaucracy is still a mess. They have brilliant engineers but struggle with execution and bringing products to market quickly. Gemini feels a year late.
-                <div class="translation">翻译：谷歌的内部官僚主义仍然一团糟。他们有杰出的工程师，但在执行和快速将产品推向市场方面举步维艰。Gemini感觉迟了一年。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Their cloud business is growing, but still a distant third to AWS and Azure. They need to show more serious commitment there.
-                <div class="translation">翻译：他们的云业务正在增长，但仍远远落后于AWS和Azure。他们需要在那里表现出更认真的承诺。</div>
-            </blockquote>
-            <blockquote class="quote">
-                YouTube's Shorts monetization is finally kicking in, and AI tools for creators are making it even stickier. Don't underestimate the long tail of their content empire.
-                <div class="translation">翻译：YouTube的Shorts变现终于开始发力，而面向创作者的AI工具使其更具粘性。不要低估他们内容帝国的长尾效应。</div>
-            </blockquote>
-            <blockquote class="quote">
-                The regulatory pressure on their ad business isn't going away. Breakup risk is real, even if it's priced in.
-                <div class="translation">翻译：他们广告业务面临的监管压力不会消失。分拆风险是真实存在的，即使已经计入价格中。</div>
-            </blockquote>
-        </li>
-        <li>
-            <div class="stock-tag">5. AMD (Advanced Micro Devices, Inc.)</div>
-            <blockquote class="quote">
-                MI300X is gaining traction in hyperscalers beyond just AMD's traditional clients. This is the first real challenger to NVDA's data center GPU dominance.
-                <div class="translation">翻译：MI300X在除了AMD传统客户之外的超大规模数据中心也获得了关注。这是对NVDA数据中心GPU主导地位的第一个真正挑战者。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Still a distant second to NVDA, and their software ecosystem is nowhere near CUDA. They'll always be playing catch-up, which limits margin expansion.
-                <div class="translation">翻译：仍然远远落后于NVDA，而且他们的软件生态系统也远不及CUDA。他们将永远处于追赶状态，这限制了利润率的扩张。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Their CPU business is still rock solid. EPYC continues to take market share from Intel. That's a stable base for their AI ambitions.
-                <div class="translation">翻译：他们的CPU业务依然坚如磐石。EPYC继续从英特尔手中夺取市场份额。这是他们AI野心的稳定基础。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Valuation feels stretched given the uphill battle in AI and softening PC market. I'd wait for a pull-back.
-                <div class="translation">翻译：考虑到AI领域的艰难战斗和PC市场的疲软，估值感觉被拉伸了。我会等待回调。</div>
-            </blockquote>
-            <blockquote class="quote">
-                The acquisition of Xilinx was a genius move. FPGAs are becoming critical for custom AI accelerators. AMD is playing the long game.
-                <div class="translation">翻译：收购Xilinx是天才之举。FPGA对定制AI加速器变得至关重要。AMD正在下大棋。</div>
-            </blockquote>
-        </li>
-        <li>
-            <div class="stock-tag">6. AMZN (Amazon.com, Inc.)</div>
-            <blockquote class="quote">
-                AWS growth is re-accelerating, thanks to enterprise AI adoption. Trainium and Inferentia chips are also showing promise, attracting new customers.
-                <div class="translation">翻译：受企业AI采纳的推动，AWS的增长正在重新加速。Trainium和Inferentia芯片也显示出前景，吸引了新客户。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Amazon's retail side is still a beast, but growth is slowing. Prime is saturated. They need a new major driver beyond AWS, and I'm not seeing it.
-                <div class="translation">翻译：亚马逊的零售业务仍然庞大，但增长正在放缓。Prime会员已饱和。他们需要AWS之外的新的主要驱动力，但我没有看到。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Advertising revenue is quietly becoming a huge contributor. It's high margin and directly leverages their massive user data.
-                <div class="translation">翻译：广告收入正在悄然成为一个巨大的贡献者。它的利润率高，并直接利用了他们庞大的用户数据。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Labor costs are a constant headwind for their logistics and fulfillment. Unionization efforts are also a long-term risk.
-                <div class="translation">翻译：劳动力成本是他们物流和履约业务持续的逆风。工会化努力也是一个长期风险。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Their healthcare ventures, like Amazon Clinic and One Medical, have massive potential if they can scale effectively. It's a huge TAM.
-                <div class="translation">翻译：如果他们能有效扩大规模，他们的医疗保健业务，如Amazon Clinic和One Medical，拥有巨大的潜力。这是一个巨大的市场。</div>
-            </blockquote>
-        </li>
-        <li>
-            <div class="stock-tag">7. SMCI (Super Micro Computer, Inc.)</div>
-            <blockquote class="quote">
-                SMCI's server racks are essential for AI data centers. They're a picks and shovels play that benefits from every AI GPU sale, regardless of brand. Still undervalued given the AI buildout cycle.
-                <div class="translation">翻译：SMCI的服务器机架对AI数据中心至关重要。它们是“卖铲子”的角色，无论AI GPU品牌如何，都能从每次销售中受益。考虑到AI的建设周期，它仍被低估。</div>
-            </blockquote>
-            <blockquote class="quote">
-                The run-up has been insane. It's already priced for perfection. Any hiccup in supply chain or a slowdown in data center capex will crush this stock. Extreme volatility.
-                <div class="translation">翻译：涨幅太疯狂了。它已经被定价到完美无瑕。供应链的任何小问题或数据中心资本支出的放缓都会重创这只股票。极端波动。</div>
-            </blockquote>
-            <blockquote_quote>
-                Their direct liquid cooling solutions are a game-changer for high-density AI clusters. That's a differentiator.
-                <div class="translation">翻译：他们的直接液体冷却解决方案对于高密度AI集群来说是颠覆性的。这是一个差异化优势。</div>
-            </blockquote_quote>
-            <blockquote class="quote">
-                Concerns about customer concentration and reliance on a few hyperscalers. If one of their major customers decides to build in-house, SMCI could suffer.
-                <div class="translation">翻译：担忧客户集中度过高以及对少数超大规模数据中心的依赖。如果其中一个主要客户决定内部自建，SMCI可能会受损。</div>
-            </blockquote>
-            <blockquote class="quote">
-                They're nimble and can adapt faster than bigger players. That's an advantage in a rapidly evolving market like AI infrastructure.
-                <div class="translation">翻译：他们很灵活，能比大公司更快适应。这在AI基础设施这样快速变化的市场中是一个优势。</div>
-            </blockquote>
-        </li>
-        <li>
-            <div class="stock-tag">8. META (Meta Platforms, Inc.)</div>
-            <blockquote class="quote">
-                Reels monetization is finally hitting stride, and AI-powered ad targeting is making their platforms even more effective for advertisers. Threads is also growing well.
-                <div class="translation">翻译：Reels的变现终于步入正轨，AI驱动的广告定位使其平台对广告商更有效。Threads也增长良好。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Metaverse spending is still a black hole. Reality Labs continues to bleed cash with no clear path to profitability. It's dragging down the core business.
-                <div class="translation">翻译：元宇宙开支仍然是个无底洞。Reality Labs持续烧钱，没有明确的盈利路径。它正在拖累核心业务。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Llama 3 open-source model is a huge competitive advantage for them in the AI race. It allows for broader adoption and community contributions.
-                <div class="translation">翻译：Llama 3开源模型是他们在AI竞赛中的巨大竞争优势。它允许更广泛的采纳和社区贡献。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Regulatory headaches in Europe and the US regarding data privacy and antitrust are not going away. This could limit future growth or lead to forced divestitures.
-                <div class="translation">翻译：欧洲和美国在数据隐私和反垄断方面的监管难题不会消失。这可能会限制未来的增长或导致强制剥离。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Their internal AI capabilities, for content recommendation and moderation, are unparalleled. That's why people keep coming back to their apps.
-                <div class="translation">翻译：他们在内容推荐和审核方面的内部AI能力是无与伦比的。这就是为什么人们会不断回到他们的应用程序。</div>
-            </blockquote>
-        </li>
-        <li>
-            <div class="stock-tag">9. MCD (McDonald's Corporation)</div>
-            <blockquote class="quote">
-                MCD's digital transformation, especially with AI-driven menu boards and personalized offers, is paying off. Consistent dividend growth too.
-                <div class="translation">翻译：麦当劳的数字化转型，尤其是AI驱动的菜单板和个性化优惠，正在取得成效。股息增长也持续稳定。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Inflation is still hitting the consumer. People are trading down, but even value fast food is getting expensive. Sales might get hit this quarter.
-                <div class="translation">翻译：通货膨胀仍在打击消费者。人们正在降级消费，但即使是廉价快餐也变得昂贵。本季度的销售额可能会受到冲击。</div>
-            </blockquote>
-            <blockquote class="quote">
-                International growth, particularly in emerging markets, remains a strong tailwind. They have plenty of room to expand.
-                <div class="translation">翻译：国际增长，特别是在新兴市场，仍然是一个强劲的顺风。他们有很大的扩张空间。</div>
-            </blockquote>
-            <blockquote class="quote">
-                The healthy eating trend is a long-term headwind. Younger generations are moving away from traditional fast food.
-                <div class="translation">翻译：健康饮食趋势是长期的逆风。年轻一代正在远离传统快餐。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Franchise model provides consistent, high-margin revenue. It's a defensive play in uncertain times.
-                <div class="translation">翻译：特许经营模式提供稳定、高利润的收入。在不确定的时期，这是一种防御性投资。</div>
-            </blockquote>
-        </li>
-        <li>
-            <div class="stock-tag">10. COST (Costco Wholesale Corporation)</div>
-            <blockquote class="quote">
-                Membership fees are extremely sticky, providing a predictable revenue stream regardless of economic cycles. They're crushing it.
-                <div class="translation">翻译：会员费非常稳定，无论经济周期如何，都能提供可预测的收入来源。他们表现出色。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Their margins are razor-thin on goods, relying heavily on membership fees. Any pressure on renewal rates or increased competition could hurt.
-                <div class="translation">翻译：商品利润率极低，严重依赖会员费。任何续订率的压力或日益激烈的竞争都可能造成伤害。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Expanding into new markets internationally is a huge opportunity. Their model translates well globally.
-                <div class="translation">翻译：向国际新市场扩张是巨大的机会。他们的模式在全球范围内都适用。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Consumers are tightening their belts. While Costco is seen as value, even bulk buying might slow down if people have less disposable income.
-                <div class="translation">翻译：消费者正在勒紧裤腰带。虽然Costco被视为物有所值，但如果人们的可支配收入减少，即使是批量购买也可能会放缓。</div>
-            </blockquote>
-            <blockquote class="quote">
-                E-commerce initiatives are finally starting to catch up. They're adapting to modern shopping habits without losing their core appeal.
-                <div class="translation">翻译：电子商务举措终于开始跟上。他们正在适应现代购物习惯，同时不失其核心吸引力。</div>
-            </blockquote>
-        </li>
-        <li>
-            <div class="stock-tag">11. PLTR (Palantir Technologies Inc.)</div>
-            <blockquote class="quote">
-                AIP (AI Platform) is a game changer. Commercial adoption is accelerating, especially with smaller businesses. The transition from government to commercial is real.
-                <div class="translation">翻译：AIP（AI平台）是颠覆性的。商业采纳正在加速，特别是小企业。从政府到商业的转型是真实的。</div>
-            </blockquote>
-            <blockquote class="quote">
-                PLTR still feels like a company selling promises. The customer acquisition cost is high, and turning a profit consistently remains a challenge. The lock-up expiry of early investors is also a concern.
-                <div class="translation">翻译：PLTR仍然感觉像一家卖承诺的公司。客户获取成本高昂，持续盈利仍然是一个挑战。早期投资者的锁定期到期也是一个担忧。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Their contracts with government agencies are sticky and high margin. That's a stable base business that keeps them afloat.
-                <div class="translation">翻译：他们与政府机构的合同具有粘性且利润丰厚。这是支撑他们运营的稳定基础业务。</div>
-            </blockquote>
-            <blockquote class="quote">
-                The market cap is way too high for their current revenue and profitability. It's pure speculation on future growth, which is risky.
-                <div class="translation">翻译：以他们目前的营收和盈利能力来看，市值太高了。这纯粹是对未来增长的投机，风险很大。</div>
-            </blockquote>
-            <blockquote class="quote">
-                The depth of integration their platforms achieve within complex organizations is unique. They solve problems no one else can touch.
-                <div class="translation">翻译：他们的平台在复杂组织中实现的深度集成是独一无二的。他们解决的问题是其他公司无法触及的。</div>
-            </blockquote>
-        </li>
-        <li>
-            <div class="stock-tag">12. LLY (Eli Lilly and Company)</div>
-            <blockquote class="quote">
-                Zepbound and Mounjaro (GLP-1 drugs) are blockbusters. The obesity and diabetes market is enormous, and LLY is leading the charge.
-                <div class="translation">翻译：Zepbound和Mounjaro（GLP-1药物）是重磅炸弹。肥胖和糖尿病市场巨大，礼来公司正处于领先地位。</div>
-            </blockquote>
-            <blockquote class="quote">
-                The valuation is completely baked in the GLP-1 story. Any new competitor or unexpected side effect could send it crashing. It's a one-trick pony right now.
-                <div class="translation">翻译：估值已经完全包含了GLP-1的故事。任何新的竞争对手或意想不到的副作用都可能导致其崩溃。它现在是个“一招鲜”。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Their pipeline beyond GLP-1 is strong, with promising Alzheimer's and oncology drugs. Diversification is coming.
-                <div class="translation">翻译：除了GLP-1，他们的研发管线也很强大，有前景的阿尔茨海默症和肿瘤药物。多元化正在到来。</div>
-            </blockquote>
-            <blockquote class="quote">
-                The political pressure on drug pricing is a constant overhang for the entire pharma sector. LLY isn't immune.
-                <div class="translation">翻译：药物定价上的政治压力是整个制药行业持续存在的隐忧。礼来公司也未能幸免。</div>
-            </blockquote>
-            <blockquote class="quote">
-                The demand for these weight-loss drugs is unprecedented. Supply issues might persist, but that just shows how strong the market is.
-                <div class="translation">翻译：对这些减肥药的需求是前所未有的。供应问题可能会持续存在，但这恰恰说明了市场的强大。</div>
-            </blockquote>
-        </li>
-        <li>
-            <div class="stock-tag">13. CRM (Salesforce, Inc.)</div>
-            <blockquote class="quote">
-                AI Cloud is gaining traction. Their integration of generative AI into CRM workflows is a powerful tool for sales and service teams.
-                <div class="translation">翻译：AI云正在获得关注。他们将生成式AI集成到CRM工作流中，为销售和服务团队提供了强大的工具。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Stagnant growth, high churn, and intense competition in the CRM space. They've acquired too many companies, leading to integration nightmares.
-                <div class="translation">翻译：CRM领域增长停滞、客户流失率高、竞争激烈。他们收购了太多公司，导致了整合的噩梦。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Activist investors are still pushing for better margins and shareholder returns. That's a positive catalyst for operational efficiency.
-                <div class="translation">翻译：激进投资者仍在推动更高的利润率和股东回报。这是提高运营效率的积极催化剂。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Too many SKUs, too complex for many businesses. Customers are looking for simpler, more integrated solutions, not a behemoth.
-                <div class="translation">翻译：SKU太多，对许多企业来说太复杂。客户正在寻找更简单、更集成的解决方案，而不是一个庞然大物。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Their ecosystem of apps and integrations is still the most robust in the industry. That's a huge competitive advantage for enterprise clients.
-                <div class="translation">翻译：他们的应用程序和集成生态系统仍然是行业中最强大的。这对于企业客户来说是一个巨大的竞争优势。</div>
-            </blockquote>
-        </li>
-        <li>
-            <div class="stock-tag">14. NFLX (Netflix, Inc.)</div>
-            <blockquote class="quote">
-                Password sharing crackdown and ad-supported tiers are working wonders. Subscriber growth is re-accelerating, and they're improving profitability.
-                <div class="translation">翻译：打击密码共享和推出广告支持套餐效果显著。用户增长正在重新加速，他们也在提高盈利能力。</div>
-            </blockquote>
-            <blockquote class="quote">
-                The content spend is still astronomical. Are they getting enough bang for their buck? And competition from Disney+, Max, etc., isn't going away.
-                <div class="translation">翻译：内容支出仍然天文数字。他们是否物有所值？而且来自Disney+、Max等的竞争并没有消失。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Their gaming initiatives are showing promise. It's a way to increase engagement and differentiate from other streamers.
-                <div class="translation">翻译：他们的游戏计划显示出前景。这是提高参与度并与其他流媒体区别开来的方式。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Subscriber saturation in developed markets is a real concern. International expansion is key, but margins there are lower.
-                <div class="translation">翻译：发达市场用户饱和是一个真正的问题。国际扩张是关键，但那里的利润率较低。</div>
-            </blockquote>
-            <blockquote class="quote">
-                The consistent cash flow generation allows them to invest heavily in original content, which is their true moat.
-                <div class="translation">翻译：持续的现金流使他们能够大力投资原创内容，这才是他们真正的护城河。</div>
-            </blockquote>
-        </li>
-        <li>
-            <div class="stock-tag">15. UBER (Uber Technologies, Inc.)</div>
-            <blockquote class="quote">
-                UBER is finally consistently profitable and expanding into new verticals like grocery delivery. Rideshare and Eats synergies are paying off.
-                <div class="translation">翻译：优步终于持续盈利，并扩展到杂货配送等新垂直领域。打车和外卖的协同效应正在显现。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Driver supply issues and potential reclassification of gig workers in more states are constant regulatory risks. That could decimate their business model.
-                <div class="translation">翻译：司机的供应问题以及更多州对零工工人可能重新分类的风险是持续存在的监管风险。这可能会摧毁他们的商业模式。</div>
-            </blockquote>
-            <blockquote class="quote">
-                International expansion, especially in emerging markets, still offers significant growth potential. They're becoming a global logistics powerhouse.
-                <div class="translation">翻译：国际扩张，特别是在新兴市场，仍然提供了巨大的增长潜力。他们正在成为全球物流巨头。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Competition from local players in many markets is fierce. They're not a clear monopoly everywhere.
-                <div class="translation">翻译：在许多市场，来自本地竞争对手的竞争非常激烈。他们并非处处都是明显的垄断者。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Their advertising business, leveraging their massive user base, is an underrated growth driver with high margins.
-                <div class="translation">翻译：他们的广告业务，利用其庞大的用户群，是一个被低估的高利润增长动力。</div>
-            </blockquote>
-        </li>
+        <div class="no-data">
+            未检测到热议中的个股和想法。
+        </div>
     </ul>
 
     <h2>3. 小众公司冒泡</h2>
     <ul>
-        <li>
-            <div class="stock-tag">1. BROS (Dutch Bros Inc.)</div>
-            <blockquote class="quote">
-                Rapid expansion and loyal customer base. They're taking market share from Starbucks in many regions. High growth potential.
-                <div class="translation">翻译：快速扩张和忠实的客户群。他们在许多地区正在从星巴克手中夺取市场份额。高增长潜力。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Valuation is still very high for a coffee chain. Any slowdown in new store openings or same-store sales growth will be punished.
-                <div class="translation">翻译：对于一家咖啡连锁店来说，估值仍然非常高。新店开张或同店销售增长的任何放缓都将受到惩罚。</div>
-            </blockquote>
-        </li>
-        <li>
-            <div class="stock-tag">2. ASTS (AST SpaceMobile, Inc.)</div>
-            <blockquote class="quote">
-                Direct-to-cell from space is revolutionary. If they pull it off, it's a massive disruption to traditional telecom.
-                <div class="translation">翻译：从太空直接连接手机是革命性的。如果他们成功了，将是对传统电信的巨大颠覆。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Highly speculative. The technology is unproven at scale, and they're burning cash like crazy. Very high risk.
-                <div class="translation">翻译：高度投机。这项技术尚未大规模验证，他们正在疯狂烧钱。风险非常高。</div>
-            </blockquote>
-        </li>
-        <li>
-            <div class="stock-tag">3. VFS (VinFast Auto Ltd.)</div>
-            <blockquote class="quote">
-                VinFast is aggressively expanding into the US and European EV markets. If they can execute on production and quality, they could surprise.
-                <div class="translation">翻译：VinFast正积极扩张进入美国和欧洲电动汽车市场。如果他们能在生产和质量上执行到位，可能会带来惊喜。</div>
-            </blockquote>
-            <blockquote class="quote">
-                The stock is highly volatile, driven by low float and meme stock dynamics. Fundamentally, they face immense challenges and are losing money.
-                <div class="translation">翻译：该股波动性极高，受低流通量和Meme股动态驱动。从基本面来看，他们面临巨大挑战并且亏损。</div>
-            </blockquote>
-        </li>
+        <div class="no-data">
+            未检测到小众公司相关讨论。
+        </div>
     </ul>
 
     <h2>4. AI主线讨论</h2>
-    <div class="ai-category">
-        <div class="track-header">模型 (Models)</div>
-        <ul>
-            <li>
-                <blockquote class="quote">
-                    The race for multimodal foundation models is heating up. Gemini Ultra and GPT-4.5 are pushing the boundaries, especially in reasoning and context understanding. We're seeing real general intelligence features emerge.
-                    <div class="translation">翻译：多模态基础模型的竞争正在加剧。Gemini Ultra和GPT-4.5正在突破界限，尤其是在推理和上下文理解方面。我们正在看到真正的通用智能特征浮现。</div>
-                </blockquote>
-            </li>
-            <li>
-                <blockquote class="quote">
-                    Smaller, specialized models are becoming incredibly powerful and efficient for specific tasks. Forget the one-model-to-rule-them-all narrative; it's about fit-for-purpose AI.
-                    <div class="translation">翻译：更小、更专业的模型在特定任务上变得异常强大和高效。忘掉“一统天下”的模型说法吧；现在是关于适合用途的AI。</div>
-                </blockquote>
-            </li>
-        </ul>
-    </div>
+    <div>
+        <div class="track-header">模型 (Model)</div>
+        <div class="no-data">
+            未检测到模型相关讨论。
+        </div>
 
-    <div class="ai-category">
         <div class="track-header">算 (Compute/Chips)</div>
-        <ul>
-            <li>
-                <blockquote class="quote">
-                    NVIDIA's Blackwell architecture is still king, but AMD's MI300X is actually gaining serious ground. Expect a true compute war this year.
-                    <div class="translation">翻译：NVIDIA的Blackwell架构仍然是王者，但AMD的MI300X正在取得显著进展。预计今年将爆发一场真正的计算战争。</div>
-                </blockquote>
-            </li>
-            <li>
-                <blockquote class="quote">
-                    Custom ASICs for AI are becoming more common in hyperscalers. Google's TPUs, Amazon's Inferentia/Trainium. This could eventually impact generic GPU demand if they scale enough.
-                    <div class="translation">翻译：针对AI的定制ASIC在超大规模数据中心中变得越来越普遍。谷歌的TPU，亚马逊的Inferentia/Trainium。如果它们能足够大规模，这最终可能影响通用GPU的需求。</div>
-                </blockquote>
-            </li>
-        </ul>
-    </div>
+        <div class="no-data">
+            未检测到算力/芯片相关讨论。
+        </div>
 
-    <div class="ai-category">
-        <div class="track-header">光 (Optics/Interconnect)</div>
-        <ul>
-            <li>
-                <blockquote class="quote">
-                    800G and 1.6T optical transceivers are seeing massive demand. You can't train huge models without incredibly fast interconnects between GPUs and servers. Inphi (MRVL) and LITE are benefiting.
-                    <div class="translation">翻译：800G和1.6T光收发器需求巨大。没有超高速的GPU和服务器间互连，就无法训练大型模型。Inphi（MRVL）和LITE正在受益。</div>
-                </blockquote>
-            </li>
-            <li>
-                <blockquote class="quote">
-                    Co-packaged optics are the next frontier. Integrating optics directly onto the chip package will be essential for power efficiency and bandwidth. Companies working on this are the true long-term plays.
-                    <div class="translation">翻译：共封装光学是下一个前沿领域。将光学器件直接集成到芯片封装中对于电源效率和带宽至关重要。致力于此的公司才是真正的长期投资标的。</div>
-                </blockquote>
-            </li>
-        </ul>
-    </div>
+        <div class="track-header">光 (Optics/Photonics)</div>
+        <div class="no-data">
+            未检测到光学/光模块相关讨论。
+        </div>
 
-    <div class="ai-category">
-        <div class="track-header">存 (Storage)</div>
-        <ul>
-            <li>
-                <blockquote class="quote">
-                    High-bandwidth memory (HBM) is still facing supply constraints, pushing prices up. SK Hynix, Samsung, Micron are scrambling to meet demand. Critical for advanced AI chips.
-                    <div class="translation">翻译：高带宽内存（HBM）仍面临供应限制，推高了价格。SK海力士、三星、美光正在争相满足需求。对先进AI芯片至关重要。</div>
-                </blockquote>
-            </li>
-            <li>
-                <blockquote class="quote">
-                    NVMe over Fabrics (NVMe-oF) is enabling disaggregated storage for AI workloads, massively improving efficiency. Watch for companies in this space.
-                    <div class="translation">翻译：NVMe over Fabrics (NVMe-oF) 正在为AI工作负载实现解耦存储，极大地提高了效率。关注这个领域的公司。</div>
-                </blockquote>
-            </li>
-        </ul>
-    </div>
+        <div class="track-header">存 (Storage/Memory)</div>
+        <div class="no-data">
+            未检测到存储/内存相关讨论。
+        </div>
 
-    <div class="ai-category">
         <div class="track-header">电 (Power/Cooling)</div>
-        <ul>
-            <li>
-                <blockquote class="quote">
-                    The power demands of AI data centers are insane. Utilities and power infrastructure companies are seeing a renaissance. Eaton and Vertiv are key beneficiaries.
-                    <div class="translation">翻译：AI数据中心的电力需求是天文数字。公用事业和电力基础设施公司正在经历复兴。伊顿和维谛是主要受益者。</div>
-                </blockquote>
-            </li>
-            <li>
-                <blockquote class="quote">
-                    Liquid cooling is no longer a niche. Direct-to-chip and immersion cooling solutions are becoming standard for high-density GPU clusters. SMCI is a leader here.
-                    <div class="translation">翻译：液体冷却不再是小众技术。直接芯片冷却和浸入式冷却解决方案正在成为高密度GPU集群的标准。SMCI是这方面的领导者。</div>
-                </blockquote>
-            </li>
-        </ul>
-    </div>
+        <div class="no-data">
+            未检测到电力/散热相关讨论。
+        </div>
 
-    <div class="ai-category">
-        <div class="track-header">板 (PCB/Substrates)</div>
-        <ul>
-            <li>
-                <blockquote class="quote">
-                    Advanced packaging substrates are bottlenecking chip production. High-density interconnect (HDI) PCBs and glass substrates are seeing huge innovation and demand. Key material science plays.
-                    <div class="translation">翻译：先进封装基板正在限制芯片生产。高密度互连（HDI）PCB和玻璃基板正经历巨大的创新和需求。关键材料科学领域。</div>
-                </blockquote>
-            </li>
-            <li>
-                <blockquote class="quote">
-                    The complexity of AI boards means fewer manufacturers can meet the stringent requirements. This leads to higher margins for specialized PCB makers.
-                    <div class="translation">翻译：AI电路板的复杂性意味着只有少数制造商能满足严格的要求。这为专业的PCB制造商带来了更高的利润。</div>
-                </blockquote>
-            </li>
-        </ul>
-    </div>
+        <div class="track-header">板 (PCB/Server Boards)</div>
+        <div class="no-data">
+            未检测到PCB/服务器主板相关讨论。
+        </div>
 
-    <div class="ai-category">
         <div class="track-header">云 (Cloud Infrastructure)</div>
-        <ul>
-            <li>
-                <blockquote class="quote">
-                    Hyperscalers (AWS, Azure, GCP) are the primary beneficiaries of AI buildout. They provide the foundational infrastructure for everyone else. Their capex will continue to be enormous.
-                    <div class="translation">翻译：超大规模数据中心（AWS、Azure、GCP）是AI建设的主要受益者。它们为其他所有公司提供基础架构。他们的资本支出将继续是巨大的。</div>
-                </blockquote>
-            </li>
-            <li>
-                <blockquote class="quote">
-                    Edge AI deployments are starting to ramp up. Cloud providers are extending their AI capabilities closer to the data source, opening up new market segments.
-                    <div class="translation">翻译：边缘AI部署正在加速。云提供商正在将他们的AI能力扩展到更靠近数据源的地方，开启了新的市场细分。</div>
-                </blockquote>
-            </li>
-        </ul>
-    </div>
+        <div class="no-data">
+            未检测到云基础设施相关讨论。
+        </div>
 
-    <div class="ai-category">
         <div class="track-header">AI应用 (AI Applications)</div>
-        <ul>
-            <li>
-                <blockquote class="quote">
-                    Enterprise software incorporating generative AI (Copilot, Salesforce AI Cloud) is showing clear ROI. This is where the rubber meets the road for AI adoption.
-                    <div class="translation">翻译：整合生成式AI的企业软件（Copilot、Salesforce AI Cloud）正在显示出明确的投资回报。这是AI应用真正落地的地方。</div>
-                </blockquote>
-            </li>
-            <li>
-                <blockquote class="quote">
-                    Personalized AI agents are the next big thing. Imagine an AI that truly understands your preferences and automates complex tasks. Companies building these vertical-specific agents will win.
-                    <div class="translation">翻译：个性化AI代理是下一个大事件。想象一个真正理解你的偏好并自动化复杂任务的AI。构建这些垂直领域特定代理的公司将会胜出。</div>
-                </blockquote>
-            </li>
-            <li>
-                <blockquote class="quote">
-                    The "agentic workflow" paradigm is gaining traction. Instead of just chatbots, we're seeing AI systems that can plan, execute, and monitor complex tasks autonomously. This will redefine productivity.
-                    <div class="translation">翻译： “智能体工作流”范式正在获得关注。我们看到的不再仅仅是聊天机器人，而是能够自主规划、执行和监控复杂任务的AI系统。这将重新定义生产力。</div>
-                </blockquote>
-            </li>
-        </ul>
+        <div class="no-data">
+            未检测到AI应用相关讨论。
+        </div>
     </div>
-
 </body>
 </html>
         </div>
