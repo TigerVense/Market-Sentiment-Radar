@@ -5,6 +5,7 @@ from datetime import datetime
 import pytz
 import requests
 import json
+import re
 
 def get_fear_and_greed():
     url = "https://production.dataviz.cnn.io/index/fearandgreed/graphdata"
@@ -31,13 +32,14 @@ def fetch_data():
     content = ""
     for name, url in feeds.items():
         try:
-            f = feedparser.parse(url, agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36')
+            f = feedparser.parse(url, agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64)')
             for entry in f.entries[:80]: 
                 title = entry.title
-                summary = entry.summary[:200] if 'summary' in entry else ""
-                import re
+                summary = entry.summary if 'summary' in entry else ""
+                # 清除 HTML 标签
                 summary = re.sub('<[^<]+>', '', summary)
-                content += f"[{name}] {title} | 补充: {summary}\n"
+                # 【关键修复】：将抓取长度放宽到 800 字符，保证足够容纳几个完整的句子
+                content += f"[{name}] {title} | 补充: {summary[:800]}\n"
         except: pass
     return content
 
@@ -50,12 +52,13 @@ def get_ai_analysis(raw_text):
     prompt = f"""
     你是一个专业的美股量化分析引擎。请基于下方提供的（{today_str}）Reddit数据池，提炼真实的市场情绪网页。
     
-    【核心规则（绝对服从，生死攸关）】：
-    1. 【反幻觉】：所有引用必须 100% 源自下方数据池！绝对不允许使用你的历史记忆捏造数据。
-    2. 【质量过滤】：剔除纯情绪化的谩骂（如“微软是垃圾”、“死猫跳”）和毫无逻辑的发泄。只保留包含业务探讨、数据支撑、或做多/做空逻辑的优质内容。如果原帖只是一堆公司名字的堆砌而没有实质内容，直接丢弃！
-    3. 【禁止乱加标签】：在输出个股标题时，严格遵守 `代码 (公司全名)` 的格式。绝对不要自己加戏去标注“未上市公司”、“私人公司”等未经核实的修饰词（例如不要写 Klarna(未上市瑞典金融科技公司)，直接写 Klarna 即可）。
-    4. 【纯净的个股板块】：第二和第三部分只能是具体的“单一上市公司”！绝对禁止把 ETF、宏观话题、或泛行业板块混入个股版块！
-    5. 【聚合深挖（严禁偷懒）】：在个股板块，请全面扫描数据池，把关于该公司的所有有价值的讨论聚合在一起。如果能找到多条不同的高质量观点，必须输出 2-4 条引用，绝不要只放 1 条就草草了事！（除非数据池里真的只有1条）。
+    【核心规则（绝对服从）】：
+    1. 【反幻觉】：引用必须 100% 源自数据池！
+    2. 【防截断】：在提取引言时，如果发现补充内容在末尾被生硬截断（没说完），请只提取前面【完整的句子】，把末尾的半截话或者半个单词直接删掉，保证输出的话是顺畅的。
+    3. 【质量过滤】：剔除纯情绪化的谩骂（如“微软是垃圾”）。只保留包含业务探讨、数据支撑、或做多/做空逻辑的优质内容。
+    4. 【禁止乱加标签】：输出个股标题时，格式为 `代码 (公司全名)`。绝对不要自己加戏标注“未上市公司”等未经核实的修饰词。
+    5. 【纯净板块】：第二和第三部分只能是具体的“单一上市公司”。严禁混入 ETF 或泛行业板块！
+    6. 【聚合深挖】：在个股板块，全面扫描数据池，如果能找到多条高质量观点，必须输出 2-4 条引用！
 
     【个股输出强制模板（必须严格复制以下 HTML 结构）】：
     <li>
@@ -67,8 +70,8 @@ def get_ai_analysis(raw_text):
       </li>
 
     【网页强制四大结构】：
-    <h2>1. 宏观与市场情绪</h2> (总结今日核心逻辑，摘录真实原文)
-    <h2>2. 热议中的个股和想法</h2> (挖掘真实提及的高热度上市公司，每只尽力输出多条多空逻辑引用)
+    <h2>1. 宏观与市场情绪</h2> (总结核心逻辑，摘录真实原文)
+    <h2>2. 热议中的个股和想法</h2> (挖掘真实提及的高热度上市公司，每只输出多条多空逻辑引用)
     <h2>3. 小众公司冒泡</h2> (挖掘0-10只冷门股，没有就不写)
     <h2>4. AI主线讨论</h2> (使用 <div class="track-header">标题</div> 标签严格输出8大类：模型、算、光、存、电、板、云、AI应用)
 
