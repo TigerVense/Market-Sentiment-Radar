@@ -7,284 +7,230 @@
         <title>02月21日 实战派情报终端</title>
         <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
         <style>
-            :root {
-                --bg: #0f172a;
-                --card-bg: #1e293b;
-                --text-main: #f1f5f9;
-                --text-muted: #94a3b8;
-                --accent: #38bdf8;
-                --border: #334155;
-            }
+            :root { --bg: #0f172a; --card-bg: #1e293b; --text-main: #f1f5f9; --text-muted: #94a3b8; --accent: #38bdf8; --border: #334155; }
             body { background: var(--bg); color: var(--text-main); font-family: -apple-system, sans-serif; padding: 20px; line-height: 1.6; }
             .container { max-width: 900px; margin: auto; }
             h1 { color: var(--accent); border-bottom: 2px solid var(--border); padding-bottom: 10px; font-size: 1.8rem; }
-            h2 { color: #fbbf24; margin-top: 40px; border-bottom: 1px solid var(--border); padding-bottom: 8px; font-size: 1.5rem; }
+            h2 { color: #fbbf24; margin-top: 40px; border-bottom: 1px solid var(--border); padding-bottom: 8px; font-size: 1.5rem; display: block; width: 100%; }
             h3 { color: #38bdf8; margin-top: 25px; font-size: 1.2rem; }
             .time { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px; }
             
-            /* 仪表盘卡片样式 */
-            .dashboard-card { background: var(--card-bg); border-radius: 12px; padding: 20px; margin-top: 20px; margin-bottom: 30px; border: 1px solid var(--border); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.5); }
-            .gauge-container { width: 100%; height: 260px; }
+            /* CNN风格仪表盘容器 */
+            .dashboard-card { background: #020617; border-radius: 12px; padding: 30px 20px 10px 20px; margin-top: 20px; margin-bottom: 30px; border: 1px solid var(--border); }
+            .gauge-container { width: 100%; height: 280px; }
+            .index-title { text-align: center; color: #f8fafc; font-size: 1.5rem; font-weight: bold; margin-bottom: -20px; }
+            .index-subtitle { text-align: center; color: var(--text-muted); font-size: 0.9rem; margin-bottom: 10px; }
             
-            ol, ul { padding-left: 20px; margin-top: 20px; }
-            ol li { margin-bottom: 40px; font-size: 1.1rem; border-bottom: 1px dashed var(--border); padding-bottom: 20px; }
-            ol li strong { color: var(--accent); font-size: 1.3rem; }
+            /* 列表与引用强制隔离换行 */
+            ol, ul { padding-left: 20px; margin-top: 15px; display: block; }
+            ol li { margin-bottom: 40px; font-size: 1.1rem; border-bottom: 1px dashed var(--border); padding-bottom: 20px; display: block; }
+            ol li strong { color: var(--accent); font-size: 1.4rem; display: block; margin-bottom: 15px; } /* 强制名字独占一行 */
             
             blockquote, .quote {
-                background: #020617;
-                border-left: 4px solid #10b981;
-                padding: 12px 15px;
-                margin: 12px 0;
-                color: #e2e8f0;
-                font-size: 0.95rem;
-                font-style: normal;
-                border-radius: 4px;
-                line-height: 1.6;
+                background: #020617; border-left: 4px solid #10b981; padding: 12px 15px; margin: 15px 0; color: #e2e8f0; font-size: 0.95rem; border-radius: 4px; line-height: 1.6; display: block;
             }
             .translation { color: #94a3b8; margin-top: 10px; font-size: 0.9rem; border-top: 1px dotted #334155; padding-top: 10px; }
         </style>
     </head>
     <body>
         <div class="container">
-            <h1>🎯 02月21日 市场异动与情绪透视</h1>
-            <p class="time">情报源头: 300+ 硬核原帖 | 最后分析时间: 2026-02-21 14:25:09 (北京时间)</p>
+            <h1>🎯 02月21日 市场异动与情报透视</h1>
+            <p class="time">情报源头: 300+ 硬核原帖 | 最后分析时间: 2026-02-21 14:39:41 (北京时间)</p>
             
             <div class="dashboard-card">
-                <h3 style="margin-top: 0; text-align: center; color: #f8fafc; border:none;">CNN 市场恐慌与贪婪指数</h3>
+                <div class="index-title">Fear & Greed Index</div>
+                <div class="index-subtitle">What emotion is driving the market now?</div>
                 <div id="gauge" class="gauge-container"></div>
             </div>
 
-            以下是基于今日Reddit最新数据（2026年02月21日）的美股情绪分析简报，专为一线实战派参与者设计：
+            尊敬的投资者：
 
----
+以下是基于2026年02月21日Reddit社群数据生成的美股量化分析网页报告。
 
 <h2>1. 宏观与市场情绪</h2>
-
-今日市场焦点集中在最高法院对特朗普关税政策的裁决，以及最新公布的美国经济数据。尽管最高法院裁定特朗普此前的全球关税非法，特朗普本人随后宣布将通过其他授权实施新的10%全球关税，使得贸易政策的不确定性持续。同时，美国第四季度GDP增长远低于预期，通胀数据则有所企稳。市场对这些宏观事件的反应呈现出复杂性，部分观察者认为市场走势与消息面存在背离。
-
+- 今日市场焦点集中于美国最高法院对前总统特朗普关税政策的裁决及其后续影响，以及不及预期的GDP数据。
+- 尽管最高法院裁定特朗普之前的全球关税为非法，但特朗普立即宣布将以不同授权再次实施10%的全球关税，导致市场情绪复杂。同时，疲软的第四季度GDP数据和坚挺的PCE通胀数据描绘了一幅经济增长乏力但通胀压力犹存的图景。
 <blockquote class="quote">
-[Investing(长线逻辑)] Weird market today given the tariff news
-<div class="translation">翻译：鉴于关税新闻，今天的市场表现异常。</div>
+  Trump Announces New 10% Global Tariff
+  <div class="translation">翻译：特朗普宣布新的10%全球关税</div>
 </blockquote>
-
 <blockquote class="quote">
-[Economics(宏观大势)] Fourth-quarter U.S. GDP up just 1.4%, badly missing estimate; inflation firms at 3%
-<div class="translation">翻译：美国第四季度GDP仅增长1.4%，远低于预期；通胀企稳于3%。</div>
+  Supreme Court rules that Trump’s sweeping emergency tariffs are illegal | CNN Politics
+  <div class="translation">翻译：最高法院裁定特朗普广泛的紧急关税非法</div>
 </blockquote>
-
 <blockquote class="quote">
-[Economics(宏观大势)] Exclusive: More than $175 billion collected under Trump tariffs now subject to refunds after Supreme Court ruling
-<div class="translation">翻译：独家：最高法院裁决后，特朗普关税政策下征收的逾1750亿美元现面临退款。</div>
+  Fourth-quarter U.S. GDP up just 1.4%, badly missing estimate
+  <div class="translation">翻译：美国第四季度GDP仅增长1.4%，远低于预期</div>
 </blockquote>
-
-<blockquote class="quote">
-[Investing(长线逻辑)] From 'buy America' to 'bye America', Wall Street exodus gathers pace
-<div class="translation">翻译：从“买入美国”到“告别美国”，华尔街的资本外流正在加速。</div>
+<blockquote_class="quote">
+  Core PCE jumps to 3% and could go higher with future revisions
+  <div class="translation">翻译：核心PCE跃升至3%，未来修正可能更高</div>
 </blockquote>
-
 <blockquote class="quote">
-[Economics(宏观大势)] Supreme Court’s Tariff Ruling Is Secretly a Gift to Trump
-<div class="translation">翻译：最高法院的关税裁决实际上是给特朗普的一份“礼物”。</div>
+  Stock market today: Dow, S&P 500, Nasdaq jump to post weekly gains as Supreme Court strikes down Trump tariffs
+  <div class="translation">翻译：今日股市：最高法院取消特朗普关税后，道指、标普500、纳斯达克指数上涨，录得周度涨幅</div>
 </blockquote>
 
 <h2>2. 热议中的个股和想法</h2>
-
-今日Reddit社区讨论了多只公司个股的最新动态及其背后的基本面与博弈逻辑，涵盖了从科技巨头到特定行业的分析。
-
-1.  **英伟达 (NVDA)**
+1.  **Google (GOOG)**
     <blockquote class="quote">
-    [Stocks(主流个股)] Google Is Exploring Ways to Use Its Financial Might to Take On Nvidia
-    <div class="translation">翻译：谷歌正在探索如何利用其雄厚财力挑战英伟达。</div>
+      I heard this was the casino? GOOG 3DTE - $1,640 -> $11,589
+      <div class="translation">翻译：我听说这是赌场？谷歌3DTE期权，从1,640美元到11,589美元</div>
     </blockquote>
     <blockquote class="quote">
-    [Stocks(主流个股)] Nvidia is close to finalising a $30bn investment into OpenAI
-    <div class="translation">翻译：英伟达即将敲定对OpenAI的300亿美元投资。</div>
+      Google Is Exploring Ways to Use Its Financial Might to Take On Nvidia
+      <div class="translation">翻译：谷歌正在探索如何利用其雄厚的财力挑战英伟达</div>
     </blockquote>
-
-2.  **谷歌 (GOOG)**
     <blockquote class="quote">
-    [Stocks(主流个股)] Google Is Exploring Ways to Use Its Financial Might to Take On Nvidia
-    <div class="translation">翻译：谷歌正在探索如何利用其雄厚财力挑战英伟达。</div>
+      Put ideas I’m highly considering MSFT and GOOGL
+      <div class="translation">翻译：我正在高度考虑做空微软和谷歌的看跌期权</div>
     </blockquote>
 
-3.  **CrowdStrike (CRWD)**
+2.  **Nvidia (NVDA)**
     <blockquote class="quote">
-    [WSB(散户情绪)] CRWD and NET down almost 10% today because... Claude has a new code review skill
-    <div class="translation">翻译：CRWD和NET今天下跌近10%，原因在于... Claude有了新的代码审查技能。</div>
-    </blockquote>
-
-4.  **Cloudflare (NET)**
-    <blockquote class="quote">
-    [WSB(散户情绪)] CRWD and NET down almost 10% today because... Claude has a new code review skill
-    <div class="translation">翻译：CRWD和NET今天下跌近10%，原因在于... Claude有了新的代码审查技能。</div>
-    </blockquote>
-
-5.  **Palantir (PLTR)**
-    <blockquote class="quote">
-    [Stocks(主流个股)] PLTR "IF it does not make sense to buy the whole company, it does not make sense to buy a single share."
-    <div class="translation">翻译：PLTR：“如果买入整个公司都不划算，那么买入单个股票也没有意义。”</div>
-    </blockquote>
-
-6.  **Carvana (CVNA)**
-    <blockquote class="quote">
-    [Stocks(主流个股)] Most of Carvana’s (CVNA) Income is Fluff, Potentially Hiding Huge Concealed Losses Last Quarter
-    <div class="translation">翻译：Carvana（CVNA）的大部分收入都是虚假的，可能隐藏了上季度巨额的未披露亏损。</div>
+      Google Is Exploring Ways to Use Its Financial Might to Take On Nvidia
+      <div class="translation">翻译：谷歌正在探索如何利用其雄厚的财力挑战英伟达</div>
     </blockquote>
     <blockquote class="quote">
-    [Options(期权异动)] Carvana $420 Put Options Big Ups After Hours
-    <div class="translation">翻译：Carvana 420美元看跌期权在盘后大涨。</div>
-    </blockquote>
-
-7.  **Sprout Farmers Market (SFM)**
-    <blockquote class="quote">
-    [Stocks(主流个股)] SFM deep dive: low multiple vs store-driven growth
-    <div class="translation">翻译：SFM深度分析：低估值与门店驱动增长。</div>
+      Nvidia is close to finalising a $30bn investment into OpenAI
+      <div class="translation">翻译：英伟达即将完成对OpenAI的300亿美元投资</div>
     </blockquote>
     <blockquote class="quote">
-    [Options(期权异动)] Sprout Farmers' Market $SFM Earnings Trade Vol Crush Setup
-    <div class="translation">翻译：Sprout Farmers' Market ($SFM) 财报交易波动率挤压布局。</div>
-    </blockquote>
-
-8.  **Opendoor (OPEN)**
-    <blockquote class="quote">
-    [WSB(散户情绪)] OPEN made just $4,000 per home last quarter. Every possible metric down , but the stock rallied 16%. Value investing at its best!!
-    <div class="translation">翻译：Opendoor 上季度每套房屋仅赚4000美元。所有指标都在下降，但股价却上涨了16%。这才是价值投资的精髓！</div>
-    </blockquote>
-
-9.  **沃尔玛 (WMT)**
-    <blockquote class="quote">
-    [Stocks(主流个股)] Walmart beats… and still drops
-    <div class="translation">翻译：沃尔玛业绩超预期…但股价仍下跌。</div>
-    </blockquote>
-
-10. **Lithia Motors (LAD)**
-    <blockquote class="quote">
-    [Options(期权异动)] Lithia Motors (LAD) Price to Revenue Brings it Into Larger Firm’s Cross Hairs
-    <div class="translation">翻译：Lithia Motors (LAD) 的市销率使其进入了大型公司的视线。</div>
-    </blockquote>
-
-11. **Constellation Energy (CEG)**
-    <blockquote class="quote">
-    [SecAnalysis(硬核研报)] Constellation Energy: The Federal Reserve of the Electron
-    <div class="translation">翻译：Constellation Energy：电力界的联邦储备。</div>
-    </blockquote>
-
-12. **Waste Management (WM)**
-    <blockquote class="quote">
-    [SecAnalysis(硬核研报)] Death, Taxes, and Garbage: The Story of WM
-    <div class="translation">翻译：死亡、税收和垃圾：WM的故事。</div>
-    </blockquote>
-
-13. **SaaS行业 (主题讨论)**
-    <blockquote class="quote">
-    [SecAnalysis(硬核研报)] The SaaS bloodbath: opportunities and perils for investors
-    <div class="translation">翻译：SaaS行业的血洗：投资者的机遇与风险。</div>
+      Five leading public AI companies are collectively on track to spend about $700 billion this year on big-ticket projects
+      <div class="translation">翻译：五家领先的上市AI公司今年有望集体投入约7000亿美元用于大型项目</div>
     </blockquote>
     <blockquote class="quote">
-    [SecAnalysis(硬核研报)] SaaS Isn’t Dead, the Pricing Model Might Be
-    <div class="translation">翻译：SaaS并未消亡，可能只是定价模式需要改变。</div>
-    </blockquote>
-    <blockquote_quote>
-    [SecAnalysis(硬核研报)] Some ramblings on the SaaSpocalypse
-    <div class="translation">翻译：关于SaaSpocalypse的一些思考。</div>
-    </blockquote>
-
-14. **韩国股票 (区域市场观点)**
-    <blockquote class="quote">
-    [Investing(长线逻辑)] Korean stocks - value king of 2026
-    <div class="translation">翻译：韩国股票——2026年的价值之王。</div>
-    </blockquote>
-
-15. **非美市场交易 (宏观策略)**
-    <blockquote class="quote">
-    [Investing(长线逻辑)] The Ex-U.S. Trade is Working
-    <div class="translation">翻译：非美市场交易正在奏效。</div>
+      Optical & Networking Supercycle at the heart of the AI Revolution
+      <div class="translation">翻译：光通信与网络超级周期是AI革命的核心</div>
     </blockquote>
 
 <h2>3. AI主线讨论</h2>
-
-今日关于AI产业链的讨论热度不减，从巨额投资、技术竞争到监管影响，Reddit社区贡献了多条高质量分析。
-
-**通用趋势与资金流向**
+<h3>模型：模型进展是第一性原理。</h3>
 <blockquote class="quote">
-[Stocks(主流个股)] Five leading public AI companies are collectively on track to spend about $700 billion this year on big-ticket projects
-<div class="translation">翻译：五家领先的上市AI公司今年预计将 collectively 投入约7000亿美元用于重大项目。</div>
+  CRWD and NET down almost 10% today because... Claude has a new code review skill
+  <div class="translation">翻译：CRWD和NET今天下跌近10%因为……Claude有了一项新的代码审查技能</div>
 </blockquote>
 <blockquote class="quote">
-[SecAnalysis(硬核研报)] The Efficiency Trap: Why AI’s Micro-Success Could Become a Macro Problem
-<div class="translation">翻译：效率陷阱：为何AI的微观成功可能演变为宏观问题。</div>
+  Google Is Exploring Ways to Use Its Financial Might to Take On Nvidia
+  <div class="translation">翻译：谷歌正在探索如何利用其雄厚的财力挑战英伟达</div>
 </blockquote>
 <blockquote class="quote">
-[Investing(长线逻辑)] EU AI Act 2026: Why Big Tech Investors should watch the August deadline.
-<div class="translation">翻译：欧盟2026年AI法案：为何大型科技投资者应关注八月截止日期。</div>
-</blockquote>
-
-**AI模型、算力与云服务**
-<blockquote class="quote">
-[Stocks(主流个股)] Nvidia is close to finalising a $30bn investment into OpenAI
-<div class="translation">翻译：英伟达即将敲定对OpenAI的300亿美元投资。</div>
+  Nvidia is close to finalising a $30bn investment into OpenAI
+  <div class="translation">翻译：英伟达即将完成对OpenAI的300亿美元投资</div>
 </blockquote>
 <blockquote class="quote">
-[Stocks(主流个股)] Google Is Exploring Ways to Use Its Financial Might to Take On Nvidia
-<div class="translation">翻译：谷歌正在探索如何利用其雄厚财力挑战英伟达。</div>
+  i’m officially "ai-ed out"... am i the only one who thinks the hype is finally hitting a wall?
+  <div class="translation">翻译：我正式“AI疲劳”了……我是不是唯一一个认为炒作终于碰壁的人？</div>
 </blockquote>
 <blockquote class="quote">
-[Stocks(主流个股)] The hyperscalers are like the Five Families of the Godfather
-<div class="translation">翻译：超大规模云服务商就像《教父》中的五大家族。</div>
-</blockquote>
-<blockquote class="quote">
-[WSB(散户情绪)] CRWD and NET down almost 10% today because... Claude has a new code review skill
-<div class="translation">翻译：CRWD和NET今天下跌近10%，原因在于... Claude有了新的代码审查技能。</div>
+  EU AI Act 2026: Why Big Tech Investors should watch the August deadline.
+  <div class="translation">翻译：2026年欧盟AI法案：为什么大型科技投资者应关注8月截止日期。</div>
 </blockquote>
 
-**光通信与网络**
+<h3>算：技术路线、台积电产能分配。</h3>
 <blockquote class="quote">
-[SecAnalysis(硬核研报)] Optical & Networking Supercycle at the heart of the AI Revolution
-<div class="translation">翻译：光通信与网络超级周期是AI革命的核心。</div>
+  Google Is Exploring Ways to Use Its Financial Might to Take On Nvidia
+  <div class="translation">翻译：谷歌正在探索如何利用其雄厚的财力挑战英伟达</div>
+</blockquote>
+<blockquote class="quote">
+  Nvidia is close to finalising a $30bn investment into OpenAI
+  <div class="translation">翻译：英伟达即将完成对OpenAI的300亿美元投资</div>
+</blockquote>
+<blockquote class="quote">
+  Five leading public AI companies are collectively on track to spend about $700 billion this year on big-ticket projects
+  <div class="translation">翻译：五家领先的上市AI公司今年有望集体投入约7000亿美元用于大型项目</div>
+</blockquote>
+<blockquote_class="quote">
+  Optical & Networking Supercycle at the heart of the AI Revolution
+  <div class="translation">翻译：光通信与网络超级周期是AI革命的核心</div>
+</blockquote>
+
+<h3>光：光通信格局、技术路线、边际变化；上游边际变化。</h3>
+<blockquote class="quote">
+  Optical & Networking Supercycle at the heart of the AI Revolution
+  <div class="translation">翻译：光通信与网络超级周期是AI革命的核心</div>
+</blockquote>
+
+<h3>存：格局、边际变化。</h3>
+- 在提供的Reddit数据中，未发现直接针对AI存储（存）领域的相关讨论。
+
+<h3>电：数据中心对电力的消耗、边际变化 (如燃气轮机需求、格局、供应链等)。</h3>
+- 在提供的Reddit数据中，未发现直接针对AI数据中心电力消耗（电）领域的相关讨论。
+
+<h3>板：PCB格局、边际变化；上游边际变化。</h3>
+- 在提供的Reddit数据中，未发现直接针对AI相关PCB（板）领域的相关讨论。
+
+<h3>云：中国&全球云服务边际变化。</h3>
+<blockquote class="quote">
+  The hyperscalers are like the Five Families of the Godfather
+  <div class="translation">翻译：超大规模云服务商就像《教父》里的五大家族</div>
+</blockquote>
+<blockquote class="quote">
+  Some ramblings on the SaaSpocalypse
+  <div class="translation">翻译：关于SaaS末日的一些胡言乱语</div>
+</blockquote>
+<blockquote class="quote">
+  SaaS Isn’t Dead, the Pricing Model Might Be
+  <div class="translation">翻译：SaaS并未消亡，可能是定价模式出了问题</div>
+</blockquote>
+
+<h3>AI应用：AI对应用产业的改造，千行百业。</h3>
+<blockquote class="quote">
+  CRWD and NET down almost 10% today because... Claude has a new code review skill
+  <div class="translation">翻译：CRWD和NET今天下跌近10%因为……Claude有了一项新的代码审查技能</div>
+</blockquote>
+<blockquote class="quote">
+  Betting on AI disruption as a hedge against AI disruption, does this logic hold?
+  <div class="translation">翻译：押注AI颠覆作为对冲AI颠覆的策略，这种逻辑成立吗？</div>
+</blockquote>
+<blockquote class="quote">
+  The Efficiency Trap: Why AI’s Micro-Success Could Become a Macro Problem
+  <div class="translation">翻译：效率陷阱：为什么AI的微观成功可能成为宏观问题</div>
+</blockquote>
+<blockquote class="quote">
+  i’m officially "ai-ed out"... am i the only one who thinks the hype is finally hitting a wall?
+  <div class="translation">翻译：我正式“AI疲劳”了……我是不是唯一一个认为炒作终于碰壁的人？</div>
 </blockquote>
         </div>
 
         <script>
             var chartDom = document.getElementById('gauge');
-            var myChart = echarts.init(chartDom, 'dark');
+            var myChart = echarts.init(chartDom);
             
-            // 动态决定颜色
-            var score = 42;
-            var color = '#eab308'; // 默认黄色
-            if (score <= 25) color = '#ef4444';      // 极度恐慌 (红)
-            else if (score <= 45) color = '#f97316'; // 恐慌 (橙)
-            else if (score <= 55) color = '#eab308'; // 中性 (黄)
-            else if (score <= 75) color = '#84cc16'; // 贪婪 (浅绿)
-            else color = '#22c55e';                  // 极度贪婪 (深绿)
-
             var option = {
-                backgroundColor: 'transparent',
-                series: [
-                    {
-                        type: 'gauge',
-                        startAngle: 180,
-                        endAngle: 0,
-                        min: 0,
-                        max: 100,
-                        splitNumber: 4,
-                        itemStyle: { color: color },
-                        progress: { show: true, width: 25 },
-                        pointer: { show: true, length: '50%', width: 6 },
-                        axisLine: { lineStyle: { width: 25, color: [[1, '#1e293b']] } },
-                        axisTick: { show: false },
-                        splitLine: { length: 25, lineStyle: { width: 2, color: '#0f172a' } },
-                        axisLabel: { distance: 30, color: '#94a3b8', fontSize: 14 },
-                        detail: {
-                            valueAnimation: true,
-                            formatter: '{value}\n恐慌',
-                            color: 'auto',
-                            fontSize: 28,
-                            offsetCenter: [0, '30%'],
-                            lineHeight: 40
+                series: [{
+                    type: 'gauge',
+                    startAngle: 180, endAngle: 0, min: 0, max: 100,
+                    radius: '100%',
+                    center: ['50%', '75%'],
+                    axisLine: {
+                        lineStyle: {
+                            width: 45, // 极宽的彩色带，一比一复刻 CNN
+                            color: [
+                                [0.25, '#ef4444'], // Extreme Fear
+                                [0.45, '#f97316'], // Fear
+                                [0.55, '#d1d5db'], // Neutral
+                                [0.75, '#84cc16'], // Greed
+                                [1,    '#22c55e']  // Extreme Greed
+                            ]
+                        }
+                    },
+                    pointer: {
+                        icon: 'path://M12.8,0.7l12,40.1H0.7L12.8,0.7z',
+                        length: '65%', width: 8, offsetCenter: [0, '-5%'],
+                        itemStyle: { color: '#ffffff' }
+                    },
+                    axisTick: { show: false }, splitLine: { show: false }, axisLabel: { show: false },
+                    detail: {
+                        fontSize: 55, fontWeight: 'bold', offsetCenter: [0, '20%'],
+                        formatter: function (value) {
+                            return value + '\n{rating|恐慌}';
                         },
-                        data: [{ value: score }]
-                    }
-                ]
+                        rich: { rating: { fontSize: 24, color: '#94a3b8', padding: [10, 0, 0, 0], fontWeight: 'normal' } },
+                        color: '#f8fafc'
+                    },
+                    data: [{ value: 42 }]
+                }]
             };
             option && myChart.setOption(option);
             window.addEventListener('resize', function() { myChart.resize(); });
