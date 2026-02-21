@@ -61,11 +61,10 @@ def get_ai_analysis(raw_text):
     prompt = f"""
     你是一个极其严谨的美股量化分析引擎。请基于（{today_str}）Reddit数据生成中文网页。
     
-    【核心质量控制与反偷懒机制】（最高优先级铁律，违背将导致系统崩溃）：
-    1. 【过滤无脑喷子】：像“MSFT is such crap (微软太烂了)”这种纯情绪化、无逻辑、无数据的发泄废话，**直接全部丢弃**！只保留有业务探讨、数据支撑或博弈逻辑的高价值评论。
-    2. 【严防偷懒，强制丰满】：每只入选的股票，**绝对不允许**只放 1 条评论！你必须在数据池里深挖，每只股票强制罗列 3-5 条多角度的相关讨论。如果该股的高质量评论凑不够 3 条，宁可换一只股票上榜，也必须保证最终输出的 15 只股票内容充实！
-    3. 绝对不要在二级标题下方写任何“过渡段”或“介绍语”。标题结束立刻换行输出正文。
-    4. 摘录原文时，去除所有来源标签（如“[WSB]”），只输出纯净英文原文和中文翻译。
+    【核心质量控制与反作弊机制】（违背将导致系统崩溃）：
+    1. 【过滤无脑喷子】：纯情绪化、无逻辑的发泄废话直接丢弃！只保留有业务探讨或博弈逻辑的高价值评论。
+    2. 【严防话题伪装成个股】：在“个股”版块，**绝对禁止**将“AI产业”、“SaaS”、“半导体”、“降息”、“宏观大势”或“ETF（如SPY/QQQ）”等泛话题当作股票列出！
+    3. 标题结束立刻换行输出正文，绝对不要写任何“过渡段”或“总结语”。
 
     【强制网页三大结构】：
     
@@ -74,11 +73,12 @@ def get_ai_analysis(raw_text):
     
     <h2>2. 热议中的个股和想法</h2>
     - （不要写开头介绍，直接开始编号）
-    - 必须、强制列出 **至少 15 只** 不同的美股上市公司个股！
-    - 每只个股下，强制摘录 3-5 条高质量的散户或机构观点原文（纯英文+翻译）。
+    - 【真·个股白名单校验】：本版块**只能**包含带有明确股票代码的具体上市公司。输出格式必须是：`1. **代码 (公司名)**`。
+    - 在保证绝对是“真实上市公司”的前提下，尽可能挖掘 **10 到 15 只** 不同的股票。如果优质股票只有 12 只，就只输出 12 只，**宁缺毋滥，严禁拿话题凑数！**
+    - 每只个股下，强制摘录 3-5 条高质量评论（纯英文+翻译）。如果尾部股票实在只有1-2条，也可接受，首要保证它是真股票。
     
     <h2>3. AI主线讨论</h2>
-    - 严格且只能按照以下 8 个分类输出标题，并在每个分类下大量摘录市场真实观点：
+    - 严格按照以下 8 个分类输出标题，并在每个分类下大量摘录市场真实观点：
       * 模型：模型进展是第一性原理。
       * 算：技术路线、台积电产能分配。
       * 光：光通信格局、技术路线、边际变化；上游边际变化。
@@ -122,10 +122,9 @@ def generate_html(report, fg_score, fg_rating):
             h3 { color: #38bdf8; margin-top: 25px; font-size: 1.2rem; }
             .time { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px; }
             
-            /* 修复 CNN 风格仪表盘容器文字重叠问题 */
             .dashboard-card { background: #020617; border-radius: 12px; padding: 25px 20px 10px 20px; margin-top: 20px; margin-bottom: 30px; border: 1px solid var(--border); }
             .gauge-container { width: 100%; height: 260px; margin-top: 10px; }
-            .index-title { text-align: center; color: #f8fafc; font-size: 1.5rem; font-weight: bold; margin-bottom: 5px; } /* 移除了负边距 */
+            .index-title { text-align: center; color: #f8fafc; font-size: 1.5rem; font-weight: bold; margin-bottom: 5px; }
             .index-subtitle { text-align: center; color: var(--text-muted); font-size: 0.9rem; margin-bottom: 15px; position: relative; z-index: 10; }
             
             ol, ul { padding-left: 20px; margin-top: 15px; display: block; }
@@ -161,7 +160,7 @@ def generate_html(report, fg_score, fg_rating):
                     type: 'gauge',
                     startAngle: 180, endAngle: 0, min: 0, max: 100,
                     radius: '100%',
-                    center: ['50%', '65%'], /* 下调了圆心，防止文字挤在一起 */
+                    center: ['50%', '65%'],
                     axisLine: {
                         lineStyle: {
                             width: 45,
