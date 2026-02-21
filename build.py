@@ -36,7 +36,9 @@ def fetch_data():
             for entry in f.entries[:80]: 
                 title = entry.title
                 summary = entry.summary if 'summary' in entry else ""
+                # 清除 HTML 标签
                 summary = re.sub('<[^<]+>', '', summary)
+                # 【关键修复】：将抓取长度放宽到 800 字符，保证足够容纳几个完整的句子
                 content += f"[{name}] {title} | 补充: {summary[:800]}\n"
         except: pass
     return content
@@ -145,40 +147,8 @@ def generate_html(report, fg_score, fg_rating):
     html_template = html_template.replace("{{today_str}}", today_str).replace("{{update_time}}", update_time).replace("{{report}}", report).replace("{{fg_score}}", str(fg_score)).replace("{{fg_rating}}", fg_rating)
     with open("index.html", "w", encoding="utf-8") as f: f.write(html_template)
 
-def send_discord_push(score, rating):
-    webhook_url = os.environ.get("DISCORD_WEBHOOK_URL")
-    if not webhook_url: return
-    
-    color = 15158332 if score < 45 else (3066993 if score > 55 else 9807270)
-    repo_url = "https://vense-23.github.io/Market-Sentiment-Radar/" 
-    tz = pytz.timezone('Asia/Shanghai')
-    today_str = datetime.now(tz).strftime("%Y-%m-%d %H:%M")
-    
-    # 【核心修复】：使用三引号防弹设计，无论你怎么复制换行都不会报 SyntaxError
-    desc_text = f"""**📊 CNN 恐慌与贪婪指数**：`{rating} ({score}分)`
-
-🤖 AI 已经完成 Reddit 全网数据扫描，提取了最新的个股博弈逻辑与小众黑马股。
-
-👉 **[点击此处进入浏览器阅读极客排版全文]({repo_url})**
-
-*(注：网页云端部署存在 1-2 分钟延迟，点开若为旧版请稍后刷新)*"""
-
-    payload = {
-        "username": "实战派雷达",
-        "avatar_url": "https://cdn-icons-png.flaticon.com/512/3254/3254107.png",
-        "embeds": [{
-            "title": f"🎯 {today_str} 美股情绪深度研报已出炉",
-            "description": desc_text,
-            "color": color
-        }]
-    }
-    
-    try: requests.post(webhook_url, json=payload, timeout=10)
-    except: pass
-
 if __name__ == "__main__":
     score, rating = get_fear_and_greed()
     data = fetch_data()
     analysis = get_ai_analysis(data)
     generate_html(analysis, score, rating)
-    send_discord_push(score, rating)
