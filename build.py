@@ -32,7 +32,14 @@ def fetch_data():
     for name, url in feeds.items():
         try:
             f = feedparser.parse(url, agent='Mozilla/5.0')
-            for entry in f.entries[:50]: content += f"[{name}] {entry.title}\n"
+            for entry in f.entries[:50]: 
+                # 尽量获取更多真实文本，避免 AI 幻觉
+                title = entry.title
+                summary = entry.summary[:200] if 'summary' in entry else ""
+                # 清理 summary 中的 HTML 标签
+                import re
+                summary = re.sub('<[^<]+>', '', summary)
+                content += f"[{name}] {title} | 补充内容: {summary}\n"
         except: pass
     return content
 
@@ -45,26 +52,28 @@ def get_ai_analysis(raw_text):
     prompt = f"""
     你是一个极其严谨的美股量化分析引擎。请基于（{today_str}）Reddit数据生成网页。
     
-    【绝对禁止的排版与内容错误（生死攸关）】：
-    1. 绝对不要使用 Markdown 的星号（**）来加粗字体！
-    2. 【拒绝全是好话的假评论】：真实的交易市场是多空互搏的赌场。必须保留看跌（Bearish）、做空逻辑、质疑估值过高的声音！只要不是毫无逻辑的纯脏话，即使是抱怨或看衰公司的评论也必须按原样摘录。绝不能只挑正面的夸奖，必须原汁原味地展现“有褒有贬”的多空分歧。
+    【最高警戒：反幻觉与绝对真实（生死攸关）】：
+    1. 你摘录的每一句 [英文原文] 必须 100% 逐字源自下方提供的【原始数据】！
+    2. 绝对禁止为了凑数而凭空捏造、杜撰不存在的评论！绝不能使用你的历史训练数据（不准出现旧新闻如GPT-4发布等）。
+    3. 真实性高于一切数量要求！如果关于某只股票只有1条真实数据，那就只写1条；如果没有看空的真实数据，就不准捏造看空逻辑。
 
     【个股输出强制模板（必须严格复制以下 HTML 结构填空）】：
     <li>
       <div class="stock-tag">1. 代码 (公司全名)</div>
       <blockquote class="quote">
-        [英文原文1]
-        <div class="translation">翻译：[中文翻译1]</div>
+        [100%源自原始数据的英文原文]
+        <div class="translation">翻译：[中文翻译]</div>
       </blockquote>
     </li>
 
-    【网页强制四大结构（必须严格按顺序输出）】：
-    <h2>1. 宏观与市场情绪</h2> (总结今日核心逻辑，摘录3-5条原文)
-    <h2>2. 热议中的个股和想法</h2> (挖掘10-15只真实上市公司，每只强制3-5条高质量多空博弈引用)
-    <h2>3. 小众公司冒泡</h2> (挖掘0-10只冷门股，每只1-2条引用，没有就不写)
-    <h2>4. AI主线讨论</h2> (使用 <div class="track-header">标题</div> 标签严格输出8大类：模型、算、光、存、电、板、云、AI应用)
+    【网页强制四大结构】：
+    <h2>1. 宏观与市场情绪</h2> (总结今日核心逻辑，摘录真实原文)
+    <h2>2. 热议中的个股和想法</h2> (挖掘真实提及的上市公司，有几条写几条，绝不造假)
+    <h2>3. 小众公司冒泡</h2> (挖掘0-10只冷门股，没有就不写)
+    <h2>4. AI主线讨论</h2> (使用 <div class="track-header">标题</div> 标签输出8大类：模型、算、光、存、电、板、云、AI应用。只有在原始数据中找到对应内容才写，找不到就留空)
 
-    原始数据：{raw_text}
+    原始数据：
+    {raw_text}
     """
     response = model.generate_content(prompt)
     return response.text.replace("```html", "").replace("```", "").strip()
@@ -106,25 +115,8 @@ def generate_html(report, fg_score, fg_rating):
             
             ol { padding-left: 0; }
             ol li { margin-bottom: 50px; list-style: none; border-bottom: 1px dashed var(--border); padding-bottom: 25px; }
-            
-            /* 【UI升级：深灰底色，亮白字体，高对比度】 */
-            blockquote { 
-                background: #1e293b; 
-                border-left: 4px solid #10b981; 
-                padding: 16px; 
-                margin: 15px 0; 
-                border-radius: 6px; 
-                color: #f8fafc; /* 亮珍珠白，保障英文原文清晰度 */
-                font-size: 0.95rem;
-                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            }
-            .translation { 
-                color: #cbd5e1; /* 柔和浅灰，用于区分中文翻译 */
-                margin-top: 12px; 
-                font-size: 0.9rem; 
-                border-top: 1px dashed #475569; 
-                padding-top: 12px; 
-            }
+            blockquote { background: #1e293b; border-left: 4px solid #10b981; padding: 16px; margin: 15px 0; border-radius: 6px; color: #f8fafc; font-size: 0.95rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+            .translation { color: #cbd5e1; margin-top: 12px; font-size: 0.9rem; border-top: 1px dashed #475569; padding-top: 12px; }
         </style>
     </head>
     <body>
