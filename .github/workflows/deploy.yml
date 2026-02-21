@@ -1,8 +1,6 @@
 name: Update Radar Page
 on:
   schedule:
-    # 00:30 UTC 是北京时间 08:30
-    # 12:30 UTC 是北京时间 20:30
     - cron: '30 0,12 * * *' 
   workflow_dispatch:
 jobs:
@@ -15,15 +13,17 @@ jobs:
         with:
           python-version: '3.10'
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: pip install feedparser google-generativeai pytz requests
       - name: Run Script
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }} # 喂给脚本的 Discord 暗号
         run: python build.py
       - name: Push to Repo
         run: |
-          git config --global user.name "GitHub Bot"
-          git config --global user.email "bot@github.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add index.html
-          git commit -m "Auto-update analysis" || exit 0
+          git commit -m "Auto-update market radar and send push" || exit 0
           git push
