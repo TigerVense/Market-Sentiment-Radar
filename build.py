@@ -14,8 +14,9 @@ def fetch_data():
     content = ""
     for name, url in feeds.items():
         try:
+            # 【爆改点 1】：将抓取深度提升至 50 条，总计提供约 200 条原材料
             f = feedparser.parse(url, agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64)')
-            for entry in f.entries[:20]: # 增加单版块抓取量，确保样本充足
+            for entry in f.entries[:50]: 
                 content += f"[{name}] {entry.title}\n"
         except Exception as e:
             print(f"抓取 {name} 失败: {e}")
@@ -25,26 +26,32 @@ def get_ai_analysis(raw_text):
     genai.configure(api_key=os.environ.get("GEMINI_API_KEY"))
     model = genai.GenerativeModel('gemini-2.5-flash')
     
-    # 动态注入今天的日期
     tz = pytz.timezone('Asia/Shanghai')
     today_str = datetime.now(tz).strftime("%Y年%m月%d日")
     
+    # 【爆改点 2】：引入负面提示词、动态数量控制和海量摘录要求
     prompt = f"""
-    你现在是一个顶级美股量化与基本面分析助手。
-    请基于今日（{today_str}）Reddit 核心讨论区的最新数据，生成深度中文网页简报。
+    你现在是一个服务于一线实战派参与者的顶级美股情绪分析引擎。
+    请基于今日（{today_str}）Reddit 最新数据（近200条讨论），生成极度硬核的中文网页简报。
     
     分析核心要求（必须严格遵守）：
-    1. 【筛选标准说明】：在简报最开头，简短说明你的高热度筛选标准（必须明确提及是基于 {today_str} 当日新增帖子的“提及频次、情绪分歧度以及产业链边际变化”）。
-    2. 【严格限制的 TOP 20 个股】：
-       - 只能列出**具体的上市公司个股**（Ticker）。**绝对禁止**列出 SPY、QQQ 等 ETF，**绝对禁止**列出宏观话题或泛行业名称。
-       - 必须采用纯垂直排版，按顺序“1. 2. 3...”向下排列，严禁使用并排的小框框或网格排版。
-       - 在每个个股的分析逻辑下方，直接摘录 1-2 句当日该股票相关的核心高质量原文讨论（可用中文翻译呈现，使用带有引用的样式）。
-    3. 【AI 产业链深度追踪】：
-       - 聚焦：模型、算、光（含中际旭创相关的上游）、存、电（组件、发电、电网）、板、云（如 Google 等动态）。
-       - 必须在相关产业链板块下方，汇总摘录 5-10 个当日新增的、写得最精彩的 Reddit 原文观点（明确标注出处和讨论方向）。
-    4. 【排版要求】：只输出内部的 HTML 元素，使用原生的 <ol> 或 <ul> 列表，以及 <blockquote class="quote"> 来包裹原文摘录，不要加内联样式破坏深色主题。
+    1. 【严格的杂音过滤（Negative Prompt）】：
+       - 绝对禁止收录任何关于券商软件故障、账户无法交易、期权限制、出入金问题的话题（如 Moomoo/FUTU, JPM, Robinhood 客服类问题）。
+       - 绝对禁止将 SPY, QQQ 等大盘 ETF 或“降息”、“衰退”等纯宏观话题列为个股。
+    
+    2. 【宁缺毋滥的个股名单（动态 10-20 只）】：
+       - 筛选标准：仅限今日有高频提及、且包含具体基本面或交易情绪博弈的上市公司。
+       - 如果真正有价值的个股只有 12 只，就只写 12 只，宁缺毋滥。
+       - 排版：必须按顺序“1. 2. 3...”垂直向下排列。
+       - 【重要细节】：在每只个股逻辑下方，如果存在优质讨论，请摘录 3-5 条原文（带引用样式），不要吝啬篇幅。
 
-    今日原始讨论数据：
+    3. 【AI 产业链深度追踪与海量原文展示】：
+       - 聚焦：模型、算、光、存、电（组件/发电/电网）、板、云。
+       - 【重要细节】：这是本次报告的核心！在每一个产业链环节下方，不要过度精简。如果底层数据库中有大量关于该环节的讨论，请直接展示 5 条、10 条甚至 15 条最高质量的原文摘录（翻译为中文）。越详细、越原汁原味越好，让我直接看到市场的真实声音。
+
+    4. 【排版要求】：只输出内部的 HTML 元素，使用 <ol> 或 <ul> 列表。<blockquote class="quote"> 用于包裹原文摘录。如果有连续的多条摘录，请将它们分多个 blockquote 堆叠排列。
+
+    今日原始讨论数据池：
     {raw_text}
     """
     response = model.generate_content(prompt)
@@ -65,7 +72,6 @@ def generate_html(report):
         <style>
             :root {{
                 --bg: #0f172a;
-                --card-bg: #1e293b;
                 --text-main: #f1f5f9;
                 --text-muted: #94a3b8;
                 --accent: #38bdf8;
@@ -76,31 +82,29 @@ def generate_html(report):
             h1 {{ color: var(--accent); border-bottom: 2px solid var(--border); padding-bottom: 10px; font-size: 1.8rem; }}
             h2, h3 {{ color: #fbbf24; margin-top: 30px; }}
             .time {{ color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px; }}
-            .intro-box {{ background: rgba(56, 189, 248, 0.1); border-left: 4px solid var(--accent); padding: 15px; margin-bottom: 30px; border-radius: 0 8px 8px 0; }}
             
-            /* 强制列表垂直排列，消除网格卡片 */
             ol {{ padding-left: 20px; margin-top: 20px; }}
-            ol li {{ margin-bottom: 25px; font-size: 1.1rem; border-bottom: 1px dashed var(--border); padding-bottom: 15px; }}
+            ol li {{ margin-bottom: 30px; font-size: 1.1rem; border-bottom: 1px dashed var(--border); padding-bottom: 15px; }}
             ol li strong {{ color: var(--accent); font-size: 1.2rem; }}
             
-            /* 原文摘录的专属样式 */
+            /* 优化后的原文摘录样式，适合大量堆叠 */
             blockquote, .quote {{
                 background: #020617;
-                border-left: 4px solid #10b981; /* 绿色引用条，更显眼 */
-                padding: 12px 15px;
-                margin: 10px 0;
+                border-left: 4px solid #10b981;
+                padding: 10px 15px;
+                margin: 8px 0;
                 color: #cbd5e1;
                 font-size: 0.95rem;
                 font-style: italic;
                 border-radius: 4px;
+                line-height: 1.5;
             }}
-            .quote-label {{ font-size: 0.8rem; color: #10b981; font-weight: bold; font-style: normal; display: block; margin-bottom: 4px; }}
         </style>
     </head>
     <body>
         <div class="container">
-            <h1>🎯 {today_str} 美股极热个股与AI产业链透视</h1>
-            <p class="time">系统抓取时间: {update_time} (北京时间)</p>
+            <h1>🎯 {today_str} 市场异动个股与AI产业链透视</h1>
+            <p class="time">情报源头: 200+ 最新高热原帖 | 最后分析时间: {update_time} (北京时间)</p>
             {report}
         </div>
     </body>
@@ -110,9 +114,9 @@ def generate_html(report):
         f.write(html_template)
 
 if __name__ == "__main__":
-    print("开始精准抓取今日数据...")
+    print("开始大批量抓取今日 200+ 原始数据...")
     data = fetch_data()
-    print("Gemini 正在执行严格过滤与摘录...")
+    print("Gemini 正在执行严苛过滤与深度海量摘录...")
     analysis = get_ai_analysis(data)
-    print("重新渲染深色沉浸式排版...")
+    print("生成网页...")
     generate_html(analysis)
