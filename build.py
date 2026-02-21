@@ -45,14 +45,28 @@ def get_ai_analysis(raw_text):
     prompt = f"""
     你是一个极其严谨的美股量化分析引擎。请基于（{today_str}）Reddit数据生成网页。
     
-    【UI 高亮控制（铁律）】：
-    1. 个股标题必须使用 <strong class="stock-tag"> 标签。格式：<strong class="stock-tag">1. 代码 (公司全名)</strong>
-    2. AI 主线标题必须使用 <h3 class="track-header"> 标签。例如：<h3 class="track-header">模型：模型进展是第一性原理</h3>
-    3. 每个标题后必须换行，不准与评论挤在一起。
-    4. 翻译：每条引用必须包含 [英文原文] 和 <div class="translation">翻译：...</div>。
-    5. 质量：剔除纯谩骂，只保留理性的观点。每只个股强制 3-5 条高质量引用。
+    【绝对禁止的排版错误（生死攸关）】：
+    1. 绝对、绝对、绝对不要使用 Markdown 的星号（**）来加粗字体！
+    2. 个股标题严禁和评论挤在同一行！
+    3. 剔除纯谩骂，只保留理性的观点。每只个股强制 3-5 条高质量引用。
 
-    网页必须包含三个板块：<h2>1. 宏观与市场情绪</h2>、<h2>2. 热议中的个股和想法</h2>（10-15只）、<h2>3. AI主线讨论</h2>（严格按那8类输出并加粗标题）。
+    【个股输出强制模板（必须严格复制以下 HTML 结构填空）】：
+    <li>
+      <div class="stock-tag">1. 代码 (公司全名)</div>
+      <blockquote class="quote">
+        [英文原文1]
+        <div class="translation">翻译：[中文翻译1]</div>
+      </blockquote>
+      <blockquote class="quote">
+        [英文原文2]
+        <div class="translation">翻译：[中文翻译2]</div>
+      </blockquote>
+    </li>
+
+    【网页强制结构】：
+    <h2>1. 宏观与市场情绪</h2>
+    <h2>2. 热议中的个股和想法</h2>（挖掘10-15只真实上市公司）
+    <h2>3. AI主线讨论</h2>（必须使用 <div class="track-header">标题</div> 标签输出8大类：模型、算、光、存、电、板、云、AI应用）
 
     原始数据：{raw_text}
     """
@@ -79,16 +93,15 @@ def generate_html(report, fg_score, fg_rating):
             h1 { color: var(--accent); border-bottom: 2px solid var(--border); padding-bottom: 10px; }
             h2 { color: #fbbf24; margin-top: 45px; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
             
-            /* 个股 Ticker 加粗标签 */
+            /* 强制块级标签，彻底消灭粘连 */
             .stock-tag { 
-                display: inline-block; background: rgba(251, 191, 36, 0.15); 
-                color: #fbbf24; padding: 5px 15px; border-left: 5px solid #fbbf24; 
+                display: block; width: fit-content; background: rgba(251, 191, 36, 0.15); 
+                color: #fbbf24; padding: 6px 16px; border-left: 5px solid #fbbf24; 
                 border-radius: 4px; font-size: 1.3rem; margin-bottom: 15px; font-weight: bold;
             }
             
-            /* AI 主线标题高亮加粗 */
             .track-header { 
-                color: var(--accent); font-size: 1.25rem; margin-top: 30px; padding: 8px 12px;
+                display: block; color: var(--accent); font-size: 1.25rem; margin-top: 35px; margin-bottom: 15px; padding: 8px 12px;
                 background: linear-gradient(90deg, rgba(56, 189, 248, 0.1) 0%, transparent 100%);
                 border-bottom: 2px solid rgba(56, 189, 248, 0.4); font-weight: bold;
             }
@@ -96,6 +109,7 @@ def generate_html(report, fg_score, fg_rating):
             .dashboard-card { background: #020617; border-radius: 12px; padding: 25px 20px; margin: 30px 0; border: 1px solid var(--border); }
             .gauge-container { width: 100%; height: 260px; }
             
+            ol { padding-left: 0; }
             ol li { margin-bottom: 50px; list-style: none; border-bottom: 1px dashed var(--border); padding-bottom: 25px; }
             blockquote { background: #020617; border-left: 4px solid #10b981; padding: 15px; margin: 15px 0; border-radius: 4px; }
             .translation { color: #94a3b8; margin-top: 10px; font-size: 0.9rem; border-top: 1px dotted #334155; padding-top: 10px; }
