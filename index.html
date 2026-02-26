@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>02月25日 情报终端</title>
+        <title>02月26日 情报终端</title>
         <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
         <style>
             :root { --bg: #0f172a; --text: #f1f5f9; --accent: #38bdf8; --border: #334155; }
@@ -36,214 +36,164 @@
     </head>
     <body>
         <div class="container">
-            <h1>🎯 02月25日 市场情报透视</h1>
-            <p style="color:#94a3b8">情报最后更新: 2026-02-25 21:48:50 (北京时间)</p>
+            <h1>🎯 02月26日 市场情报透视</h1>
+            <p style="color:#94a3b8">情报最后更新: 2026-02-26 11:17:53 (北京时间)</p>
             <div class="dashboard-card"><div id="gauge" class="gauge-container"></div></div>
-            <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>美股市场情绪分析 (2026年02月25日)</title>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: #f4f7f6; color: #333; }
-        h1, h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; margin-top: 30px; }
-        .stock-tag { font-weight: bold; color: #e74c3c; margin-bottom: 5px; font-size: 1.1em; }
-        .quote { background-color: #ecf0f1; border-left: 5px solid #3498db; margin: 15px 0; padding: 10px 20px; font-style: italic; color: #555; }
-        .quote .translation { margin-top: 10px; font-style: normal; color: #2c3e50; border-top: 1px dashed #bdc3c7; padding-top: 8px; }
-        ul { list-style-type: none; padding: 0; }
-        li { background-color: #ffffff; margin-bottom: 10px; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .track-header { font-weight: bold; color: #2980b9; margin-top: 20px; margin-bottom: 10px; font-size: 1.1em; border-bottom: 1px dotted #2980b9; padding-bottom: 5px; }
-    </style>
-</head>
-<body>
-
-    <h1>美股市场情绪分析 (2026年02月25日)</h1>
-
+            <div class="market-sentiment-report">
     <h2>1. 宏观与市场情绪</h2>
-    <ul>
-      <li>
-        <blockquote class="quote">
-          MAG-7 are trading at the lowest premium vs. S&P 493 in the last 10 years.
-          <div class="translation">翻译：七巨头（MAG-7）相对于标普493在过去十年中正以最低溢价交易。</div>
-        </blockquote>
-      </li>
-      <li>
-        <blockquote class="quote">
-          USDEUR and DXY (USD vs basket) are down about 9% since a year ago. So from an outside-the-US persepective inflation-adjusted S&P is basically flat.
-          <div class="translation">翻译：自一年前以来，美元兑欧元和美元指数（美元兑一篮子货币）已下跌约9%。因此，从非美国视角来看，经通胀调整后的标普指数基本持平。</div>
-        </blockquote>
-      </li>
-      <li>
-        <blockquote class="quote">
-          The thought put in my head by Everything around my about the AI bubble keeps causing stress.
-          <div class="translation">翻译：周围关于人工智能泡沫的一切都让我感到压力。</div>
-        </blockquote>
-      </li>
-      <li>
-        <blockquote class="quote">
-          Fed's Goolsbee calls for a hold on cuts as current rate of inflation is 'not good enough'.
-          <div class="translation">翻译：美联储的古尔斯比呼吁暂停降息，因为当前的通胀率“还不够好”。</div>
-        </blockquote>
-      </li>
-      <li>
-        <blockquote class="quote">
-          Investors brace for a State of the Union speech that may fuel anxiety.
-          <div class="translation">翻译：投资者为可能加剧焦虑的国情咨文演讲做准备。</div>
-        </blockquote>
-      </li>
-      <li>
-        <blockquote class="quote">
-          President Donald Trump plans to use his 2026 State of the Union address to highlight new data center energy agreements with major tech firms that are intended to address rising electricity demand tied to AI infrastructure.
-          <div class="translation">翻译：唐纳德·特朗普总统计划利用其2026年国情咨文演讲，重点提及与主要科技公司达成的新数据中心能源协议，旨在解决与人工智能基础设施相关的电力需求增长问题。</div>
-        </blockquote>
-      </li>
-      <li>
-        <blockquote class="quote">
-          US economy slows after turbulent year.
-          <div class="translation">翻译：美国经济在动荡一年后放缓。</div>
-        </blockquote>
-      </li>
-      <li>
-        <blockquote class="quote">
-          Annual inflation down to 1.7% in the euro area.
-          <div class="translation">翻译：欧元区年通胀率降至1.7%。</div>
-        </blockquote>
-      </li>
-      <li>
-        <blockquote class="quote">
-          The rate at which these industries are coming under attack by the AI narrative is pretty insane.
-          <div class="translation">翻译：这些行业受到人工智能叙事冲击的速度相当惊人。</div>
-        </blockquote>
-      </li>
-      <li>
-        <blockquote class="quote">
-          South Korea semi exports just jumped 134% YoY. The AI hardware demand is still accelerating.
-          <div class="translation">翻译：韩国半导体出口同比增长134%。人工智能硬件需求仍在加速。</div>
-        </blockquote>
-      </li>
-      <li>
-        <blockquote class="quote">
-          The Efficiency Trap: Why AI’s Micro-Success Could Become a Macro Problem.
-          <div class="translation">翻译：效率陷阱：为何人工智能的微观成功可能成为宏观问题。</div>
-        </blockquote>
-      </li>
-      <li>
-        <blockquote class="quote">
-          European Clean Energy Stocks Face Divergence Between AI Hype and Policy Realities.
-          <div class="translation">翻译：欧洲清洁能源股票面临人工智能炒作与政策现实之间的分歧。</div>
-        </blockquote>
-      </li>
-      <li>
-        <blockquote class="quote">
-          Michael Burry Reveals 'Sinister' Accounting Tricks of Mag 7 Firms to Inflate Earnings by Over 20%.
-          <div class="translation">翻译：迈克尔·伯里揭示了七巨头公司“险恶”的会计伎俩，以夸大超过20%的收益。</div>
-        </blockquote>
-      </li>
-    </ul>
+    <p>市场情绪在乐观与谨慎之间摇摆。虽然部分宏观数据显示经济增长尚可，但市场仍未进入全面的风险偏好阶段。通胀担忧和地缘政治风险是投资者关注的焦点。</p>
+    <blockquote class="quote">
+      Some macro data looks fine. ISM is at 52.6, so growth isn’t breaking down. The yield curve is positive (+0.60), which doesn’t scream recession stress. VIX has cooled to around 19.
+      <div class="translation">翻译：一些宏观数据看起来不错。ISM 为 52.6，所以增长并未崩溃。收益率曲线为正（+0.60），这并未预示经济衰退压力。VIX 已降至 19 左右。</div>
+    </blockquote>
+    <blockquote class="quote">
+      But other pieces don’t line up for me. The Russell 2000 is still down over the last 30 days. The dollar (DXY) is up about 1.3% over that same period. Risk sentiment (Fear & Greed) is still very low at 11.
+      <div class="translation">翻译：但其他方面对我来说不协调。罗素 2000 指数在过去 30 天仍下跌。美元（DXY）同期上涨约 1.3%。风险情绪（恐惧与贪婪）仍处于非常低的 11。</div>
+    </blockquote>
+    <blockquote class="quote">
+      S&P up about 15% since a year ago (but as we already know, this is mainly due to a few big tech companies) USDEUR and DXY (USD vs basket) are down about 9% since a year ago.
+      <div class="translation">翻译：标普指数自一年前上涨约 15%（但我们已经知道，这主要归因于少数几家大型科技公司）美元兑欧元和美元指数（DXY）自一年前下跌约 9%。</div>
+    </blockquote>
+    <blockquote class="quote">
+      Fed's Goolsbee calls for a hold on cuts as current rate of inflation is 'not good enough'.
+      <div class="translation">翻译：美联储古尔斯比呼吁暂停降息，因当前通胀率“不够好”。</div>
+    </blockquote>
+    <blockquote class="quote">
+      so scotus killed the old tariffs but the admin just used section 122 to slap a 10% duty back on everything for the next 150 days lol. it feels like we’re just kicking the can down the road while prices at walmart and amazon stay high.
+      <div class="translation">翻译：所以最高法院废除了旧关税，但政府只是利用第 122 条对所有商品重新征收 10% 的关税，为期 150 天，这感觉就像我们只是在拖延问题，而沃尔玛和亚马逊的价格仍然很高。</div>
+    </blockquote>
+    <blockquote class="quote">
+      Returns are generated from taking risk. If we become too hypersensitive to risk and try to hedge it all away, we are effectively reducing our return potential.
+      <div class="translation">翻译：回报来自承担风险。如果我们对风险过于敏感，并试图将其全部对冲掉，我们实际上是在降低我们的回报潜力。</div>
+    </blockquote>
 
     <h2>2. 热议中的个股和想法</h2>
     <ul>
       <li>
-        <div class="stock-tag">MSFT (Microsoft Corp)</div>
+        <div class="stock-tag">NVDA (NVIDIA Corporation)</div>
         <blockquote class="quote">
-          President Donald Trump plans to use his 2026 State of the Union address to highlight new data center energy agreements with major tech firms that are intended to address rising electricity demand tied to AI infrastructure. The administration has been negotiating “ratepayer protection” pledges under which companies such as Microsoft, Google, OpenAI, Amazon, and Meta would publicly commit to ensuring that their expanding, energy-hungry data centers won’t drive up grid costs for households and will shoulder the costs of needed power and infrastructure — including potentially higher electricity rates in host communities.
-          <div class="translation">翻译：唐纳德·特朗普总统计划利用其2026年国情咨文演讲，重点提及与主要科技公司达成的新数据中心能源协议，旨在解决与人工智能基础设施相关的电力需求增长问题。政府一直在谈判“纳税人保护”承诺，根据这些承诺，微软、谷歌、OpenAI、亚马逊和Meta等公司将公开承诺确保其不断扩大的、能源密集型数据中心不会推高家庭电网成本，并将承担所需电力和基础设施的成本——包括托管社区可能更高的电价。</div>
+          Expectations for revenue this quarter is 65-66billy. I think they easily eclipse that as Jensen tends to guide conservatively. Consensus guide for next quarter is 75 Billy. I actually think that number will be closer to 80. Just obscene amounts of money an even more crazy are their margins.
+          <div class="translation">翻译：本季度营收预期为 650-660 亿美元。我认为他们很容易超过这个数字，因为 Jensen 倾向于保守指导。下一季度的普遍预期是 750 亿美元。我实际上认为这个数字将接近 800 亿美元。这简直是天文数字般的收入，他们的利润率更是疯狂。</div>
         </blockquote>
         <blockquote class="quote">
-          Welp, decided to take the loss after doubling and tripling down on these $405 March 6th calls. Wiped out my YTD realized gains, but it could've been worse.
-          <div class="translation">翻译：好吧，在对这些3月6日405美元看涨期权加倍和三倍下注后，我决定止损。我的年初至今已实现收益被抹去，但情况可能更糟。</div>
+          You have Blackwell selling out, orders for Rubin from Meta (more hyperscalers to follow) and then you have next generation Feynman production to keep the train rolling.
+          <div class="translation">翻译：Blackwell 芯片销售一空，Meta 订购了 Rubin 芯片（更多超大规模数据中心将跟进），然后是下一代 Feynman 芯片的生产，以保持业务持续发展。</div>
         </blockquote>
         <blockquote class="quote">
-          Japan's Fair Trade Commission raided Microsoft Japan's offices on Wednesday as part of an investigation into whether it improperly restricted customers of its Azure platform from using rival cloud services.
-          <div class="translation">翻译：据《日本经济新闻》报道，日本公平贸易委员会周三突袭了微软日本办事处，作为一项调查的一部分，该调查旨在查明微软是否不当限制其Azure平台客户使用竞争对手的云服务。</div>
+          Record Q4 revenue of $68.1B (+20% QoQ,+73% Y/Y) vs Consensus of $65.7B Record Q4 EPS of $1.62 vs Consensus of $1.53 Record Data Center Q4 revenue of $62.3B (+75% Y/Y).
+          <div class="translation">翻译：第四季度营收达到创纪录的 681 亿美元（环比增长 20%，同比增长 73%），高于市场预期的 657 亿美元；第四季度每股收益达到创纪录的 1.62 美元，高于市场预期的 1.53 美元；数据中心第四季度营收达到创纪录的 623 亿美元（同比增长 75%）。</div>
+        </blockquote>
+        <blockquote class="quote">
+          What's getting missed: that $78B assumes zero China Data Center revenue. CFO Colette Kress said explicitly on the call tonight that while H200 chips were approved for sale to China by the US government, Nvidia has not generated any revenue from them and doesn't know whether imports will be allowed in.
+          <div class="translation">翻译：被忽视的一点是：780 亿美元的预期收入假设中国数据中心收入为零。首席财务官 Colette Kress 在今晚的电话会议上明确表示，尽管 H200 芯片已获得美国政府批准销往中国，但英伟达尚未从中获得任何收入，也不确定是否允许进口。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">MSFT (Microsoft Corporation)</div>
+        <blockquote class="quote">
+          Japan's Fair Trade Commission raided Microsoft Japan's offices on Wednesday as part of an investigation into whether it improperly restricted customers of its Azure platform from using rival cloud services, the Nikkei business daily reported, citing sources familiar with the matter.
+          <div class="translation">翻译：据《日本经济新闻》援引知情人士报道，日本公平贸易委员会周三突击搜查了微软日本的办公室，作为调查其是否不当限制 Azure 平台客户使用竞争对手云服务的一部分。</div>
+        </blockquote>
+        <blockquote class="quote">
+          MSFT: $81.3 billion (up 16.7% YoY) Quarterly Net Incomes MSFT: $38.5 billion (up 59.5% YoY).
+          <div class="translation">翻译：微软：813 亿美元（同比增长 16.7%）季度净收入 微软：385 亿美元（同比增长 59.5%）。</div>
         </blockquote>
         <blockquote class="quote">
           Amazon, Microsoft, and Google aren't making risky AI investments. They're systematically extracting equity from every serious AI company while getting their money back through infrastructure fees.
-          <div class="translation">翻译：亚马逊、微软和谷歌并非在进行有风险的人工智能投资。他们正在系统地从每一家重要的人工智能公司中获取股权，同时通过基础设施费用收回资金。</div>
+          <div class="translation">翻译：亚马逊、微软和谷歌并没有进行高风险的 AI 投资。他们正在系统地从每一家重要的 AI 公司中提取股权，同时通过基础设施费用收回资金。</div>
+        </blockquote>
+        <blockquote class="quote">
+          President Donald Trump plans to use his 2026 State of the Union address to highlight new data center energy agreements with major tech firms that are intended to address rising electricity demand tied to AI infrastructure.
+          <div class="translation">翻译：唐纳德·特朗普总统计划利用其 2026 年国情咨文强调与主要科技公司达成新的数据中心能源协议，旨在解决与人工智能基础设施相关的日益增长的电力需求。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">META (Meta Platforms, Inc.)</div>
+        <blockquote class="quote">
+          Meta Platforms has reportedly agreed to purchase over $100 billion worth of AI computing power from Advanced Micro Devices, signaling an aggressive expansion of its artificial intelligence infrastructure.
+          <div class="translation">翻译：据报道，Meta Platforms 已同意从 Advanced Micro Devices 购买价值超过 1000 亿美元的 AI 计算能力，这标志着其人工智能基础设施的积极扩张。</div>
+        </blockquote>
+        <blockquote class="quote">
+          META: $59.9 billion (up 23.8% YoY) Quarterly Net Incomes META: $22.8 billion (up 9.3% YoY).
+          <div class="translation">翻译：Meta：599 亿美元（同比增长 23.8%）季度净收入 Meta：228 亿美元（同比增长 9.3%）。</div>
+        </blockquote>
+        <blockquote class="quote">
+          Amazon, Microsoft, and Google aren't making risky AI investments. They're systematically extracting equity from every serious AI company while getting their money back through infrastructure fees.
+          <div class="translation">翻译：亚马逊、微软和谷歌并没有进行高风险的 AI 投资。他们正在系统地从每一家重要的 AI 公司中提取股权，同时通过基础设施费用收回资金。</div>
+        </blockquote>
+        <blockquote class="quote">
+          President Donald Trump plans to use his 2026 State of the Union address to highlight new data center energy agreements with major tech firms that are intended to address rising electricity demand tied to AI infrastructure.
+          <div class="translation">翻译：唐纳德·特朗普总统计划利用其 2026 年国情咨文强调与主要科技公司达成新的数据中心能源协议，旨在解决与人工智能基础设施相关的日益增长的电力需求。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">AAPL (Apple Inc.)</div>
+        <blockquote class="quote">
+          bombshell report released today that the feds warned tech companies about china invading Taiwan, yet the two companies most likely to be hit the hardest are up today.
+          <div class="translation">翻译：今天发布的一份重磅报告称，联邦政府警告科技公司中国可能入侵台湾，然而最有可能受到严重冲击的两家公司今天却上涨了。</div>
+        </blockquote>
+        <blockquote class="quote">
+          AAPL: $143.8 billion (up 15.7% YoY) Quarterly Net Incomes AAPL: $42.1 billion (up 15.9% YoY).
+          <div class="translation">翻译：苹果：1438 亿美元（同比增长 15.7%）季度净收入 苹果：421 亿美元（同比增长 15.9%）。</div>
+        </blockquote>
+        <blockquote class="quote">
+          AAPL is trending up and there's a product release coming but I think this could be a good setup to get out before earnings.
+          <div class="translation">翻译：苹果股价正在上涨，并且即将发布新产品，但我认为这可能是在财报发布前退出的一个好时机。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">TSLA (Tesla, Inc.)</div>
+        <blockquote class="quote">
+          I bought in 2014, and I’ve sold a decent amount of the years. There are probably better investments I can make with this $10k at this point. How should I decide when/if to sell TSLA, realize the gains, and re-invest?
+          <div class="translation">翻译：我是在 2014 年买入的，这些年我卖出了不少。在这一点上，我可能可以用这 1 万美元进行更好的投资。我应该如何决定何时/是否出售特斯拉，实现收益，然后重新投资？</div>
+        </blockquote>
+        <blockquote class="quote">
+          Some dude turned $100K to $6.1M in 4 minutes. Makes you question your rules and discipline.
+          <div class="translation">翻译：有人在 4 分钟内将 10 万美元变成了 610 万美元。这让你质疑自己的规则和纪律。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">IBM (International Business Machines Corporation)</div>
+        <blockquote class="quote">
+          IBM just wiped out about $31B in market cap in a single session. Down 13% in a day. Now roughly 27% down this month.
+          <div class="translation">翻译：IBM 在一个交易日内市值蒸发约 310 亿美元。一天下跌 13%。本月累计下跌约 27%。</div>
+        </blockquote>
+        <blockquote class="quote">
+          News that Anthropic’s Claude Code can now help modernize COBOL systems. And that’s interesting, because COBOL is basically the backbone of a lot of IBM’s legacy mainframe business.
+          <div class="translation">翻译：Anthropic 的 Claude Code 现在可以帮助现代化 COBOL 系统，这很有意思，因为 COBOL 基本上是 IBM 许多传统大型机业务的支柱。</div>
+        </blockquote>
+        <blockquote class="quote">
+          If AI suddenly makes migration cheaper and faster, that chips away at the “no one wants to touch this” moat IBM has benefited from for decades. Are we watching real disruption happen in real time?
+          <div class="translation">翻译：如果人工智能突然让迁移变得更便宜、更快，那么它就会侵蚀 IBM 几十年来一直受益的“没人想碰”的护城河。我们正在实时见证真正的颠覆发生吗？</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">TSM (Taiwan Semiconductor Manufacturing Company Limited)</div>
+        <blockquote class="quote">
+          TSMC's stock surged by 4.25%, closing at $385.75 per share, elevating its market cap to $2 trillion.
+          <div class="translation">翻译：台积电股价飙升 4.25%，收于每股 385.75 美元，使其市值升至 2 万亿美元。</div>
+        </blockquote>
+        <blockquote class="quote">
+          The rapid doubling of TSMC's market value is largely driven by the persistent demand in the AI sector.
+          <div class="translation">翻译：台积电市值迅速翻倍，主要受人工智能领域持续需求的推动。</div>
+        </blockquote>
+        <blockquote class="quote">
+          bombshell report released today that the feds warned tech companies about china invading Taiwan, yet the two companies most likely to be hit the hardest are up today.
+          <div class="translation">翻译：今天发布的一份重磅报告称，联邦政府警告科技公司中国可能入侵台湾，然而最有可能受到严重冲击的两家公司今天却上涨了。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">CRM (Salesforce, Inc.)</div>
+        <blockquote class="quote">
+          Salesforce shares sink on mixed guidance as company commits $50 billion for buybacks.
+          <div class="translation">翻译：Salesforce 因喜忧参半的业绩指引而股价下跌，公司承诺回购 500 亿美元股票。</div>
         </blockquote>
       </li>
       <li>
         <div class="stock-tag">AMD (Advanced Micro Devices, Inc.)</div>
         <blockquote class="quote">
-          Portfolio was on life support, bleeding out like a true regard. Then MU and AMD rolled up with the defibrillator: shock +$232k (144%).
-          <div class="translation">翻译：投资组合命悬一线，像一个真正的傻瓜一样血流不止。然后美光和AMD带着除颤器赶来：一震之下，增加了23.2万美元（144%）。</div>
-        </blockquote>
-        <blockquote class="quote">
-          AMD clinches second mega chip supply deal, this time with Meta.
-          <div class="translation">翻译：AMD与Meta达成第二笔大型芯片供应协议。</div>
-        </blockquote>
-        <blockquote class="quote">
           Meta Platforms has reportedly agreed to purchase over $100 billion worth of AI computing power from Advanced Micro Devices, signaling an aggressive expansion of its artificial intelligence infrastructure.
-          <div class="translation">翻译：据报道，Meta Platforms已同意从Advanced Micro Devices购买价值超过1000亿美元的人工智能计算能力，这标志着其人工智能基础设施的积极扩张。</div>
-        </blockquote>
-        <blockquote class="quote">
-          These call options offer the lowest ratio of Call Pricing (IV) relative to historical volatility (HV). These options are priced expecting the underlying to move up significantly less than it has moved up in the past.
-          <div class="translation">翻译：这些看涨期权提供了看涨期权定价（隐含波动率）相对于历史波动率（HV）的最低比率。这些期权的定价预期标的物上涨幅度将远小于其过去上涨幅度。</div>
-        </blockquote>
-      </li>
-      <li>
-        <div class="stock-tag">MU (Micron Technology, Inc.)</div>
-        <blockquote class="quote">
-          Memory chips and red-team rockets brought me back from the dead. MU Memory King reigns supreme.
-          <div class="translation">翻译：内存芯片和红队火箭将我从死亡线上拉了回来。美光内存之王至高无上。</div>
-        </blockquote>
-        <blockquote class="quote">
-          MU $500C Earnings next month, low forward PE, bottleneck in industry.
-          <div class="translation">翻译：美光下月公布财报，看涨期权500美元，低远期市盈率，行业瓶颈。</div>
-        </blockquote>
-        <blockquote class="quote">
-          Setting one up for micron as well, based on inventory, pricing and some other factors.
-          <div class="translation">翻译：我正在为美光建立一个类似的分析模型，基于库存、定价和其他一些因素。</div>
-        </blockquote>
-      </li>
-      <li>
-        <div class="stock-tag">PYPL (PayPal Holdings, Inc.)</div>
-        <blockquote class="quote">
-          PayPal stock surges on report Stripe weighs acquisition.
-          <div class="translation">翻译：据报道Stripe考虑收购PayPal，PayPal股价飙升。</div>
-        </blockquote>
-        <blockquote class="quote">
-          Payments Processor Stripe Expresses Interest in PayPal.
-          <div class="translation">翻译：支付处理商Stripe表示对PayPal有兴趣。</div>
-        </blockquote>
-        <blockquote class="quote">
-          PayPal shares jumped 8% Tuesday afternoon after Bloomberg reported that Stripe is a serious contenter for an acquisition of all or parts of the payments company.
-          <div class="translation">翻译：周二下午，彭博社报道称Stripe正在认真考虑收购PayPal全部或部分业务后，PayPal股价上涨8%。</div>
-        </blockquote>
-      </li>
-      <li>
-        <div class="stock-tag">WBD (Warner Bros. Discovery, Inc.)</div>
-        <blockquote class="quote">
-          '$7 billion break-up fee': Warner Bros. Discovery says Paramount’s new bid might top Netflix’s.
-          <div class="translation">翻译：“70亿美元分手费”：华纳兄弟探索表示派拉蒙的新报价可能超过Netflix。</div>
-        </blockquote>
-        <blockquote class="quote">
-          Warner Bros. Discovery says Paramount raised its bid to $31 per share. $31 is not enough to beat a Netflix deal.
-          <div class="translation">翻译：华纳兄弟探索表示派拉蒙将出价提高到每股31美元。31美元不足以击败Netflix的交易。</div>
-        </blockquote>
-        <blockquote class="quote">
-          Today's increase in bid by Paramount shows that content is KING.
-          <div class="translation">翻译：今天派拉蒙提高出价表明内容为王。</div>
-        </blockquote>
-      </li>
-      <li>
-        <div class="stock-tag">IBM (International Business Machines Corp.)</div>
-        <blockquote class="quote">
-          IBM just wiped out about $31B in market cap in a single session. Down 13% in a day.
-          <div class="translation">翻译：IBM在单一交易日内市值蒸发了约310亿美元。一天内下跌了13%。</div>
-        </blockquote>
-        <blockquote class="quote">
-          News that Anthropic’s Claude Code can now help modernize COBOL systems. And that’s interesting, because COBOL is basically the backbone of a lot of IBM’s legacy mainframe business.
-          <div class="translation">翻译：消息称Anthropic的Claude Code现在可以帮助现代化COBOL系统。这很有趣，因为COBOL基本上是IBM许多传统大型机业务的支柱。</div>
-        </blockquote>
-        <blockquote class="quote">
-          Are we watching real disruption happen in real time?
-          <div class="translation">翻译：我们是否正在实时见证真正的颠覆发生？</div>
-        </blockquote>
-        <blockquote class="quote">
-          IBM sinks as Anthropic touts Claude Code’s ability to modernize COBOL codebases. COBOL, or Common Business-Oriented Language, is a programming language for business functions.
-          <div class="translation">翻译：IBM股价下跌，原因是Anthropic宣称Claude Code能够现代化COBOL代码库。COBOL，即通用商业导向语言，是一种用于业务功能的编程语言。</div>
+          <div class="translation">翻译：据报道，Meta Platforms 已同意从 Advanced Micro Devices 购买价值超过 1000 亿美元的 AI 计算能力，这标志着其人工智能基础设施的积极扩张。</div>
         </blockquote>
       </li>
     </ul>
@@ -251,244 +201,162 @@
     <h2>3. 小众公司冒泡</h2>
     <ul>
       <li>
-        <div class="stock-tag">GLW (Corning Inc.)</div>
+        <div class="stock-tag">ZS (Zscaler, Inc.)</div>
         <blockquote class="quote">
-          Bought these leaps when GLW first hit $85 in 10/25, 12/27 expiry, $100 strike because I read that GLW makes fiber optics for data centers, among other things. It barely moved for three months, then they went ITM when GLW announced their $6 billion deal with Meta early January.
-          <div class="translation">翻译：当GLW在25年10月首次达到85美元时，我买入了这些长期看涨期权，到期日是27年12月，行权价100美元，因为我读到GLW为数据中心等制造光纤。它在三个月内几乎没有波动，直到GLW在1月初宣布与Meta达成60亿美元的交易时，它们才进入实值区域。</div>
+          How on earth is Zscaler (one of the largest cybersecurity companies) so low? I get the push back and changing environment with SMBs able to make their own products and cybersecurity services but it’s trading 84% below its average target price?
+          <div class="translation">翻译：Zscaler（最大的网络安全公司之一）怎么会这么低？我理解小企业能够开发自己的产品和网络安全服务带来的阻力以及不断变化的环境，但它的交易价格比平均目标价低 84%？</div>
         </blockquote>
       </li>
       <li>
-        <div class="stock-tag">DHT (DHT Holdings, Inc.)</div>
+        <div class="stock-tag">LUNR (Intuitive Machines, Inc.)</div>
         <blockquote class="quote">
-          Yolo'd DHT monthlies because I thought we were striking Iran before Ramadan. Didn't happen, instead some guys Sinokor started hoarding VLCC's, tanker rates spiking up.
-          <div class="translation">翻译：我全仓买入DHT月度期权，因为我以为斋月前我们会打击伊朗。这没有发生，反而是一些Sinokor公司开始囤积超大型油轮，导致油轮运费飙升。</div>
+          LUNR dropped after a dilution and people panic selling/stop losses being hit? Also looks oversold to me.
+          <div class="translation">翻译：LUNR 在稀释后下跌，人们恐慌性抛售/止损被触发？对我来说也看起来超卖了。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">FOUR (Shift4 Payments, Inc.)</div>
+        <blockquote class="quote">
+          It’s a fact that on Feb 7 Jared Isaacman has officially relinquished his super-voting power over Shift4 Payments (FOUR). This was achieved through a "Simplification Transaction" where the company collapsed its multi-class share structure into a single class of Class A common stock.
+          <div class="translation">翻译：事实是，2 月 7 日，Jared Isaacman 已正式放弃了他在 Shift4 Payments（FOUR）的超级投票权。这是通过“简化交易”实现的，该公司将其多类股票结构合并为单一类别的 A 类普通股。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">SZL (Sezzle Inc.)</div>
+        <blockquote class="quote">
+          GMV reached a new quarterly high of $1.2 billion in 4Q25, representing a 35.3% YoY increase Total Revenue jumped 32.2% YoY to $129.9 million for 4Q25. Net Income Per Diluted Share*1 and Adjusted Net Income per Diluted Share*1, 2 reached $1.21 in the fourth quarter, representing 72.9% and 68.1% YoY increases, respectively.
+          <div class="translation">翻译：2025 年第四季度 GMV 达到 12 亿美元的季度新高，同比增长 35.3%；第四季度总收入同比增长 32.2% 至 1.299 亿美元。第四季度每股稀释净收益*1 和调整后每股稀释净收益*1, 2 达到 1.21 美元，分别同比增长 72.9% 和 68.1%。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">HUM (Humana Inc.)</div>
+        <blockquote class="quote">
+          Humana is trading at a deep cyclical-fear discount driven by Medicare Advantage regulatory anxiety, pricing in a worst-case margin scenario that likely overstates the actual policy risk. Over 12-18 months, if CMS rate clarity emerges and medical cost ratios normalize from post-COVID peaks, the stock could re-rate toward $260-300 range, representing 45-65% upside from current levels.
+          <div class="translation">翻译：Humana 正以深度周期性恐惧折价交易，这受 Medicare Advantage 监管担忧驱动，其定价反映了最坏的利润情景，可能夸大了实际政策风险。在 12-18 个月内，如果 CMS 费率明确化且医疗成本率从疫情后的峰值恢复正常，该股可能重新估值至 260-300 美元区间，较当前水平有 45-65% 的上涨空间。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">IT (Gartner, Inc.)</div>
+        <blockquote class="quote">
+          You're buying a company with a genuine, decades-old moat, the Magic Quadrant, the Hype Cycle, trusted C-suite relationships @ 15x earnings and an 8% FCF yield. The fear here (AI disruption + weak guidance) is real but not yet proven fatal.
+          <div class="translation">翻译：你正在购买一家拥有真实、数十年护城河的公司，拥有魔力象限、炒作周期、值得信赖的高管关系，市盈率为 15 倍，自由现金流收益率为 8%。这里的担忧（AI 颠覆 + 疲软的指引）是真实的，但尚未被证明是致命的。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">PYPL (PayPal Holdings, Inc.)</div>
+        <blockquote class="quote">
+          PayPal (NASDAQ:PYPL) shares jumped 8% Tuesday afternoon after Bloomberg reported that Stripe is a serious contenter for an acquisition of all or parts of the payments company.
+          <div class="translation">翻译：彭博社报道称 Stripe 正在认真考虑收购 PayPal（NASDAQ:PYPL）全部或部分业务后，PayPal 股价周二下午上涨 8%。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">MRK (Merck & Co., Inc.)</div>
+        <blockquote class="quote">
+          Merck announced this week that it is creating a separate cancer business, as it braces for the loss of patent protection on Keytruda, the cancer treatment that accounts for nearly half of the company’s revenue. The first threat is the 'patent cliff' everyone is talking about, meaning they will lose the exclusivity they have for Keytruda, allowing others to create their own version of Keytruda.
+          <div class="translation">翻译：默克本周宣布将成立一个独立的癌症业务部门，以应对其癌症治疗药物 Keytruda 的专利保护期届满。Keytruda 占该公司近一半的收入。第一个威胁是所有人都在谈论的“专利悬崖”，这意味着他们将失去 Keytruda 的独占权，允许其他公司生产自己的 Keytruda 版本。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">IONQ (IonQ, Inc.)</div>
+        <blockquote class="quote">
+          Ionq is trading at a price to sales ratio (P/S) of 83.5 given its 2026 sales. Let’s put this into perspective and compare with other companies. Ionq reported a massive $753.7 million GAAP net income. $949.6 million came from a change in fair value of warrant liabilities.
+          <div class="translation">翻译：鉴于其 2026 年的销售额，IonQ 的市销率（P/S）为 83.5。让我们将其置于背景中并与其他公司进行比较。IonQ 报告了高达 7.537 亿美元的 GAAP 净收入。其中 9.496 亿美元来自认股权证负债公允价值的变化。</div>
         </blockquote>
       </li>
       <li>
         <div class="stock-tag">WDAY (Workday, Inc.)</div>
         <blockquote class="quote">
-          Workday stock sinks on weak revenue guidance.
-          <div class="translation">翻译：Workday股价因疲软的营收指引而下跌。</div>
-        </blockquote>
-      </li>
-      <li>
-        <div class="stock-tag">NVO (Novo Nordisk A/S)</div>
-        <blockquote class="quote">
-          Novo just cut Wegovy/Ozempic prices up to 50% the day after CagriSema failed. Novo announced yesterday they're cutting Wegovy list prices 50% and Ozempic prices up to 40%.
-          <div class="translation">翻译：CagriSema失败的第二天，诺和诺德立即将Wegovy/Ozempic价格下调了50%。诺和诺德昨天宣布，他们将Wegovy的标价下调50%，Ozempic的价格下调40%。</div>
-        </blockquote>
-      </li>
-      <li>
-        <div class="stock-tag">OCSL (Oaktree Specialty Lending Corp.)</div>
-        <blockquote class="quote">
-          OCSL (Oaktree Specialty Lending, $1B market cap) is basically a company that lends money to mid sized businesses. This one is different because here the insiders are buying, not selling.
-          <div class="translation">翻译：OCSL（Oaktree Specialty Lending，市值10亿美元）本质上是一家向中型企业提供贷款的公司。这次不同的是，内部人士正在买入，而不是卖出。</div>
-        </blockquote>
-      </li>
-      <li>
-        <div class="stock-tag">MLR (Miller Industries, Inc.)</div>
-        <blockquote class="quote">
-          As I screen for undervalued companies, it seems there's a sweet spot right around $500m market cap. Last month I stumbled upon Miller Industries (ticker: MLR), the dominant player in tow truck systems. Low debt. Low multiples. Cyclical compression. Growth drivers: international expansion, military contracts, robotics.
-          <div class="translation">翻译：在我筛选被低估的公司时，市值5亿美元左右似乎是一个绝佳区间。上个月我偶然发现了Miller Industries（股票代码：MLR），它是拖车系统领域的主导者。低债务。低估值。周期性紧缩。增长驱动力：国际扩张、军事合同、机器人技术。</div>
-        </blockquote>
-      </li>
-      <li>
-        <div class="stock-tag">RIME (Algorhythm Holdings, Inc.)</div>
-        <blockquote class="quote">
-          RIME’s AI Hype vs. Cash Reality. $2.8M cash vs $8M+ annual burn leaves barely 4 months of runway. Debt is $6.8M. Until revenues ramp or spending drops dramatically, this is a high-risk setup.
-          <div class="translation">翻译：RIME的人工智能炒作与现金现实。280万美元现金对比每年超过800万美元的烧钱速度，仅剩不到4个月的运营资金。债务为680万美元。除非营收大幅增长或支出急剧下降，否则这是一个高风险的局面。</div>
-        </blockquote>
-      </li>
-      <li>
-        <div class="stock-tag">IMO (Imperial Oil Limited)</div>
-        <blockquote class="quote">
-          Imperial Oil’s Massive 5-Year Rally Now Raising Red Flags. After a nearly 470% surge in five years, Imperial Oil is facing valuation pushback. RBC downgraded the stock to “Underperform,” saying it’s become disconnected from fundamentals and that better opportunities exist in the sector.
-          <div class="translation">翻译：帝国石油五年来的大幅上涨现在敲响了警钟。在五年内飙升近470%后，帝国石油面临估值回调。RBC将其股票评级下调至“表现不佳”，称其已脱离基本面，并且该领域存在更好的机会。</div>
-        </blockquote>
-      </li>
-      <li>
-        <div class="stock-tag">CVNA (Carvana Co.)</div>
-        <blockquote class="quote">
-          Carvana CVNA Puts Leading the Way. + 63% YTD. Opened 3 $420 CVNA puts before earnings. Sold them last week for huge gains. I remain bearish against Carvana and I’m fully ready to disclose continued short positions.
-          <div class="translation">翻译：Carvana CVNA看跌期权领跑。年初至今+63%。我在财报发布前买入了3份420美元的CVNA看跌期权。上周卖出获得了巨额收益。我仍然看空Carvana，并已准备好披露继续持有的空头头寸。</div>
-        </blockquote>
-      </li>
-      <li>
-        <div class="stock-tag">LGF (Lionsgate Studios Corp.)</div>
-        <blockquote class="quote">
-          Lionsgate is the last remaining studio with standalone power, as a revenue generator, content creator, and insanely strong library of IP. Based on the multiples of Warner Brothers, we would expect that Lionsgate market cap on transaction would place share value at $18.50.
-          <div class="translation">翻译：Lionsgate是最后一个拥有独立实力的工作室，作为收入创造者、内容创作者和拥有极其强大的IP库。基于华纳兄弟的倍数，我们预计Lionsgate在交易中的市值将使其股票价值达到18.50美元。</div>
+          They beat EPS ($2.47 vs $2.32) and revenue was up 14.5% YoY. But the stock still tanked 8% after-hours and is down almost 40% YTD. Investors seem terrified that AI agents are going to make seat-based software redundant.
+          <div class="translation">翻译：他们的每股收益（2.47 美元对 2.32 美元）和营收（同比增长 14.5%）均超出预期。但该股在盘后仍下跌 8%，年初至今已下跌近 40%。投资者似乎担心人工智能代理将使基于座位的软件变得多余。</div>
         </blockquote>
       </li>
     </ul>
 
     <h2>4. AI主线讨论</h2>
     <div class="track-header">模型</div>
-    <ul>
-      <li>
-        <blockquote class="quote">
-          OpenAI’s planned cash burn is insane.
-          <div class="translation">翻译：OpenAI计划的现金消耗是疯狂的。</div>
-        </blockquote>
-      </li>
-      <li>
-        <blockquote class="quote">
-          OpenAI cuts spending plan to $600B from $1.4T through 2030. They also expect $280B in revenue in 2030 from $13B last year, so I guess subsidized AIs might slowly fade away.
-          <div class="translation">翻译：OpenAI将其2030年前的支出计划从1.4万亿美元削减至6000亿美元。他们还预计2030年营收将达到2800亿美元，而去年为130亿美元，所以我猜补贴式AI可能会慢慢消失。</div>
-        </blockquote>
-      </li>
-      <li>
-        <blockquote class="quote">
-          OpenAI did not slash spending from 1.4 trillion to 600 billion. They stated 600 billion by 2030, 1.4 trillion over the next 8 years.
-          <div class="translation">翻译：OpenAI并未将支出从1.4万亿美元削减至6000亿美元。他们表示到2030年为6000亿美元，未来8年为1.4万亿美元。</div>
-        </blockquote>
-      </li>
-      <li>
-        <blockquote class="quote">
-          I still believe that’s true, but I also think the cost of developing AI models is going to prove to be much cheaper than it currently is, and China will prove this to the market with more releases of Kimi and DeepSeek and who knows what else.
-          <div class="translation">翻译：我仍然相信这是真的，但我也认为开发AI模型的成本将证明比目前便宜得多，中国将通过发布更多的Kimi和DeepSeek等产品向市场证明这一点。</div>
-        </blockquote>
-      </li>
-      <li>
-        <blockquote class="quote">
-          IBM sinks as Anthropic touts Claude Code’s ability to modernize COBOL codebases.
-          <div class="translation">翻译：IBM股价下跌，原因是Anthropic宣称Claude Code能够现代化COBOL代码库。</div>
-        </blockquote>
-      </li>
-    </ul>
+    <blockquote class="quote">
+      Pentagon threatening to forcibly open source Claude to the military.
+      <div class="translation">翻译：五角大楼威胁要强制开源 Claude 供军队使用。</div>
+    </blockquote>
+    <blockquote class="quote">
+      News that Anthropic’s Claude Code can now help modernize COBOL systems.
+      <div class="translation">翻译：Anthropic 的 Claude Code 现在可以帮助现代化 COBOL 系统。</div>
+    </blockquote>
+    <blockquote class="quote">
+      Shares of U.S. software companies that entered into parentships with AI startup Anthropic on Tuesday helped lead a rebound in the sector that has been hammered by fears about the disruptive impact of artificial intelligence.
+      <div class="translation">翻译：周二，与人工智能初创公司 Anthropic 建立合作关系的美国软件公司股价引领了该行业的反弹，此前该行业一直受到对人工智能颠覆性影响的担忧的打击。</div>
+    </blockquote>
     <div class="track-header">算</div>
-    <ul>
-      <li>
-        <blockquote class="quote">
-          South Korea semi exports just jumped 134% YoY. Overall exports are up 47% YoY, but the craziest part is semiconductor exports specifically surged 134%.
-          <div class="translation">翻译：韩国半导体出口同比增长134%。整体出口增长47%，但最疯狂的是半导体出口激增134%。</div>
-        </blockquote>
-      </li>
-      <li>
-        <blockquote class="quote">
-          TSMC's stock surged by 4.25%, closing at $385.75 per share, elevating its market cap to $2 trillion. The rapid doubling of TSMC's market value is largely driven by the persistent demand in the AI sector.
-          <div class="translation">翻译：台积电股价飙升4.25%，收于每股385.75美元，使其市值达到2万亿美元。台积电市值的快速翻倍主要得益于人工智能领域持续的需求。</div>
-        </blockquote>
-      </li>
-      <li>
-        <blockquote class="quote">
-          Meta Platforms has reportedly agreed to purchase over $100 billion worth of AI computing power from Advanced Micro Devices, signaling an aggressive expansion of its artificial intelligence infrastructure.
-          <div class="translation">翻译：据报道，Meta Platforms已同意从Advanced Micro Devices购买价值超过1000亿美元的人工智能计算能力，这标志着其人工智能基础设施的积极扩张。</div>
-        </blockquote>
-      </li>
-      <li>
-        <blockquote class="quote">
-          Samsung develops and makes chips in house. Including the recently announced next gen HBM4 architecture. It is investing within US borders, with a Texas factory that Elon has stated will exclusively produce Teslas AI6 chips up to 2033.
-          <div class="translation">翻译：三星自主开发和制造芯片。包括最近宣布的下一代HBM4架构。它正在美国境内投资，在德克萨斯州设有一家工厂，埃隆曾表示该工厂将独家生产特斯拉的AI6芯片直至2033年。</div>
-        </blockquote>
-      </li>
-    </ul>
+    <blockquote class="quote">
+      You have Blackwell selling out, orders for Rubin from Meta (more hyperscalers to follow) and then you have next generation Feynman production to keep the train rolling.
+      <div class="translation">翻译：Blackwell 芯片销售一空，Meta 订购了 Rubin 芯片（更多超大规模数据中心将跟进），然后是下一代 Feynman 芯片的生产，以保持业务持续发展。</div>
+    </blockquote>
+    <blockquote class="quote">
+      Meta Platforms has reportedly agreed to purchase over $100 billion worth of AI computing power from Advanced Micro Devices, signaling an aggressive expansion of its artificial intelligence infrastructure.
+      <div class="translation">翻译：据报道，Meta Platforms 已同意从 Advanced Micro Devices 购买价值超过 1000 亿美元的 AI 计算能力，这标志着其人工智能基础设施的积极扩张。</div>
+    </blockquote>
+    <blockquote class="quote">
+      The rapid doubling of TSMC's market value is largely driven by the persistent demand in the AI sector.
+      <div class="translation">翻译：台积电市值迅速翻倍，主要受人工智能领域持续需求的推动。</div>
+    </blockquote>
+    <blockquote class="quote">
+      CFO Colette Kress said explicitly on the call tonight that while H200 chips were approved for sale to China by the US government, Nvidia has not generated any revenue from them and doesn't know whether imports will be allowed in.
+      <div class="translation">翻译：首席财务官 Colette Kress 在今晚的电话会议上明确表示，尽管 H200 芯片已获得美国政府批准销往中国，但英伟达尚未从中获得任何收入，也不确定是否允许进口。</div>
+    </blockquote>
     <div class="track-header">光</div>
-    <ul>
-      <li>
-        <blockquote class="quote">
-          Bought these leaps when GLW first hit $85 in 10/25, 12/27 expiry, $100 strike because I read that GLW makes fiber optics for data centers, among other things.
-          <div class="translation">翻译：当GLW在25年10月首次达到85美元时，我买入了这些长期看涨期权，到期日是27年12月，行权价100美元，因为我读到GLW为数据中心等制造光纤。</div>
-        </blockquote>
-      </li>
-      <li>
-        <blockquote class="quote">
-          Optical & Networking Supercycle at the heart of the AI Revolution.
-          <div class="translation">翻译：光纤与网络超级周期是人工智能革命的核心。</div>
-        </blockquote>
-      </li>
-    </ul>
-    <div class="track-header">存</div>
-    <ul>
-      <!-- No specific high-quality quotes directly related to storage technology or companies found in the provided data pool for this date. -->
-    </ul>
+    <blockquote class="quote">
+      Optical & Networking Supercycle at the heart of the AI Revolution.
+      <div class="translation">翻译：光纤与网络超级周期是人工智能革命的核心。</div>
+    </blockquote>
     <div class="track-header">电</div>
-    <ul>
-      <li>
-        <blockquote class="quote">
-          President Donald Trump plans to use his 2026 State of the Union address to highlight new data center energy agreements with major tech firms that are intended to address rising electricity demand tied to AI infrastructure.
-          <div class="translation">翻译：唐纳德·特朗普总统计划利用其2026年国情咨文演讲，重点提及与主要科技公司达成的新数据中心能源协议，旨在解决与人工智能基础设施相关的电力需求增长问题。</div>
-        </blockquote>
-      </li>
-      <li>
-        <blockquote class="quote">
-          The administration has been negotiating “ratepayer protection” pledges under which companies such as Microsoft, Google, OpenAI, Amazon, and Meta would publicly commit to ensuring that their expanding, energy-hungry data centers won’t drive up grid costs for households and will shoulder the costs of needed power and infrastructure — including potentially higher electricity rates in host communities.
-          <div class="translation">翻译：政府一直在谈判“纳税人保护”承诺，根据这些承诺，微软、谷歌、OpenAI、亚马逊和Meta等公司将公开承诺确保其不断扩大的、能源密集型数据中心不会推高家庭电网成本，并将承担所需电力和基础设施的成本——包括托管社区可能更高的电价。</div>
-        </blockquote>
-      </li>
-      <li>
-        <blockquote class="quote">
-          How deregulation made electricity more expensive, not cheaper.
-          <div class="translation">翻译：放松管制如何使电力变得更贵，而不是更便宜。</div>
-        </blockquote>
-      </li>
-    </ul>
+    <blockquote class="quote">
+      President Donald Trump plans to use his 2026 State of the Union address to highlight new data center energy agreements with major tech firms that are intended to address rising electricity demand tied to AI infrastructure.
+      <div class="translation">翻译：唐纳德·特朗普总统计划利用其 2026 年国情咨文强调与主要科技公司达成新的数据中心能源协议，旨在解决与人工智能基础设施相关的日益增长的电力需求。</div>
+    </blockquote>
+    <blockquote class="quote">
+      The administration has been negotiating 'ratepayer protection' pledges under which companies such as Microsoft, Google, OpenAI, Amazon, and Meta would publicly commit to ensuring that their expanding, energy-hungry data centers won’t drive up grid costs for households and will shoulder the costs of needed power and infrastructure- including potentially higher electricity rates in host communities.
+      <div class="translation">翻译：政府一直在谈判“纳税人保护”承诺，根据该承诺，微软、谷歌、OpenAI、亚马逊和 Meta 等公司将公开承诺确保其不断扩大的、能源密集型的数据中心不会推高家庭电网成本，并承担所需电力和基础设施的成本，包括可能导致所在社区电价上涨的费用。</div>
+    </blockquote>
     <div class="track-header">板</div>
-    <ul>
-      <li>
-        <blockquote class="quote">
-          I build data centers, semiconductors, power plants, pharmaceuticals, etc. I can tell you that this stuff isnt going nowhere. We have 20 years worth of work in Phoenix, another 15 years in Reno, and another 7 in Idaho on our books.
-          <div class="translation">翻译：我建造数据中心、半导体工厂、发电厂、制药厂等。我可以告诉你，这些东西不会消失。我们在凤凰城有20年的工作量，在里诺有15年，在爱达荷州有7年的在手订单。</div>
-        </blockquote>
-      </li>
-      <li>
-        <blockquote class="quote">
-          The need for these plants and data centers is only going to get bigger. Eaton Vertiv Arista network.
-          <div class="translation">翻译：对这些工厂和数据中心的需求只会越来越大。伊顿、维谛、Arista网络。</div>
-        </blockquote>
-      </li>
-    </ul>
+    <blockquote class="quote">
+      I currently have 18% of my portfolio specifically in Semis - rest in developed exUS and SP500.
+      <div class="translation">翻译：我目前有 18% 的投资组合专门投资于半导体——其余部分投资于发达的非美国市场和标普 500 指数。</div>
+    </blockquote>
+    <blockquote class="quote">
+      Meta Platforms has reportedly agreed to purchase over $100 billion worth of AI computing power from Advanced Micro Devices, signaling an aggressive expansion of its artificial intelligence infrastructure.
+      <div class="translation">翻译：据报道，Meta Platforms 已同意从 Advanced Micro Devices 购买价值超过 1000 亿美元的 AI 计算能力，这标志着其人工智能基础设施的积极扩张。</div>
+    </blockquote>
+    <blockquote class="quote">
+      Record Data Center Q4 revenue of $62.3B (+75% Y/Y).
+      <div class="translation">翻译：数据中心第四季度营收达到创纪录的 623 亿美元（同比增长 75%）。</div>
+    </blockquote>
     <div class="track-header">云</div>
-    <ul>
-      <li>
-        <blockquote class="quote">
-          Japan's Fair Trade Commission raided Microsoft Japan's offices on Wednesday as part of an investigation into whether it improperly restricted customers of its Azure platform from using rival cloud services.
-          <div class="translation">翻译：日本公平贸易委员会周三突袭了微软日本办事处，作为一项调查的一部分，该调查旨在查明微软是否不当限制其Azure平台客户使用竞争对手的云服务。</div>
-        </blockquote>
-      </li>
-      <li>
-        <blockquote class="quote">
-          Amazon, Microsoft, and Google aren't making risky AI investments. They're systematically extracting equity from every serious AI company while getting their money back through infrastructure fees.
-          <div class="translation">翻译：亚马逊、微软和谷歌并非在进行有风险的人工智能投资。他们正在系统地从每一家重要的人工智能公司中获取股权，同时通过基础设施费用收回资金。</div>
-        </blockquote>
-      </li>
-    </ul>
+    <blockquote class="quote">
+      Japan's Fair Trade Commission raided Microsoft Japan's offices on Wednesday as part of an investigation into whether it improperly restricted customers of its Azure platform from using rival cloud services, the Nikkei business daily reported, citing sources familiar with the matter.
+      <div class="translation">翻译：据《日本经济新闻》援引知情人士报道，日本公平贸易委员会周三突击搜查了微软日本的办公室，作为调查其是否不当限制 Azure 平台客户使用竞争对手云服务的一部分。</div>
+    </blockquote>
+    <blockquote class="quote">
+      Amazon, Microsoft, and Google aren't making risky AI investments. They're systematically extracting equity from every serious AI company while getting their money back through infrastructure fees.
+      <div class="translation">翻译：亚马逊、微软和谷歌并没有进行高风险的 AI 投资。他们正在系统地从每一家重要的 AI 公司中提取股权，同时通过基础设施费用收回资金。</div>
+    </blockquote>
     <div class="track-header">AI应用</div>
-    <ul>
-      <li>
-        <blockquote class="quote">
-          News that Anthropic’s Claude Code can now help modernize COBOL systems.
-          <div class="translation">翻译：消息称Anthropic的Claude Code现在可以帮助现代化COBOL系统。</div>
-        </blockquote>
-      </li>
-      <li>
-        <blockquote class="quote">
-          If AI suddenly makes migration cheaper and faster, that chips away at the “no one wants to touch this” moat IBM has benefited from for decades.
-          <div class="translation">翻译：如果人工智能突然使迁移变得更便宜、更快，那将削弱IBM几十年来所受益的“无人愿碰”的护城河。</div>
-        </blockquote>
-      </li>
-      <li>
-        <blockquote class="quote">
-          Shares of U.S. software companies that entered into parentships with AI startup Anthropic on Tuesday helped lead a rebound in the sector that has been hammered by fears about the disruptive impact of artificial intelligence.
-          <div class="translation">翻译：周二，与人工智能初创公司Anthropic建立合作关系的美国软件公司股价帮助引领了该行业的回升，此前该行业曾因对人工智能颠覆性影响的担忧而遭受重创。</div>
-        </blockquote>
-      </li>
-      <li>
-        <blockquote class="quote">
-          The rate at which these industries are coming under attack by the AI narrative is pretty insane. Literally every single day there’s a new viral article on how and why these companies aren’t needed anymore.
-          <div class="translation">翻译：这些行业受到人工智能叙事冲击的速度相当惊人。几乎每天都有新的热门文章，讲述这些公司为何不再被需要。</div>
-        </blockquote>
-      </li>
-      <li>
-        <blockquote class="quote">
-          Cybersecurity is one of the most obvious secular bull markets I can think of. AI is a tailwind.
-          <div class="translation">翻译：网络安全是我能想到最明显的长期牛市之一。人工智能是一个助推因素。</div>
-        </blockquote>
-      </li>
-    </ul>
-
-</body>
-</html>
+    <blockquote class="quote">
+      News that Anthropic’s Claude Code can now help modernize COBOL systems.
+      <div class="translation">翻译：Anthropic 的 Claude Code 现在可以帮助现代化 COBOL 系统。</div>
+    </blockquote>
+    <blockquote class="quote">
+      Investors seem terrified that AI agents are going to make seat-based software redundant.
+      <div class="translation">翻译：投资者似乎担心人工智能代理将使基于座位的软件变得多余。</div>
+    </blockquote>
+    <blockquote class="quote">
+      Even with Aneel Bhusri back as CEO and their new 'Illuminate' AI platform, Wall Street just isn't buying the growth story for fiscal 2027.
+      <div class="translation">翻译：即使 Aneel Bhusri 重新担任首席执行官，并且他们推出了新的“Illuminate”人工智能平台，华尔街也不看好 2027 财年的增长前景。</div>
+    </blockquote>
+    <blockquote class="quote">
+      Goldman creates an AI-free stock index.
+      <div class="translation">翻译：高盛创建了一个无人工智能股票指数。</div>
+    </blockquote>
+</div>
         </div>
         <script>
             var myChart = echarts.init(document.getElementById('gauge'));
@@ -497,8 +365,8 @@
                     type: 'gauge', startAngle: 180, endAngle: 0, min: 0, max: 100, radius: '100%', center: ['50%', '75%'],
                     axisLine: { lineStyle: { width: 45, color: [[0.25, '#ef4444'], [0.45, '#f97316'], [0.55, '#d1d5db'], [0.75, '#84cc16'], [1, '#22c55e']] } },
                     pointer: { length: '60%', width: 8, itemStyle: { color: '#fff' } },
-                    detail: { fontSize: 40, fontWeight: 'bold', offsetCenter: [0, '25%'], formatter: '{value}\n恐慌', color: '#fff' },
-                    data: [{ value: 43 }]
+                    detail: { fontSize: 40, fontWeight: 'bold', offsetCenter: [0, '25%'], formatter: '{value}\n中立', color: '#fff' },
+                    data: [{ value: 45 }]
                 }]
             });
         </script>
