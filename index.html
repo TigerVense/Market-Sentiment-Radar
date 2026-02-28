@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>02月27日 情报终端</title>
+        <title>02月28日 情报终端</title>
         <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
         <style>
             :root { --bg: #0f172a; --text: #f1f5f9; --accent: #38bdf8; --border: #334155; }
@@ -36,216 +36,154 @@
     </head>
     <body>
         <div class="container">
-            <h1>🎯 02月27日 市场情报透视</h1>
-            <p style="color:#94a3b8">情报最后更新: 2026-02-27 21:37:57 (北京时间)</p>
+            <h1>🎯 02月28日 市场情报透视</h1>
+            <p style="color:#94a3b8">情报最后更新: 2026-02-28 10:43:32 (北京时间)</p>
             <div class="dashboard-card"><div id="gauge" class="gauge-container"></div></div>
             <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>美股量化市场情绪报告 (2026年02月27日)</title>
+    <title>Reddit市场情绪分析 (2026年02月28日)</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; margin: 20px; background-color: #f4f7f6; }
-        h1, h2, h3 { color: #2c3e50; border-bottom: 2px solid #eceff1; padding-bottom: 5px; margin-top: 30px; }
-        blockquote { background-color: #e9ecef; border-left: 5px solid #007bff; margin: 15px 0; padding: 10px 20px; font-style: italic; color: #555; }
-        .translation { font-style: normal; color: #333; margin-top: 10px; padding-top: 5px; border-top: 1px dashed #ced4da; }
-        .stock-tag { font-weight: bold; color: #007bff; margin-bottom: 5px; }
-        ul { list-style-type: none; padding: 0; }
-        li { background-color: #ffffff; border: 1px solid #dee2e6; margin-bottom: 10px; padding: 15px; border-radius: 8px; }
-        .track-header { font-weight: bold; color: #0056b3; margin-top: 15px; margin-bottom: 8px; border-bottom: 1px dotted #a0a0a0; padding-bottom: 3px; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0 auto; max-width: 900px; padding: 20px; background-color: #f9f9f9; }
+        h1 { color: #2c3e50; text-align: center; margin-bottom: 30px; }
+        h2 { color: #34495e; border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 40px; }
+        ul { list-style: none; padding: 0; }
+        li { background-color: #fff; border: 1px solid #e0e0e0; border-radius: 8px; margin-bottom: 15px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .stock-tag { font-weight: bold; color: #2980b9; font-size: 1.1em; margin-bottom: 10px; }
+        .quote { background-color: #f0f8ff; border-left: 4px solid #aaddff; padding: 10px 15px; margin: 10px 0; font-style: italic; color: #555; }
+        .translation { font-size: 0.9em; color: #777; margin-top: 5px; border-top: 1px dashed #e0e0e0; padding-top: 5px; }
+        .track-header { font-weight: bold; color: #e74c3c; font-size: 1.1em; margin-top: 20px; margin-bottom: 10px; }
+        .ai-quote { background-color: #f8fcfd; border-left: 3px solid #6c7a89; padding: 8px 12px; margin: 8px 0; font-size: 0.95em; color: #444; }
     </style>
 </head>
 <body>
-
-    <h1>美股量化市场情绪报告 (2026年02月27日)</h1>
+    <h1>Reddit市场情绪分析 (2026年02月28日)</h1>
 
     <h2>1. 宏观与市场情绪</h2>
-    <p>当前市场情绪复杂，宏观层面多项因素交织。AI的广泛经济影响备受关注，既带动了巨大的基础设施投资，也引发了对就业结构性风险的担忧。与此同时，软件股的估值以及AI代理对现有工具的整合能力成为讨论焦点。地缘政治风险，特别是中东地区围绕石油供应的潜在冲突，促使投资者寻求对冲策略。监管方面，荷兰针对未实现资本利得征税的提议引发了广泛批评，凸显了税收政策对投资行为的影响。市场集中度过高，S&P 500指数中少数科技巨头占据主导地位，引发了对潜在泡沫的警示，同时有观点质疑市值作为衡量整体财富指标的理论性。私人信贷市场也显示出压力，不良贷款增加，反映出市场普遍存在的紧张情绪。</p>
-    <blockquote>
-        If the stock price holds over a number of weeks after this announcement, this is direct feedback from investors incentivizing other companies to do the same.
-        <div class="translation">翻译：如果股价在消息公布后的几周内保持稳定，这将直接反馈投资者，激励其他公司也这样做。</div>
-    </blockquote>
-    <blockquote>
-        The average rate on the popular U.S. 30-year fixed-rate mortgage fell below 6% this week for the first time in 3-1/2 years, but economists said the improvement was likely temporary and on its own insufficient to boost housing demand unless supply increased.
-        <div class="translation">翻译：本周美国受欢迎的30年期固定利率抵押贷款平均利率在3年半以来首次跌破6%，但经济学家表示，这种改善可能是暂时的，并且除非供应增加，否则它本身不足以刺激住房需求。</div>
-    </blockquote>
-    <blockquote>
-        Most people don’t connect the dots. All this AI hype isn’t just software and GPUs. Every data center being built to run models like ChatGPT needs insane amounts of electricity, and that means insane amounts of copper for power infrastructure.
-        <div class="translation">翻译：大多数人没有把这些点连接起来。所有这些AI炒作不仅仅是软件和GPU。每个为运行ChatGPT等模型而建立的数据中心都需要大量的电力，这意味着需要大量的铜用于电力基础设施。</div>
-    </blockquote>
-    <blockquote>
-        He emphasizes that established software companies provide the &quot;system of record&quot; (ground truth data). AI agents will need these systems to finish their work and store information in a way humans can understand
-        <div class="translation">翻译：他强调，成熟的软件公司提供了“记录系统”（事实数据）。AI代理将需要这些系统来完成工作并以人类可理解的方式存储信息。</div>
-    </blockquote>
-    <blockquote>
-        But even after factoring in those changes, the picture that emerges is a market that is becoming increasingly one-sided.
-        <div class="translation">翻译：但即便考虑了这些变化，呈现出的图景是市场正变得越来越一边倒。</div>
-    </blockquote>
-    <blockquote>
-        So when people talk about total market value like it’s real cash sitting somewhere, I think it’s more theoretical.
-        <div class="translation">翻译：所以当人们谈论总市值时，就好像那是一笔真实存在的现金，我认为这更具理论性。</div>
-    </blockquote>
-    <blockquote>
-        A large credit fund managed by KKR tumbled on Thursday after reporting a jump in troubled loans, highlighting the mounting strains in private markets.
-        <div class="translation">翻译：一家由KKR管理的大型信贷基金周四在报告不良贷款激增后大跌，凸显了私人市场日益增长的压力。</div>
-    </blockquote>
+    <ul>
+      <li>
+        <blockquote class="quote">
+          Wall Street's main indexes dropped on Friday as AI anxiety hammered technology stocks, with the Nasdaq and the S&P 500 on pace for their steepest monthly loss since March 2025, while hotter-than-expected inflation data also weakened sentiment.
+          <div class="translation">翻译：周五华尔街主要股指下跌，原因是人工智能焦虑打击了科技股，纳斯达克和标普500指数有望创下自2025年3月以来最大的月度跌幅，而超出预期的通胀数据也削弱了市场情绪。</div>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote class="quote">
+          January PPI jumped 0.5% MoM way over 0.3% expected , core hit 0.8% sticky wholesale inflation screaming “Fed stays hawkish.”
+          <div class="translation">翻译：1月份PPI环比上涨0.5%，远超预期的0.3%，核心PPI达到0.8%，顽固的批发通胀表明“美联储将保持鹰派立场”。</div>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote class="quote">
+          Technology shares faced selling pressure this month as concerns over high valuations and the uncertain payoff from Big Tech's massive AI spending grew.
+          <div class="translation">翻译：本月科技股面临抛售压力，原因是人们对高估值以及大型科技公司巨额人工智能支出的不确定回报感到担忧。</div>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote class="quote">
+          I've been watching the software sector meltdown for the past month and I think the market's misdiagnosing what's actually happening here. The software isn't being replaced. The people using it are getting fired.
+          <div class="translation">翻译：过去一个月我一直在关注软件行业的崩溃，我认为市场误诊了实际情况。软件并没有被取代。使用它的人被解雇了。</div>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote class="quote">
+          The average rate on the popular U.S. 30-year fixed-rate mortgage fell below 6% this week for the first time in 3-1/2 years, but economists said the improvement was likely temporary and on its own insufficient to boost housing demand unless supply increased.
+          <div class="translation">翻译：本周美国热门30年期固定利率抵押贷款平均利率在3年半以来首次跌破6%，但经济学家表示，这一改善可能是暂时的，并且本身不足以提振住房需求，除非供应增加。</div>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote class="quote">
+          Falling returns, delayed exits, longer holding periods and tougher fundraising conditions are weighing on the private equity industry, and some firms may not make it through.
+          <div class="translation">翻译：回报下降、退出延迟、持有期延长以及更严峻的募资条件正在压制私募股权行业，一些公司可能无法挺过难关。</div>
+        </blockquote>
+      </li>
+    </ul>
 
     <h2>2. 热议中的个股和想法</h2>
     <ul>
       <li>
-        <div class="stock-tag">NVDA (NVIDIA Corporation)</div>
+        <div class="stock-tag">1. NFLX (Netflix)</div>
         <blockquote class="quote">
-          Nvidia is now cheaper than roughly a third of the stocks in the S&amp;P 500 but its revenue growth over the past 12 months of 65% is the third fastest in the index, according to data compiled by Bloomberg.
-          <div class="translation">翻译：根据彭博汇编的数据，英伟达现在比标普500指数中大约三分之一的股票便宜，但其过去12个月的收入增长率达到65%，是该指数中第三快的。</div>
-        </blockquote>
-        <blockquote class="quote">
-          Of all the market reactions to a company’s earnings and guidance, this has to be the one that puzzles me the most. How could it go up more than 3% AH, then end up flat, and open almost 3% down?
-          <div class="translation">翻译：在所有对公司盈利和指引的市场反应中，这无疑是最令我困惑的。它怎么可能盘后上涨超过3%，然后持平，开盘又下跌近3%？</div>
-        </blockquote>
-        <blockquote class="quote">
-          Been seeing Burry’s Nvidia vs Cisco comparison going around and it kinda makes sense on the supply side. Locking in huge capacity right when demand looks unstoppable has burned tech before.
-          <div class="translation">翻译：一直在看到Burry对英伟达和思科的比较，从供应侧来看有点道理。在需求看起来势不可挡的时候锁定巨大的产能，以前曾让科技公司吃过亏。</div>
-        </blockquote>
-        <blockquote class="quote">
-          What's getting missed: that $78B assumes zero China Data Center revenue.
-          <div class="translation">翻译：被忽视的是：780亿美元的指引假设中国数据中心收入为零。</div>
-        </blockquote>
-      </li>
-      <li>
-        <div class="stock-tag">NFLX (Netflix Inc.)</div>
-        <blockquote class="quote">
-          Netflix declined to raise its bid for Warner Bros. Discovery’s assets to match a revised bid by Paramount Skydance.
-          <div class="translation">翻译：Netflix拒绝提高对华纳兄弟探索公司资产的报价，以匹配派拉蒙Skydance的修订报价。</div>
-        </blockquote>
-        <blockquote class="quote">
-          On Thursday, the WBD board said it valued Paramount’s $31-per-share offer to be superior to an existing deal with Netflix.
-          <div class="translation">翻译：周四，WBD董事会表示，派拉蒙每股31美元的报价优于与Netflix现有协议。</div>
+          Netflix climbs after ending Warner Bros Discovery pursuit.
+          <div class="translation">翻译：Netflix在终止对华纳兄弟探索的收购后股价上涨。</div>
         </blockquote>
         <blockquote class="quote">
           Netflix just pulled the plug on their offer to buy Warner Bros Discovery’s studios/streaming biz, saying Paramount Skydance’s latest sweetened bid (around $111B for the whole company) is no longer worth matching.
-          <div class="translation">翻译：Netflix刚刚撤回了收购华纳兄弟探索公司旗下制片厂/流媒体业务的提议，表示派拉蒙Skydance最新提高的报价（整个公司约1110亿美元）已不值得匹配。</div>
+          <div class="translation">翻译：Netflix刚刚撤回了收购华纳兄弟探索影业/流媒体业务的要约，称派拉蒙Skydance最新提高的报价（约为整个公司1110亿美元）已不值得匹配。</div>
         </blockquote>
         <blockquote class="quote">
-          They called it “no longer financially attractive” in their shareholder letter today (Feb 26, 2026).
-          <div class="translation">翻译：他们在今天（2026年2月26日）的股东信中称其“不再具有财务吸引力”。</div>
+          Congratulations Netflix shareholders, we're back on track boys.
+          <div class="translation">翻译：恭喜Netflix的股东们，我们又回到了正轨。</div>
+        </blockquote>
+        <blockquote class="quote">
+          Bought lottos for the White House news. Calls were so cheap relative to the upside.
+          <div class="translation">翻译：我为白宫新闻买了彩票式期权。看涨期权相对于上涨空间来说非常便宜。</div>
         </blockquote>
       </li>
       <li>
-        <div class="stock-tag">SQ (Block Inc.)</div>
+        <div class="stock-tag">2. NVDA (NVIDIA)</div>
         <blockquote class="quote">
-          Block to slash 40% of workforce. Stock up &gt;25%.
-          <div class="translation">翻译：Block将裁员40%。股价上涨超过25%。</div>
+          How is NVDA down almost 3% after the blockbuster print? Of all the market reactions to a company’s earnings and guidance, this has to be the one that puzzles me the most.
+          <div class="translation">翻译：在发布了爆炸性的财报后，英伟达的股价怎么会下跌近3%？在所有市场对公司财报和指引的反应中，这最让我感到困惑。</div>
         </blockquote>
         <blockquote class="quote">
-          If the stock price holds over a number of weeks after this announcement, this is direct feedback from investors incentivizing other companies to do the same.
-          <div class="translation">翻译：如果股价在消息公布后的数周内保持稳定，这将是投资者激励其他公司采取相同行动的直接反馈。</div>
+          Nvidia is now cheaper than roughly a third of the stocks in the S&P 500 but its revenue growth over the past 12 months of 65% is the third fastest in the index, according to data compiled by Bloomberg.
+          <div class="translation">翻译：根据彭博社汇编的数据，英伟达目前比标普500指数中大约三分之一的股票便宜，但其过去12个月的营收增长率为65%，是该指数中第三快的。</div>
         </blockquote>
         <blockquote class="quote">
-          we're not making this decision because we're in trouble. our business is strong. gross profit continues to grow, we continue to serve more and more customers, and profitability is improving.
-          <div class="translation">翻译：我们做出这个决定不是因为我们陷入困境。我们的业务很强劲。毛利润持续增长，我们继续服务越来越多的客户，盈利能力也在提高。</div>
+          Sold calls and puts on NVDA earnings. It’s gonna be another IV crush earnings.
+          <div class="translation">翻译：我卖出了英伟达财报的看涨和看跌期权。这又将是一次隐含波动率崩盘的财报。</div>
         </blockquote>
         <blockquote class="quote">
-          we're already seeing that the intelligence tools we’re creating and using, paired with smaller and flatter teams, are enabling a new way of working which fundamentally changes what it means to build and run a company.
-          <div class="translation">翻译：我们已经看到，我们正在创建和使用的智能工具，与更小、更扁平的团队相结合，正在实现一种新的工作方式，从根本上改变了建立和运营公司的意义。</div>
-        </blockquote>
-      </li>
-      <li>
-        <div class="stock-tag">PYPL (PayPal Holdings Inc.)</div>
-        <blockquote class="quote">
-          PayPal is not actively seeking a buyer and is not in negotiations with Stripe or any other company.
-          <div class="translation">翻译：PayPal目前并未积极寻求买家，也未与Stripe或任何其他公司进行谈判。</div>
-        </blockquote>
-        <blockquote class="quote">
-          Instead, insiders say that the fintech firm has been quietly preparing for months to defend itself against potential activist investors or hostile takeover attempts, according to Semafor.
-          <div class="translation">翻译：据Semafor报道，内部人士称这家金融科技公司数月来一直在悄悄准备，以抵御潜在的激进投资者或敌意收购企图。</div>
-        </blockquote>
-        <blockquote class="quote">
-          This precautionary move came after a sharp drop in PayPal’s stock price raised concerns that the company could become vulnerable.
-          <div class="translation">翻译：这一预防性举措是在PayPal股价大幅下跌引发人们对其可能变得脆弱的担忧之后采取的。</div>
-        </blockquote>
-        <blockquote class="quote">
-          Although Bloomberg reported that Stripe has explored acquiring PayPal, the company has declined to comment on the speculation.
-          <div class="translation">翻译：尽管彭博社报道称Stripe曾考虑收购PayPal，但该公司拒绝就此猜测发表评论。</div>
+          NVDA tanked the market today (Thursday) post earnings but my models show me support levels are still very strong at 6700 and the 6646 area.
+          <div class="translation">翻译：英伟达在财报发布后今天（周四）拖累了市场，但我的模型显示其在6700和6646区域的支撑位仍然非常强劲。</div>
         </blockquote>
       </li>
       <li>
-        <div class="stock-tag">DUOL (Duolingo Inc.)</div>
+        <div class="stock-tag">3. DUOL (Duolingo)</div>
         <blockquote class="quote">
           Duolingo slides 22% after hours on poor forecast.
-          <div class="translation">翻译：Duolingo因业绩预测不佳盘后下跌22%。</div>
+          <div class="translation">翻译：Duolingo因业绩预测不佳，盘后下跌22%。</div>
         </blockquote>
         <blockquote class="quote">
           This stock was $530 at the end of May 2025. 8 months later it's now at $91.
-          <div class="translation">翻译：这支股票在2025年5月底是530美元。8个月后现在是91美元。</div>
+          <div class="translation">翻译：这只股票在2025年5月底是530美元。8个月后，现在是91美元。</div>
         </blockquote>
         <blockquote class="quote">
-          Duolingo forecast first-quarter and 2026 bookings below expectations on Thursday as the language-learning app shifts strategy toward faster user growth, a move it said will weigh on bookings growth and profitability this year.
-          <div class="translation">翻译：Duolingo周四预测第一季度和2026年预订量低于预期，因为这款语言学习应用将战略转向更快的用户增长，此举将影响今年的预订量增长和盈利能力。</div>
-        </blockquote>
-        <blockquote class="quote">
-          Shares fell nearly 20% in extended trading.
-          <div class="translation">翻译：股价在延长交易中下跌近20%。</div>
+          Duolingo (DUOL.O) forecast first-quarter and 2026 bookings below expectations on Thursday as the language-learning app shifts strategy toward faster user growth, a move it said will weigh on bookings growth and profitability this year.
+          <div class="translation">翻译：Duolingo（DUOL.O）周四预测第一季度和2026年的预订量低于预期，原因是这款语言学习应用将战略转向更快的用户增长，此举将拖累今年的预订量增长和盈利能力。</div>
         </blockquote>
       </li>
       <li>
-        <div class="stock-tag">WBD (Warner Bros. Discovery Inc.)</div>
+        <div class="stock-tag">4. SQ (Block)</div>
         <blockquote class="quote">
-          WBD deem Paramount offer Superior.
-          <div class="translation">翻译：WBD认为派拉蒙的报价更优。</div>
+          Block shares soar 24% as company slashes workforce by nearly half.
+          <div class="translation">翻译：Block公司股价飙升24%，此前该公司裁员近一半。</div>
         </blockquote>
         <blockquote class="quote">
-          On Thursday, the WBD board said it valued Paramount’s $31-per-share offer to be superior to an existing deal with Netflix.
-          <div class="translation">翻译：周四，WBD董事会表示，他们认为派拉蒙每股31美元的报价优于与Netflix现有的协议。</div>
+          we're not making this decision because we're in trouble. our business is strong. gross profit continues to grow, we continue to serve more and more customers, and profitability is improving.
+          <div class="translation">翻译：我们做出这个决定并非因为我们陷入困境。我们的业务表现强劲。毛利润持续增长，我们继续服务越来越多的客户，盈利能力正在改善。</div>
         </blockquote>
         <blockquote class="quote">
-          Paramount agreed to pay the $2.8 billion breakup fee that WBD would owe Netflix if that deal didn’t go through.
-          <div class="translation">翻译：派拉蒙同意支付28亿美元的分手费，如果与Netflix的交易未能完成，WBD将需要支付这笔费用。</div>
+          we're already seeing that the intelligence tools we’re creating and using, paired with smaller and flatter teams, are enabling a new way of working which fundamentally changes what it means to build and run a company.
+          <div class="translation">翻译：我们已经看到，我们正在创建和使用的智能工具，与更小、更扁平的团队结合，正在开启一种新的工作方式，这从根本上改变了构建和运营公司的意义。</div>
         </blockquote>
         <blockquote class="quote">
-          Netflix stock spiked in extended trading, while shares of Warner Bros. Discovery fell.
-          <div class="translation">翻译：Netflix股价在盘后交易中飙升，而华纳兄弟探索公司的股价下跌。</div>
-        </blockquote>
-      </li>
-      <li>
-        <div class="stock-tag">EBAY (eBay Inc.)</div>
-        <blockquote class="quote">
-          EBay lays off 6% of global workforce in an effort to “reinvent” its business.
-          <div class="translation">翻译：EBay裁员全球6%的员工，以“重塑”其业务。</div>
+          Block surges on plan to cut 4,000 jobs on AI bet.
+          <div class="translation">翻译：Block公司因计划裁员4000人以押注人工智能而股价飙升。</div>
         </blockquote>
       </li>
       <li>
-        <div class="stock-tag">CVNA (Carvana Co.)</div>
+        <div class="stock-tag">5. MU (Micron Technology)</div>
         <blockquote class="quote">
-          On Carvana (CVNA)'s most recent earnings report CFO Mark Jenkins told reporters: &quot;We don't sell loans to related parties.
-          <div class="translation">翻译：在Carvana (CVNA)最近的财报中，首席财务官Mark Jenkins告诉记者：“我们不向关联方出售贷款。”</div>
+          MU: 39.64%.
+          <div class="translation">翻译：MU（美光科技）上涨39.64%。</div>
         </blockquote>
         <blockquote class="quote">
-          Unfortunately that is far from the truth.
-          <div class="translation">翻译：不幸的是，这与事实相去甚远。</div>
-        </blockquote>
-        <blockquote class="quote">
-          As an automotive dealer I have directly seen Carvana loans written or assumed by Bridgecrest, a 3rd party bank owned by Carvana CEO Ernest Garcia III's Father (Ernest Garcia the II)
-          <div class="translation">翻译：作为一名汽车经销商，我亲眼看到Carvana的贷款由Bridgecrest承销或承担，这是一家由Carvana首席执行官Ernest Garcia III的父亲（Ernest Garcia II）拥有的第三方银行。</div>
-        </blockquote>
-      </li>
-      <li>
-        <div class="stock-tag">COREWEAVE (CoreWeave Inc.)</div>
-        <blockquote class="quote">
-          CoreWeave’s stock was down about 6% after the closing bell.
-          <div class="translation">翻译：收盘后，CoreWeave的股票下跌了大约6%。</div>
-        </blockquote>
-        <blockquote class="quote">
-          The company’s fourth-quarter revenue reached $1.57 billion, growing 110% year over year and exceeding the $1.55 billion FactSet consensus.
-          <div class="translation">翻译：该公司第四季度营收达到15.7亿美元，同比增长110%，超出FactSet共识的15.5亿美元。</div>
-        </blockquote>
-        <blockquote class="quote">
-          The company posted a net loss of $452 million, far steeper than the $342 million anticipated by analysts.
-          <div class="translation">翻译：该公司净亏损4.52亿美元，远超分析师预期的3.42亿美元。</div>
-        </blockquote>
-        <blockquote class="quote">
-          CoreWeave Inc. fell as much as 13% in late trading after reporting a bigger-than-expected loss and boosting capital expenditures, spurring concerns about the company overspending on infrastructure.
-          <div class="translation">翻译：CoreWeave公司在报告了超出预期的亏损并增加了资本支出后，盘后交易中下跌了高达13%，引发了对该公司在基础设施方面过度支出的担忧。</div>
+          I suggest shorting MU as it is the only wsb stock that is still up by a lot.
+          <div class="translation">翻译：我建议做空MU，因为它是华尔街散户论坛（WSB）中唯一仍然大涨的股票。</div>
         </blockquote>
       </li>
     </ul>
@@ -253,193 +191,201 @@
     <h2>3. 小众公司冒泡</h2>
     <ul>
       <li>
-        <div class="stock-tag">RKLB (Rocket Lab USA Inc.)</div>
+        <div class="stock-tag">1. RDDT (Reddit)</div>
         <blockquote class="quote">
-          RKLB Posts Quarterly Revenue of 180M, Annual Revenue of 602M, Delivering Annual Growth of 38% and Growing Backlog 73% YoY to 1.85B.
-          <div class="translation">翻译：RKLB公布季度营收1.8亿美元，年度营收6.02亿美元，实现38%的年增长，并将积压订单同比增长73%至18.5亿美元。</div>
+          RDDT: -37.2%.
+          <div class="translation">翻译：RDDT（Reddit）下跌37.2%。</div>
         </blockquote>
         <blockquote class="quote">
-          Optimist scenario for Neutron in Q4 2026.
-          <div class="translation">翻译：Neutron在2026年第四季度的乐观情景。</div>
-        </blockquote>
-      </li>
-      <li>
-        <div class="stock-tag">SMPL (Simply Good Foods Company)</div>
-        <blockquote class="quote">
-          Simply Good Foods ($SMPL) the company behind Quest protein bars and Atkins shakes is one of the more interesting setups I've come across while digging through SEC filings in last couple of days.
-          <div class="translation">翻译：Simply Good Foods ($SMPL) 是Quest蛋白棒和Atkins奶昔背后的公司，是我最近几天查阅SEC文件时发现的几个更有趣的设置之一。</div>
-        </blockquote>
-        <blockquote class="quote">
-          CEO Geoff Tanner was removed on Jan 18, 2026.
-          <div class="translation">翻译：首席执行官Geoff Tanner于2026年1月18日被免职。</div>
-        </blockquote>
-        <blockquote class="quote">
-          The very next day, Joseph Scalzo - the founder who took the company public in 2017 and led the Quest Nutrition acquisition - returned as CEO.
-          <div class="translation">翻译：就在第二天，Joseph Scalzo——于2017年将公司上市并领导了Quest Nutrition收购案的创始人——回归担任首席执行官。</div>
-        </blockquote>
-        <blockquote class="quote">
-          His compensation: $1.1M salary + 2 million stock options at current prices.
-          <div class="translation">翻译：他的薪酬：110万美元工资 + 200万份按当前价格计算的股票期权。</div>
+          Despite its immense social impact, its relatively small market capitalization creates a structural vulnerability, leaving the company susceptible to the whims of powerful institutional actors and speculative forces.
+          <div class="translation">翻译：尽管它具有巨大的社会影响力，但其相对较小的市值造成了结构性脆弱性，使其容易受到强大机构行为者和投机力量的摆布。</div>
         </blockquote>
       </li>
       <li>
-        <div class="stock-tag">FOUR (Shift4 Payments Inc.)</div>
+        <div class="stock-tag">2. SMPL (Simply Good Foods)</div>
         <blockquote class="quote">
-          Recently, Shift4 ($FOUR) took a 15% hit, dropping to the $48 level.
-          <div class="translation">翻译：最近，Shift4 ($FOUR) 遭受了15%的打击，跌至48美元。</div>
+          CEO Geoff Tanner was removed on Jan 18, 2026. The very next day, Joseph Scalzo - the founder who took the company public in 2017 and led the Quest Nutrition acquisition - returned as CEO.
+          <div class="translation">翻译：首席执行官Geoff Tanner于2026年1月18日被免职。第二天，公司创始人Joseph Scalzo——他于2017年带领公司上市并主导了Quest Nutrition的收购——回归担任首席执行官。</div>
         </blockquote>
         <blockquote class="quote">
-          The market panicked over management's conservative guidance of &quot;mid-teens&quot; core US growth.
-          <div class="translation">翻译：市场对管理层保守的“中十位数”美国核心增长指引感到恐慌。</div>
-        </blockquote>
-        <blockquote class="quote">
-          However, when digging into the actual financials and the underlying market mechanics, thissell-off appears to have created a highly asymmetric risk/reward opportunity.
-          <div class="translation">翻译：然而，深入研究实际财务状况和潜在市场机制后，这次抛售似乎创造了一个高度不对称的风险/回报机会。</div>
-        </blockquote>
-        <blockquote class="quote">
-          Despite the core US slowdown, overall top-line revenue is still projected to grow between 26% and 31% YoY.
-          <div class="translation">翻译：尽管美国核心业务增速放缓，但整体营收预计仍将同比增长26%至31%。</div>
+          His compensation: $1.1M salary + 2 million stock options at current prices. That's a bet-on-yourself package.
+          <div class="translation">翻译：他的薪酬包括110万美元年薪和200万股现价股票期权。这是一个“赌上自己”的薪酬方案。</div>
         </blockquote>
       </li>
       <li>
-        <div class="stock-tag">SKM (SK Telecom Co. Ltd.)</div>
+        <div class="stock-tag">3. SKM (SK Telecom Co., Ltd.)</div>
         <blockquote class="quote">
           $SKM is a Korean Telecom that got lucky by investing $100M into Anthropic, that's now worth $8b.
-          <div class="translation">翻译：SKM是一家韩国电信公司，通过向Anthropic投资1亿美元而获得幸运，这笔投资现在价值80亿美元。</div>
-        </blockquote>
-        <blockquote class="quote">
-          Most of the company's valuation is in that investment.
-          <div class="translation">翻译：该公司的大部分估值都来自这项投资。</div>
-        </blockquote>
-        <blockquote class="quote">
-          Today at 5pm is the deadline for Anthropic to give the Pentagon unrestricted access to it's AI.
-          <div class="translation">翻译：今天下午5点是Anthropic向五角大楼提供对其AI无限制访问的截止日期。</div>
+          <div class="translation">翻译：SKM是一家韩国电信公司，通过向Anthropic投资1亿美元而获得了好运，现在这笔投资价值80亿美元。</div>
         </blockquote>
         <blockquote class="quote">
           Anthropic's value will crash, and so will $SKM, which is the purest way to trade Anthropic on the market right now.
-          <div class="translation">翻译：Anthropic的价值将暴跌，SKM也将如此，这是目前在市场上交易Anthropic最纯粹的方式。</div>
+          <div class="translation">翻译：Anthropic的价值将崩溃，SKM的价值也将随之崩溃，这是目前在市场上交易Anthropic最纯粹的方式。</div>
         </blockquote>
       </li>
       <li>
-        <div class="stock-tag">FLTR (Flutter Entertainment PLC)</div>
+        <div class="stock-tag">4. CVNA (Carvana)</div>
         <blockquote class="quote">
-          Flutter reported fourth-quarter revenue of $4.74 billion, up 25% year-over-year.
-          <div class="translation">翻译：Flutter公布第四季度营收为47.4亿美元，同比增长25%。</div>
+          On Carvana (CVNA)'s most recent earnings report CFO Mark Jenkins told reporters: "We don't sell loans to related parties."
+          <div class="translation">翻译：在Carvana (CVNA)最近的财报中，首席财务官Mark Jenkins告诉记者：“我们不向关联方出售贷款。”</div>
         </blockquote>
         <blockquote class="quote">
-          The revenue missed a Street consensus estimate of $4.97 billion, according to data from Benzinga Pro.
-          <div class="translation">翻译：根据Benzinga Pro的数据，营收低于华尔街普遍预期的49.7亿美元。</div>
-        </blockquote>
-        <blockquote class="quote">
-          The company reported quarterly earnings per share of $1.74, missing a Street consensus estimate of $1.99.
-          <div class="translation">翻译：该公司公布的季度每股收益为1.74美元，低于华尔街普遍预期的1.99美元。</div>
-        </blockquote>
-        <blockquote class="quote">
-          For the U.S. segment with FanDuel, the company reported 41% market share for online sportsbooks and 28% market share for iGaming.
-          <div class="translation">翻译：在美国市场，针对FanDuel，该公司报告在线体育博彩市场份额为41%，iGaming市场份额为28%。</div>
+          Unfortunately that is far from the truth. As an automotive dealer I have directly seen Carvana loans written or assumed by Bridgecrest, a 3rd party bank owned by Carvana CEO Ernest Garcia III's Father (Ernest Garcia the II).
+          <div class="translation">翻译：不幸的是，这与事实相去甚远。作为一名汽车经销商，我亲眼看到Carvana的贷款由Bridgecrest承销或承担，这是一家由Carvana首席执行官Ernest Garcia III的父亲（Ernest Garcia II）拥有的第三方银行。</div>
         </blockquote>
       </li>
       <li>
-        <div class="stock-tag">RR (Richtech Robotics Inc.)</div>
+        <div class="stock-tag">5. GASS (GasGas)</div>
+        <blockquote class="quote">
+          I discovered $GASS a few days ago and it hits a new 52w high everyday.
+          <div class="translation">翻译：我几天前发现了GASS，它每天都创下52周新高。</div>
+        </blockquote>
+        <blockquote class="quote">
+          Despite its rally the financials, growth, debt, and P/E all signal it could be cheap still.
+          <div class="translation">翻译：尽管它上涨，但其财务状况、增长、债务和市盈率都表明它可能仍然便宜。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">6. RR (Richtech Robotics)</div>
         <blockquote class="quote">
           Richtech currently has approximately $330M in cash, virtually no debt, and a market capitalization near $600M, with short interest exceeding 35% of float.
-          <div class="translation">翻译：Richtech目前拥有约3.3亿美元现金，几乎没有债务，市值接近6亿美元，空头头寸超过流通股的35%。</div>
-        </blockquote>
-        <blockquote class="quote">
-          That capital structure materially limits balance sheet risk while creating asymmetric positioning if sentiment shifts.
-          <div class="translation">翻译：这种资本结构实质上限制了资产负债表风险，同时如果市场情绪发生转变，会创造不对称的仓位。</div>
-        </blockquote>
-        <blockquote class="quote">
-          With high short exposure and significant liquidity, the stock is structurally primed for a squeeze scenario if incremental positive catalysts emerge.
-          <div class="translation">翻译：由于高空头头寸和显著的流动性，如果出现增量积极催化剂，该股在结构上已为逼空情景做好准备。</div>
+          <div class="translation">翻译：Richtech目前拥有约3.3亿美元现金，几乎没有债务，市值接近6亿美元，空头持仓超过流通股的35%。</div>
         </blockquote>
         <blockquote class="quote">
           If conversions materialize at scale, revenue can inflect meaningfully.
-          <div class="translation">翻译：如果大规模转化成为现实，收入将能够有意义地增长。</div>
-        </blockquote>
-      </li>
-      <li>
-        <div class="stock-tag">MLR (Miller Industries Inc.)</div>
-        <blockquote class="quote">
-          Last month I stumbled upon Miller Industries (ticker: MLR), the dominant player in tow truck systems.
-          <div class="translation">翻译：上个月我偶然发现了Miller Industries（股票代码：MLR），它是拖车系统领域的主导者。</div>
-        </blockquote>
-        <blockquote class="quote">
-          Low debt. Low multiples. Cyclical compression.
-          <div class="translation">翻译：低债务。低估值。周期性压缩。</div>
-        </blockquote>
-        <blockquote class="quote">
-          Growth drivers: international expansion, military contracts, robotics (FWIW).
-          <div class="translation">翻译：增长动力：国际扩张、军事合同、机器人技术（仅供参考）。</div>
+          <div class="translation">翻译：如果转化率能够大规模实现，收入将能够显著增长。</div>
         </blockquote>
       </li>
     </ul>
 
     <h2>4. AI主线讨论</h2>
-    <div class="track-header">模型 (Model)</div>
-    <blockquote>
-        OpenAI has closed a $110 billion funding round, a financing that’s more than double the size of its last raise a year ago, which was a record for a private tech company.
-        <div class="translation">翻译：OpenAI已完成1100亿美元的融资，这笔融资是其一年前上一轮融资规模的两倍多，创下了私人科技公司的纪录。</div>
-    </blockquote>
-    <blockquote>
-        Today at 5pm is the deadline for Anthropic to give the Pentagon unrestricted access to it's AI.
-        <div class="translation">翻译：今天下午5点是Anthropic向五角大楼提供对其AI无限制访问的截止日期。</div>
-    </blockquote>
+    <div class="track-header">模型</div>
+    <ul>
+      <li>
+        <div class="ai-quote">
+          OpenAI closes $110 billion funding round in largest private financing. The investment boosts OpenAI to a $730 billion pre-money valuation, which marks a big jump from its $500 billion valuation in a secondary financing in October.
+          <div class="translation">翻译：OpenAI 完成了1100亿美元的融资，成为史上最大的私人融资。这笔投资将OpenAI的投前估值提升至7300亿美元，较其10月份二级市场融资的5000亿美元估值大幅增长。</div>
+        </div>
+      </li>
+      <li>
+        <div class="ai-quote">
+          Today at 5pm is the deadline for Anthropic to give the Pentagon unrestricted access to it's AI. They won't do it and so will l loose all US gov contract and if they're labelled a "supply risk", then Amazon, Palantir, and every other company that works with the US gov will have to remove the AI models from their systems.
+          <div class="translation">翻译：今天下午5点是Anthropic向五角大楼提供对其人工智能无限制访问的截止日期。他们不会这样做，因此将失去所有美国政府合同，如果他们被标记为“供应风险”，那么亚马逊、Palantir以及所有其他与美国政府合作的公司都将不得不从其系统中移除人工智能模型。</div>
+        </div>
+      </li>
+      <li>
+        <div class="ai-quote">
+          Jensen says "market got it wrong" on software stocks. Yesterday in a cnbc interview he said "agents won't replace tools, they will use tools" in a context where tools are SaaS.
+          <div class="translation">翻译：Jensen表示“市场对软件股的看法是错误的”。昨天在CNBC的采访中，他表示“代理不会取代工具，它们会使用工具”，这里的工具指的是SaaS。</div>
+        </div>
+      </li>
+    </ul>
 
-    <div class="track-header">算 (Compute)</div>
-    <blockquote>
-        Meta just signed a multibillion-dollar agreement with AMD to secure custom AI chips for future infrastructure expansion.
-        <div class="translation">翻译：Meta刚刚与AMD签署了一项数十亿美元的协议，以确保获得定制AI芯片，用于未来的基础设施扩展。</div>
-    </blockquote>
-    <blockquote>
-        Meta’s deal reportedly targets up to 6GW of custom GPU capacity starting in 2026, signaling long-term demand for compute power beyond current AI hype cycles.
-        <div class="translation">翻译：据报道，Meta的交易目标是到2026年获得高达6GW的定制GPU产能，这预示着对计算能力的长期需求将超越当前的AI炒作周期。</div>
-    </blockquote>
+    <div class="track-header">算</div>
+    <ul>
+      <li>
+        <div class="ai-quote">
+          Meta just signed a multibillion-dollar agreement with AMD to secure custom AI chips for future infrastructure expansion.
+          <div class="translation">翻译：Meta刚刚与AMD签署了一项数十亿美元的协议，以确保获得定制AI芯片用于未来的基础设施扩展。</div>
+        </div>
+      </li>
+      <li>
+        <div class="ai-quote">
+          Meta’s deal reportedly targets up to 6GW of custom GPU capacity starting in 2026, signaling long-term demand for compute power beyond current AI hype cycles.
+          <div class="translation">翻译：据报道，Meta的交易目标是到2026年开始提供高达6GW的定制GPU容量，这表明对计算能力的长期需求将超越当前的人工智能炒作周期。</div>
+        </div>
+      </li>
+      <li>
+        <div class="ai-quote">
+          This is a GPU rental company. They buy Nvidia chips and rent them out.
+          <div class="translation">翻译：这是一家GPU租赁公司。他们购买英伟达芯片并将其出租。</div>
+        </div>
+      </li>
+    </ul>
 
-    <div class="track-header">光 (Optical)</div>
-    <blockquote>
-        Optical &amp; Networking Supercycle at the heart of the AI Revolution.
-        <div class="translation">翻译：光通信与网络超级周期是AI革命的核心。</div>
-    </blockquote>
+    <div class="track-header">光</div>
+    <ul>
+      <li>
+        <div class="ai-quote">
+          Optical & Networking Supercycle at the heart of the AI Revolution.
+          <div class="translation">翻译：光通信和网络超级周期是人工智能革命的核心。</div>
+        </div>
+      </li>
+    </ul>
 
-    <div class="track-header">存 (Storage)</div>
-    <blockquote>
-        WhiteFiber (WYFI) designs, develops, and operates data centers focused on AI infrastructure, offering hosting, colocation, cloud-based HPC GPU services, storage, networking, and security.
-        <div class="translation">翻译：WhiteFiber (WYFI) 设计、开发并运营专注于AI基础设施的数据中心，提供托管、主机托管、基于云的高性能计算GPU服务、存储、网络和安全。</div>
-    </blockquote>
+    <div class="track-header">存</div>
+    <ul>
+    </ul>
 
-    <div class="track-header">电 (Power)</div>
-    <blockquote>
-        Every data center being built to run models like ChatGPT needs insane amounts of electricity, and that means insane amounts of copper for power infrastructure.
-        <div class="translation">翻译：每个为运行ChatGPT等模型而建立的数据中心都需要大量的电力，这意味着需要大量的铜用于电力基础设施。</div>
-    </blockquote>
-    <blockquote>
-        I was thinking of investing in the infruetructure and energy aspect of Ai and Data Centers.
-        <div class="translation">翻译：我正在考虑投资AI和数据中心的基础设施和能源方面。</div>
-    </blockquote>
+    <div class="track-header">电</div>
+    <ul>
+      <li>
+        <div class="ai-quote">
+          The White House will host major technology companies on March 4 to formalize a “Rate Payer Protection Pledge” designed to ensure that the explosive growth of AI-driven data centers does not translate into higher electricity bills for residential consumers.
+          <div class="translation">翻译：白宫将于3月4日召集主要科技公司，正式签署一份“电费支付者保护承诺”，旨在确保人工智能驱动的数据中心的爆炸性增长不会导致居民电费上涨。</div>
+        </div>
+      </li>
+      <li>
+        <div class="ai-quote">
+          The administration’s position is that hyperscalers should finance or develop dedicated power sources rather than rely solely on already strained regional grids, particularly in markets where rapid load growth has contributed to rising rates.
+          <div class="translation">翻译：政府的立场是，超大规模云计算提供商应该资助或开发专用电源，而不是仅仅依赖已经紧张的区域电网，特别是在负荷快速增长导致电价上涨的市场。</div>
+        </div>
+      </li>
+    </ul>
 
-    <div class="track-header">板 (Boards)</div>
-    <p>（数据池中未发现相关高质量讨论）</p>
+    <div class="track-header">板</div>
+    <ul>
+      <li>
+        <div class="ai-quote">
+          Meta just signed a multibillion-dollar agreement with AMD to secure custom AI chips for future infrastructure expansion.
+          <div class="translation">翻译：Meta刚刚与AMD签署了一项数十亿美元的协议，以确保获得定制AI芯片用于未来的基础设施扩展。</div>
+        </div>
+      </li>
+      <li>
+        <div class="ai-quote">
+          I like the semiconductor stocks in it and the international stocks.
+          <div class="translation">翻译：我喜欢其中的半导体股票和国际股票。</div>
+        </div>
+      </li>
+    </ul>
 
-    <div class="track-header">云 (Cloud)</div>
-    <blockquote>
-        Microsoft’s Starlink collaboration expands connectivity to underserved regions, potentially onboarding hundreds of millions of new users into cloud and AI ecosystems.
-        <div class="translation">翻译：微软与Starlink的合作扩展了对服务不足地区的连接，可能将数亿新用户引入云和AI生态系统。</div>
-    </blockquote>
-    <blockquote>
-        WhiteFiber (WYFI) designs, develops, and operates data centers focused on AI infrastructure, offering hosting, colocation, cloud-based HPC GPU services, storage, networking, and security.
-        <div class="translation">翻译：WhiteFiber (WYFI) 设计、开发并运营专注于AI基础设施的数据中心，提供托管、主机托管、基于云的高性能计算GPU服务、存储、网络和安全。</div>
-    </blockquote>
+    <div class="track-header">云</div>
+    <ul>
+      <li>
+        <div class="ai-quote">
+          Microsoft continues scaling its global internet ambitions through its partnership with SpaceX’s Starlink network.
+          <div class="translation">翻译：微软通过与SpaceX的星链网络合作，继续拓展其全球互联网版图。</div>
+        </div>
+      </li>
+      <li>
+        <div class="ai-quote">
+          Microsoft’s Starlink collaboration expands connectivity to underserved regions, potentially onboarding hundreds of millions of new users into cloud and AI ecosystems.
+          <div class="translation">翻译：微软与星链的合作将连接扩展到服务不足的地区，可能将数亿新用户引入云和人工智能生态系统。</div>
+        </div>
+      </li>
+    </ul>
 
-    <div class="track-header">AI应用 (AI Applications)</div>
-    <blockquote>
-        we're already seeing that the intelligence tools we’re creating and using, paired with smaller and flatter teams, are enabling a new way of working which fundamentally changes what it means to build and run a company.
-        <div class="translation">翻译：我们已经看到，我们正在创建和使用的智能工具，与更小、更扁平的团队相结合，正在实现一种新的工作方式，从根本上改变了建立和运营公司的意义。</div>
-    </blockquote>
-    <blockquote>
-        AI agents will need these systems to finish their work and store information in a way humans can understand.
-        <div class="translation">翻译：AI代理将需要这些系统来完成工作并以人类可理解的方式存储信息。</div>
-    </blockquote>
+    <div class="track-header">AI应用</div>
+    <ul>
+      <li>
+        <div class="ai-quote">
+          Block shares soar 24% as company slashes workforce by nearly half. we're already seeing that the intelligence tools we’re creating and using, paired with smaller and flatter teams, are enabling a new way of working which fundamentally changes what it means to build and run a company.
+          <div class="translation">翻译：Block公司裁员近一半后股价飙升24%。我们已经看到，我们正在创建和使用的智能工具，与更小、更扁平的团队结合，正在开启一种新的工作方式，这从根本上改变了构建和运营公司的意义。</div>
+        </div>
+      </li>
+      <li>
+        <div class="ai-quote">
+          One of the main ideas was that these agents could eventually bypass traditional credit-card networks altogether and settle transactions using stablecoins.
+          <div class="translation">翻译：其中一个主要思想是，这些代理最终可以完全绕过传统的信用卡网络，使用稳定币进行交易结算。</div>
+        </div>
+      </li>
+      <li>
+        <div class="ai-quote">
+          ongoing fears of AI disrupting jobs/industries (Block layoffs, OpenAI valuation hype turning sour), and tech/growth names led the bleed.
+          <div class="translation">翻译：对人工智能扰乱就业/行业的持续担忧（Block裁员、OpenAI估值炒作变味），以及科技/成长股的下跌，导致了市场流血。</div>
+        </div>
+      </li>
+    </ul>
 
 </body>
 </html>
@@ -452,7 +398,7 @@
                     axisLine: { lineStyle: { width: 45, color: [[0.25, '#ef4444'], [0.45, '#f97316'], [0.55, '#d1d5db'], [0.75, '#84cc16'], [1, '#22c55e']] } },
                     pointer: { length: '60%', width: 8, itemStyle: { color: '#fff' } },
                     detail: { fontSize: 40, fontWeight: 'bold', offsetCenter: [0, '25%'], formatter: '{value}\n恐慌', color: '#fff' },
-                    data: [{ value: 43 }]
+                    data: [{ value: 42 }]
                 }]
             });
         </script>
