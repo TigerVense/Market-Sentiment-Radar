@@ -37,322 +37,183 @@
     <body>
         <div class="container">
             <h1>🎯 07月27日 市场情报透视</h1>
-            <p style="color:#94a3b8">情报最后更新: 2026-07-27 12:12:07 (北京时间)</p>
+            <p style="color:#94a3b8">情报最后更新: 2026-07-27 23:22:34 (北京时间)</p>
             <div class="dashboard-card"><div id="gauge" class="gauge-container"></div></div>
-            <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>美股量化市场情绪报告 (2026年07月27日)</title>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 20px auto; padding: 0 15px; background-color: #f9f9f9; }
-        h1 { color: #2c3e50; text-align: center; margin-bottom: 30px; }
-        h2 { color: #2c3e50; border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 40px; }
-        h3 { color: #34495e; margin-top: 25px; }
-        ul { list-style: none; padding: 0; }
-        li { background-color: #fff; border: 1px solid #eee; margin-bottom: 15px; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .stock-tag { font-weight: bold; color: #007bff; margin-bottom: 10px; font-size: 1.1em; }
-        .quote { background-color: #eaf3f9; border-left: 4px solid #007bff; margin: 15px 0; padding: 10px 15px; font-style: italic; color: #555; border-radius: 4px; }
-        .translation { font-style: normal; color: #333; margin-top: 5px; border-top: 1px dashed #c0d9ec; padding-top: 5px; font-size: 0.95em; }
-        .track-header { font-weight: bold; color: #28a745; margin-top: 20px; margin-bottom: 10px; padding: 5px 0; border-bottom: 1px solid #eee; font-size: 1.1em; }
-        p { margin-bottom: 10px; }
-        .no-discussion { color: #6c757d; font-style: italic; margin-left: 20px; }
-    </style>
-</head>
-<body>
-    <h1>美股市场情绪报告 (2026年07月27日)</h1>
+            <h2>1. 宏观与市场情绪</h2>
+<p>本周市场情绪复杂，普遍存在对“抄底”失败和投资回报不佳的失望情绪，但同时也有少数投资者取得了惊人的短期回报。AI领域依旧是焦点，围绕其巨大投资能否带来实际回报的争论激烈，但谷歌云的强劲增长和需求超过供给的现状为多头提供了支撑。半导体行业受到中国本土DUV芯片制造工具进展的影响，引发了对全球芯片股的担忧。</p>
+<blockquote class="quote">
+  I don't feel so good Mr. Stark. I thought I bought the dip when it fell below 20 :(
+  <div class="translation">翻译：斯塔克先生，我感觉不太好。我以为跌破20的时候我抄底了 :(</div>
+</blockquote>
+<blockquote class="quote">
+  I thought there would be a rebound this week
+  <div class="translation">翻译：我以为这周会有反弹。</div>
+</blockquote>
+<blockquote class="quote">
+  I’ve hit lotto after lotto since, converting it to ~$1.5M in less than 2 months.
+  <div class="translation">翻译：自那以后我屡次中奖，不到2个月就把资金变成了约150万美元。</div>
+</blockquote>
+<blockquote class="quote">
+  Apparently SpaceX launched a rocket at my portfolio. Thought I was buying the dip. Turns out I was just buying every dip. Down almost $10k in this portfolio for the month.
+  <div class="translation">翻译：显然SpaceX朝我的投资组合发射了一枚火箭。我以为我在抄底。结果我只是在买入每一个下跌。这个月我的投资组合亏损了将近1万美元。</div>
+</blockquote>
+<blockquote class="quote">
+  The bears point to +$700bn in AI capex this year, shrinking free cash flow and stretched valuations while the bulls counter with Google Cloud growing 82%, exploding cloud backlogs, and demand that still exceeds supply. The debate isn't whether AI is real. It obviously is. The real question is how to evaluate whether the massive investment can generate a realistic return.
+  <div class="translation">翻译：看空者指出今年AI资本支出超过7000亿美元，自由现金流萎缩，估值过高，而看多者则反驳说谷歌云增长了82%，云服务积压订单激增，需求仍超过供给。争论的焦点不在于AI是否真实，它显然是真实的。真正的问题是如何评估这些巨额投资能否产生切实的收益。</div>
+</blockquote>
+<blockquote
+  China begins making homegrown DUV chipmaking tools. The machines are expected to be delivered this year to leading Chinese chipmakers, including Semiconductor Manufacturing International Corp, opens new tab, Hua Hong Semiconductor opens new tab and ChangXin Memory Technologies. Chip stocks dropped after the report.
+  <div class="translation">翻译：中国开始制造本土DUV芯片制造工具。预计这些机器将于今年交付给包括中芯国际、华虹半导体和长鑫存储在内的中国领先芯片制造商。报告发布后，芯片股下跌。</div>
+</blockquote>
 
-    <h2>1. 宏观与市场情绪</h2>
-    <ul>
-        <li>
-            <blockquote class="quote">
-                The bears point to +$700bn in AI capex this year, shrinking free cash flow and stretched valuations while the bulls counter with Google Cloud growing 82%, exploding cloud backlogs, and demand that still exceeds supply.
-                <div class="translation">翻译：看空者指出今年人工智能资本支出超过7000亿美元，自由现金流萎缩，估值过高；而看多者则以谷歌云增长82%、云业务积压订单激增以及需求仍供不应求来反驳。</div>
-            </blockquote>
-        </li>
-        <li>
-            <blockquote class="quote">
-                The debate isn't whether AI is real. It obviously is.
-                <div class="translation">翻译：争论的焦点不是人工智能是否真实存在。它显然是真实的。</div>
-            </blockquote>
-        </li>
-        <li>
-            <blockquote class="quote">
-                The real question is how to evaluate whether the massive investment can generate a realistic return.
-                <div class="translation">翻译：真正的问题是如何评估这笔巨额投资能否产生切合实际的回报。</div>
-            </blockquote>
-        </li>
-        <li>
-            <blockquote class="quote">
-                Big Tech will spend $1 trillion next year building AI infrastructure.
-                <div class="translation">翻译：大型科技公司明年将斥资1万亿美元建设人工智能基础设施。</div>
-            </blockquote>
-        </li>
-        <li>
-            <blockquote class="quote">
-                New weapon of choice?
-                <div class="translation">翻译：新的选择武器？</div>
-            </blockquote>
-            <blockquote class="quote">
-                Standard Single Stock Futures (55 contracts) Contract size: 100 shares of underlying stock Tick: 0.01 index points = $1.00 Settlement: Financially settled Listing: Quarterly (Mar, Jun, Sep, Dec), 2 consecutive quarters
-                <div class="translation">翻译：标准单一股票期货（55份合约）合约规模：100股标的股票 跳动点：0.01指数点 = 1.00美元 结算：现金结算 上市：每季度（3月、6月、9月、12月），连续两个季度。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Micro Single Stock Futures (22 contracts) Contract size: 10 shares of underlying stock Tick: 0.01 index points = $0.10 Settlement: Financially settled Listing: Quarterly (Mar, Jun, Sep, Dec), 2 consecutive quarters
-                <div class="translation">翻译：微型单一股票期货（22份合约）合约规模：10股标的股票 跳动点：0.01指数点 = 0.10美元 结算：现金结算 上市：每季度（3月、6月、9月、12月），连续两个季度。</div>
-            </blockquote>
-        </li>
-        <li>
-            <blockquote class="quote">
-                My first dip into stocks was in March 2020.
-                <div class="translation">翻译：我第一次涉足股票是在2020年3月。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Sure, I never made millions, but I put all my money into AAPL, GOOGL, and AMZN when they dropped before they all split and blew up.
-                <div class="translation">翻译：当然，我从未赚到数百万，但在苹果、谷歌和亚马逊股价下跌时，我把所有钱都投了进去，它们随后分拆并爆发。</div>
-            </blockquote>
-            <blockquote class="quote">
-                I earned enough to put a lot of money on an amazing home in a fantastic area.
-                <div class="translation">翻译：我赚的钱足以在一个很棒的地区买一套非常好的房子。</div>
-            </blockquote>
-        </li>
-        <li>
-            <blockquote class="quote">
-                Samsung Electronics and SK Hynix make up nearly 50% of Korea’s stock market, and retail investors are piling into them with leverage.
-                <div class="translation">翻译：三星电子和SK海力士占据了韩国股市近50%的份额，散户投资者正带着杠杆涌入这些股票。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Feels like an entire country’s stock market turned into WallStreetBets.
-                <div class="translation">翻译：感觉整个国家的股市都变成了华尔街赌场。</div>
-            </blockquote>
-        </li>
-        <li>
-            <blockquote class="quote">
-                I spent all day making my own little Claude bot WSB Bloomberg terminal / platform .. giving me signals , taking a look at volume , VWAP some shit I never heard of til now.
-                <div class="translation">翻译：我花了一整天时间制作我自己的Claude机器人WSB彭博终端/平台……它给我提供信号，查看成交量、VWAP等我以前从未听过的东西。</div>
-            </blockquote>
-        </li>
-    </ul>
+<h2>2. 热议中的个股和想法</h2>
+<ul>
+  <li>
+    <div class="stock-tag">NVDA (NVIDIA Corporation)</div>
+    <blockquote class="quote">
+      Nvidia in Talks With OpenAI to Guarantee $250 Billion Financing for Data Center
+      <div class="translation">翻译：英伟达与OpenAI就保证2500亿美元数据中心融资进行谈判。</div>
+    </blockquote>
+    <blockquote class="quote">
+      Sk Hynix NVDA partnership
+      <div class="translation">翻译：SK海力士与英伟达建立合作关系。</div>
+    </blockquote>
+  </li>
+  <li>
+    <div class="stock-tag">GOOGL (Alphabet Inc.)</div>
+    <blockquote class="quote">
+      bulls counter with Google Cloud growing 82%, exploding cloud backlogs, and demand that still exceeds supply.
+      <div class="translation">翻译：看多者反驳说谷歌云增长了82%，云服务积压订单激增，需求仍超过供给。</div>
+    </blockquote>
+    <blockquote class="quote">
+      I bought 1000 shares of Google at $319.35, hopefully it goes to $399 in the next few months and I can take 80k profit, if not I will be holding for a while.
+      <div class="translation">翻译：我以319.35美元的价格购买了1000股谷歌股票，希望未来几个月能涨到399美元，这样我就可以获得8万美元的利润，否则我将长期持有。</div>
+    </blockquote>
+    <blockquote class="quote">
+      I put all my money into AAPL, GOOGL, and AMZN when they dropped before they all split and blew up. I earned enough to put a lot of money on an amazing home in a fantastic area.
+      <div class="translation">翻译：在2020年3月，当苹果、谷歌和亚马逊股价下跌时，我把所有的钱都投了进去，在它们拆股并暴涨之前。我赚到的钱足以在一个很棒的地区买一套非常好的房子。</div>
+    </blockquote>
+  </li>
+  <li>
+    <div class="stock-tag">META (Meta Platforms Inc.)</div>
+    <blockquote class="quote">
+      And meta took a big dump this week and is down close to 25% and trading way below its avg price target as people panic over big ai spending spree. I think these are both good stocks, and way oversold, what’s your take?
+      <div class="translation">翻译：Meta本周大跌，下跌近25%，交易价格远低于其平均目标价，因为人们对AI巨额支出狂潮感到恐慌。我认为这两只股票都很好，而且被严重超卖了，你有什么看法？</div>
+    </blockquote>
+    <blockquote class="quote">
+      Meta has big upside selling excess compute and Microsoft just continues to grow.
+      <div class="translation">翻译：Meta在出售过剩计算力方面有巨大潜力，而微软则持续增长。</div>
+    </blockquote>
+  </li>
+  <li>
+    <div class="stock-tag">MSFT (Microsoft Corporation)</div>
+    <blockquote class="quote">
+      Microsoft is down over 25% from its all time high heading into earnings and trading way below its avg price target.
+      <div class="translation">翻译：微软在财报发布前已从历史高点下跌超过25%，交易价格远低于其平均目标价。</div>
+    </blockquote>
+    <blockquote class="quote">
+      I think these are both good stocks, and way oversold, what’s your take?
+      <div class="translation">翻译：我认为这两只股票都很好，而且被严重超卖了，你有什么看法？</div>
+    </blockquote>
+    <blockquote class="quote">
+      Microsoft just continues to grow.
+      <div class="translation">翻译：微软持续增长。</div>
+    </blockquote>
+  </li>
+  <li>
+    <div class="stock-tag">AVGO (Broadcom Inc.)</div>
+    <blockquote class="quote">
+      Samsung Electronics Signs $200 Billion Five Year Semiconductor Supply Agreement with Broadcom.
+      <div class="translation">翻译：三星电子与博通签署了2000亿美元的五年期半导体供应协议。</div>
+    </blockquote>
+    <blockquote class="quote">
+      Encompassing both memory and foundry.
+      <div class="translation">翻译：涵盖了存储和代工业务。</div>
+    </blockquote>
+  </li>
+  <li>
+    <div class="stock-tag">PARA (Paramount Global)</div>
+    <blockquote class="quote">
+      Paramount agrees to delay Warner Bros. merger into 2027
+      <div class="translation">翻译：派拉蒙同意将与华纳兄弟的合并推迟到2027年。</div>
+    </blockquote>
+  </li>
+  <li>
+    <div class="stock-tag">ORCL (Oracle Corporation)</div>
+    <blockquote class="quote">
+      Oracle signs 10-year software contract with Pentagon worth up to $7 billion
+      <div class="translation">翻译：甲骨文与五角大楼签署了一份为期10年、价值高达70亿美元的软件合同。</div>
+    </blockquote>
+  </li>
+</ul>
 
-    <h2>2. 热议中的个股和想法</h2>
-    <ul>
-        <li>
-            <div class="stock-tag">1. GOOGL (Google)</div>
-            <blockquote class="quote">
-                Google Discloses $94.1 Billion in SpaceX Stock, Marking 6% Stake
-                <div class="translation">翻译：谷歌披露持有SpaceX价值941亿美元的股票，持股比例达6%。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Google Cloud growing 82%, exploding cloud backlogs, and demand that still exceeds supply.
-                <div class="translation">翻译：谷歌云增长82%，云服务积压订单激增，且需求仍供不应求。</div>
-            </blockquote>
-            <blockquote class="quote">
-                I put all my money into AAPL, GOOGL, and AMZN when they dropped before they all split and blew up.
-                <div class="translation">翻译：当苹果、谷歌和亚马逊股价下跌时，我把所有钱都投了进去，它们随后分拆并爆发。</div>
-            </blockquote>
-            <blockquote class="quote">
-                I bought 1000 shares of Google at $319.35, hopefully it goes to $399 in the next few months and I can take 80k profit, if not I will be holding for a while.
-                <div class="translation">翻译：我以319.35美元的价格购买了1000股谷歌股票，希望未来几个月能涨到399美元，这样我就可以赚取8万美元的利润，否则我将长期持有。</div>
-            </blockquote>
-        </li>
-        <li>
-            <div class="stock-tag">2. NVDA (Nvidia)</div>
-            <blockquote class="quote">
-                Nvidia in Talks With OpenAI to Guarantee $250 Billion Financing for Data Center
-                <div class="translation">翻译：英伟达正与OpenAI谈判，以确保为数据中心提供2500亿美元的融资。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Sk Hynix NVDA partnership
-                <div class="translation">翻译：SK海力士与英伟达合作。</div>
-            </blockquote>
-        </li>
-        <li>
-            <div class="stock-tag">3. MSFT (Microsoft)</div>
-            <blockquote class="quote">
-                Microsoft is down over 25% from its all time high heading into earnings and trading way below its avg price target.
-                <div class="translation">翻译：微软在财报发布前已从历史高点下跌超过25%，并且交易价格远低于其平均目标价。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Microsoft just continues to grow.
-                <div class="translation">翻译：微软持续增长。</div>
-            </blockquote>
-            <blockquote class="quote">
-                I’m running meta and Microsoft calls expiring Sept 18th.
-                <div class="translation">翻译：我正在做Meta和微软9月18日到期的看涨期权。</div>
-            </blockquote>
-            <blockquote class="quote">
-                I think these are both good stocks, and way oversold, what’s your take?
-                <div class="translation">翻译：我认为这两只股票都很好，而且被严重超卖了，你们怎么看？</div>
-            </blockquote>
-        </li>
-        <li>
-            <div class="stock-tag">4. META (Meta Platforms)</div>
-            <blockquote class="quote">
-                Meta took a big dump this week and is down close to 25% and trading way below its avg price target as people panic over big ai spending spree.
-                <div class="translation">翻译：Meta本周大幅下跌，跌幅接近25%，交易价格远低于其平均目标价，原因是人们对大规模人工智能支出狂潮感到恐慌。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Meta has big upside selling excess compute.
-                <div class="translation">翻译：Meta在出售过剩计算能力方面有很大的上行空间。</div>
-            </blockquote>
-            <blockquote class="quote">
-                I’m running meta and Microsoft calls expiring Sept 18th.
-                <div class="translation">翻译：我正在做Meta和微软9月18日到期的看涨期权。</div>
-            </blockquote>
-            <blockquote class="quote">
-                I think these are both good stocks, and way oversold, what’s your take?
-                <div class="translation">翻译：我认为这两只股票都很好，而且被严重超卖了，你们怎么看？</div>
-            </blockquote>
-        </li>
-        <li>
-            <div class="stock-tag">5. SPCX (SpaceX)</div>
-            <blockquote class="quote">
-                Google Discloses $94.1 Billion in SpaceX Stock, Marking 6% Stake
-                <div class="translation">翻译：谷歌披露持有SpaceX价值941亿美元的股票，持股比例达6%。</div>
-            </blockquote>
-            <blockquote class="quote">
-                The SpaceX investment finally paid off because they launched a rocket right at my portfolio.
-                <div class="translation">翻译：SpaceX的投资终于有了回报，因为他们直接向我的投资组合发射了一枚火箭。</div>
-            </blockquote>
-        </li>
-        <li>
-            <div class="stock-tag">6. ORCL (Oracle)</div>
-            <blockquote class="quote">
-                Oracle signs 10-year software contract with Pentagon worth up to $7 billion
-                <div class="translation">翻译：甲骨文与五角大楼签订了一份为期10年、价值高达70亿美元的软件合同。</div>
-            </blockquote>
-        </li>
-        <li>
-            <div class="stock-tag">7. LLY (Eli Lilly)</div>
-            <blockquote class="quote">
-                since Eli Lilly’s buyout of AtaiBeckley, it feels like this Psychedelic industry might finally be up to bat.
-                <div class="translation">翻译：自从礼来公司收购AtaiBeckley以来，感觉这个迷幻药行业可能终于要崛起了。</div>
-            </blockquote>
-        </li>
-    </ul>
+<h2>3. 小众公司冒泡</h2>
+<p>暂无。</p>
 
-    <h2>3. 小众公司冒泡</h2>
-    <ul>
-        <li>
-            <div class="stock-tag">1. QCOM (Qualcomm)</div>
-            <blockquote class="quote">
-                Qualcomm's AI robot presentation
-                <div class="translation">翻译：高通的人工智能机器人演示。</div>
-            </blockquote>
-        </li>
-        <li>
-            <div class="stock-tag">2. INTC (Intel)</div>
-            <blockquote class="quote">
-                There’s been a couple big misses and close calls as well (including -$110K on Intel 0DTE calls today, stupid I know).
-                <div class="translation">翻译：也有几次重大失误和险情（包括今天在英特尔0DTE看涨期权上损失了11万美元，我知道这很蠢）。</div>
-            </blockquote>
-        </li>
-        <li>
-            <div class="stock-tag">3. AVGO (Broadcom)</div>
-            <blockquote class="quote">
-                Samsung Electronics Signs $200 Billion Five Year Semiconductor Supply Agreement with Broadcom Encompassing both memory and foundry.
-                <div class="translation">翻译：三星电子与博通签署了一份价值2000亿美元的五年半导体供应协议，涵盖存储器和代工业务。</div>
-            </blockquote>
-        </li>
-    </ul>
-
-    <h2>4. AI主线讨论</h2>
-    <div class="track-header">模型 (Models)</div>
-    <ul>
-        <li>
-            <blockquote class="quote">
-                Nvidia in Talks With OpenAI to Guarantee $250 Billion Financing for Data Center
-                <div class="translation">翻译：英伟达正与OpenAI谈判，以确保为数据中心提供2500亿美元的融资。</div>
-            </blockquote>
-        </li>
-        <li>
-            <blockquote class="quote">
-                I spent all day making my own little Claude bot WSB Bloomberg terminal / platform .. giving me signals , taking a look at volume , VWAP some shit I never heard of til now.
-                <div class="translation">翻译：我花了一整天时间制作我自己的Claude机器人WSB彭博终端/平台……它给我提供信号，查看成交量、VWAP等我以前从未听过的东西。</div>
-            </blockquote>
-        </li>
-    </ul>
-    <div class="track-header">算 (Compute)</div>
-    <ul>
-        <li>
-            <blockquote class="quote">
-                The bears point to +$700bn in AI capex this year, shrinking free cash flow and stretched valuations while the bulls counter with Google Cloud growing 82%, exploding cloud backlogs, and demand that still exceeds supply.
-                <div class="translation">翻译：看空者指出今年人工智能资本支出超过7000亿美元，自由现金流萎缩，估值过高；而看多者则以谷歌云增长82%、云业务积压订单激增以及需求仍供不应求来反驳。</div>
-            </blockquote>
-        </li>
-        <li>
-            <blockquote class="quote">
-                Big Tech will spend $1 trillion next year building AI infrastructure.
-                <div class="translation">翻译：大型科技公司明年将斥资1万亿美元建设人工智能基础设施。</div>
-            </blockquote>
-        </li>
-        <li>
-            <blockquote class="quote">
-                Nvidia in Talks With OpenAI to Guarantee $250 Billion Financing for Data Center
-                <div class="translation">翻译：英伟达正与OpenAI谈判，以确保为数据中心提供2500亿美元的融资。</div>
-            </blockquote>
-        </li>
-        <li>
-            <blockquote class="quote">
-                Meta has big upside selling excess compute.
-                <div class="translation">翻译：Meta在出售过剩计算能力方面有很大的上行空间。</div>
-            </blockquote>
-        </li>
-    </ul>
-    <div class="track-header">光 (Optics)</div>
-    <p class="no-discussion">无相关讨论。</p>
-    <div class="track-header">存 (Storage)</div>
-    <ul>
-        <li>
-            <blockquote class="quote">
-                Samsung Electronics Signs $200 Billion Five Year Semiconductor Supply Agreement with Broadcom Encompassing both memory and foundry.
-                <div class="translation">翻译：三星电子与博通签署了一份价值2000亿美元的五年半导体供应协议，涵盖存储器和代工业务。</div>
-            </blockquote>
-        </li>
-        <li>
-            <blockquote class="quote">
-                Sk Hynix NVDA partnership
-                <div class="translation">翻译：SK海力士与英伟达合作。</div>
-            </blockquote>
-        </li>
-    </ul>
-    <div class="track-header">电 (Power)</div>
-    <p class="no-discussion">无相关讨论。</p>
-    <div class="track-header">板 (Boards/Packs)</div>
-    <p class="no-discussion">无相关讨论。</p>
-    <div class="track-header">云 (Cloud)</div>
-    <ul>
-        <li>
-            <blockquote class="quote">
-                The bears point to +$700bn in AI capex this year, shrinking free cash flow and stretched valuations while the bulls counter with Google Cloud growing 82%, exploding cloud backlogs, and demand that still exceeds supply.
-                <div class="translation">翻译：看空者指出今年人工智能资本支出超过7000亿美元，自由现金流萎缩，估值过高；而看多者则以谷歌云增长82%、云业务积压订单激增以及需求仍供不应求来反驳。</div>
-            </blockquote>
-        </li>
-        <li>
-            <blockquote class="quote">
-                Meta has big upside selling excess compute.
-                <div class="translation">翻译：Meta在出售过剩计算能力方面有很大的上行空间。</div>
-            </blockquote>
-        </li>
-    </ul>
-    <div class="track-header">AI应用 (AI Applications)</div>
-    <ul>
-        <li>
-            <blockquote class="quote">
-                Qualcomm's AI robot presentation
-                <div class="translation">翻译：高通的人工智能机器人演示。</div>
-            </blockquote>
-        </li>
-        <li>
-            <blockquote class="quote">
-                I spent all day making my own little Claude bot WSB Bloomberg terminal / platform .. giving me signals , taking a look at volume , VWAP some shit I never heard of til now.
-                <div class="translation">翻译：我花了一整天时间制作我自己的Claude机器人WSB彭博终端/平台……它给我提供信号，查看成交量、VWAP等我以前从未听过的东西。</div>
-            </blockquote>
-        </li>
-    </ul>
-</body>
-</html>
+<h2>4. AI主线讨论</h2>
+<div class="track-header">模型</div>
+<p>暂无相关讨论。</p>
+<div class="track-header">算</div>
+<blockquote class="quote">
+  Nvidia in Talks With OpenAI to Guarantee $250 Billion Financing for Data Center
+  <div class="translation">翻译：英伟达与OpenAI就保证2500亿美元数据中心融资进行谈判。</div>
+</blockquote>
+<blockquote class="quote">
+  Meta has big upside selling excess compute
+  <div class="translation">翻译：Meta在出售过剩计算力方面有巨大潜力。</div>
+</blockquote>
+<blockquote class="quote">
+  Google Cloud growing 82%, exploding cloud backlogs, and demand that still exceeds supply.
+  <div class="translation">翻译：谷歌云增长了82%，云服务积压订单激增，需求仍超过供给。</div>
+</blockquote>
+<blockquote class="quote">
+  Big Tech will spend $1 trillion next year building AI infrastructure. What's a realistic ROI on that investment?
+  <div class="translation">翻译：大型科技公司明年将花费1万亿美元建设AI基础设施。这项投资的实际投资回报率是多少？</div>
+</blockquote>
+<div class="track-header">光</div>
+<p>暂无相关讨论。</p>
+<div class="track-header">存</div>
+<blockquote class="quote">
+  Memory chip maker CXMT debuts in Shanghai, up 470% at open and becomes the largest listed company in China. The IPO offer was 8.66 CNY. Instantly jumped 470% over high Dram demand. The company has said it plans to use most of the proceeds from the initial public offering (IPO) to boost production of memory chips and carry out more research and developments.
+  <div class="translation">翻译：存储芯片制造商长鑫存储在上海首次亮相，开盘上涨470%，成为中国最大的上市公司。IPO发行价为8.66元人民币。由于DRAM需求旺盛，股价瞬间上涨470%。该公司表示，计划将首次公开募股（IPO）所得大部分收益用于提高存储芯片产量并进行更多研发。</div>
+</blockquote>
+<blockquote class="quote">
+  Samsung Electronics Signs $200 Billion Five Year Semiconductor Supply Agreement with Broadcom. Encompassing both memory and foundry.
+  <div class="translation">翻译：三星电子与博通签署了2000亿美元的五年期半导体供应协议。涵盖了存储和代工业务。</div>
+</blockquote>
+<blockquote class="quote">
+  Sk Hynix NVDA partnership
+  <div class="translation">翻译：SK海力士与英伟达建立合作关系。</div>
+</blockquote>
+<div class="track-header">电</div>
+<p>暂无相关讨论。</p>
+<div class="track-header">板</div>
+<blockquote class="quote">
+  China begins making homegrown DUV chipmaking tools. The machines are expected to be delivered this year to leading Chinese chipmakers, including Semiconductor Manufacturing International Corp, opens new tab, Hua Hong Semiconductor opens new tab and ChangXin Memory Technologies. Chip stocks dropped after the report.
+  <div class="translation">翻译：中国开始制造本土DUV芯片制造工具。预计这些机器将于今年交付给包括中芯国际、华虹半导体和长鑫存储在内的中国领先芯片制造商。报告发布后，芯片股下跌。</div>
+</blockquote>
+<blockquote class="quote">
+  Samsung Electronics Signs $200 Billion Five Year Semiconductor Supply Agreement with Broadcom. Encompassing both memory and foundry.
+  <div class="translation">翻译：三星电子与博通签署了2000亿美元的五年期半导体供应协议。涵盖了存储和代工业务。</div>
+</blockquote>
+<div class="track-header">云</div>
+<blockquote class="quote">
+  Google Cloud growing 82%, exploding cloud backlogs, and demand that still exceeds supply.
+  <div class="translation">翻译：谷歌云增长了82%，云服务积压订单激增，需求仍超过供给。</div>
+</blockquote>
+<blockquote class="quote">
+  Meta has big upside selling excess compute
+  <div class="translation">翻译：Meta在出售过剩计算力方面有巨大潜力。</div>
+</blockquote>
+<div class="track-header">AI应用</div>
+<blockquote class="quote">
+  Qualcomm's AI robot presentation
+  <div class="translation">翻译：高通的AI机器人演示。</div>
+</blockquote>
+<blockquote class="quote">
+  since Eli Lilly’s buyout of AtaiBeckley, it feels like this Psychedelic industry might finally be up to bat. I’ve been following MAPS -Rick Doblin for 10+ years since I was in college, long before any of this was getting mainstream attention. Whether it’s psilocybin, MDMA, LSD, ketamine, DMT, ibogaine, or ayahuasca, I’ve always believed these are eventually going to change the way we treat ourselves. Obviously they’re all different compounds with different regulatory paths, but I think the overall direction is pretty clear. I don’t own any stocks yet, but I’m looking to change that. I’ve got a good bit of capital I’d like to invest over the long term and this is an industry I believe could grow into something massive.
+  <div class="translation">翻译：自从礼来公司收购AtaiBeckley以来，感觉这个迷幻药产业可能终于要迎来发展了。我从大学时起就关注MAPS的Rick Doblin十年多了，远在这一切受到主流关注之前。无论是裸盖菇素、MDMA、LSD、氯胺酮、DMT、伊博加因还是死藤水，我一直相信它们最终会改变我们治疗自己的方式。显然，它们都是不同的化合物，有不同的监管路径，但我认为总体方向非常明确。我还没有持有任何股票，但我正打算改变这种状况。我有一笔可观的资金希望长期投资，我相信这是一个可能发展成巨大规模的行业。</div>
+</blockquote>
         </div>
         <script>
             var myChart = echarts.init(document.getElementById('gauge'));
@@ -362,7 +223,7 @@
                     axisLine: { lineStyle: { width: 45, color: [[0.25, '#ef4444'], [0.45, '#f97316'], [0.55, '#d1d5db'], [0.75, '#84cc16'], [1, '#22c55e']] } },
                     pointer: { length: '60%', width: 8, itemStyle: { color: '#fff' } },
                     detail: { fontSize: 40, fontWeight: 'bold', offsetCenter: [0, '25%'], formatter: '{value}\n恐慌', color: '#fff' },
-                    data: [{ value: 39 }]
+                    data: [{ value: 40 }]
                 }]
             });
         </script>
