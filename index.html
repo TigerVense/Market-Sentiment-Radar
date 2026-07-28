@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>07月27日 情报终端</title>
+        <title>07月28日 情报终端</title>
         <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
         <style>
             :root { --bg: #0f172a; --text: #f1f5f9; --accent: #38bdf8; --border: #334155; }
@@ -36,184 +36,162 @@
     </head>
     <body>
         <div class="container">
-            <h1>🎯 07月27日 市场情报透视</h1>
-            <p style="color:#94a3b8">情报最后更新: 2026-07-27 23:22:34 (北京时间)</p>
+            <h1>🎯 07月28日 市场情报透视</h1>
+            <p style="color:#94a3b8">情报最后更新: 2026-07-28 11:45:14 (北京时间)</p>
             <div class="dashboard-card"><div id="gauge" class="gauge-container"></div></div>
-            <h2>1. 宏观与市场情绪</h2>
-<p>本周市场情绪复杂，普遍存在对“抄底”失败和投资回报不佳的失望情绪，但同时也有少数投资者取得了惊人的短期回报。AI领域依旧是焦点，围绕其巨大投资能否带来实际回报的争论激烈，但谷歌云的强劲增长和需求超过供给的现状为多头提供了支撑。半导体行业受到中国本土DUV芯片制造工具进展的影响，引发了对全球芯片股的担忧。</p>
-<blockquote class="quote">
-  I don't feel so good Mr. Stark. I thought I bought the dip when it fell below 20 :(
-  <div class="translation">翻译：斯塔克先生，我感觉不太好。我以为跌破20的时候我抄底了 :(</div>
-</blockquote>
-<blockquote class="quote">
-  I thought there would be a rebound this week
-  <div class="translation">翻译：我以为这周会有反弹。</div>
-</blockquote>
-<blockquote class="quote">
-  I’ve hit lotto after lotto since, converting it to ~$1.5M in less than 2 months.
-  <div class="translation">翻译：自那以后我屡次中奖，不到2个月就把资金变成了约150万美元。</div>
-</blockquote>
-<blockquote class="quote">
-  Apparently SpaceX launched a rocket at my portfolio. Thought I was buying the dip. Turns out I was just buying every dip. Down almost $10k in this portfolio for the month.
-  <div class="translation">翻译：显然SpaceX朝我的投资组合发射了一枚火箭。我以为我在抄底。结果我只是在买入每一个下跌。这个月我的投资组合亏损了将近1万美元。</div>
-</blockquote>
-<blockquote class="quote">
-  The bears point to +$700bn in AI capex this year, shrinking free cash flow and stretched valuations while the bulls counter with Google Cloud growing 82%, exploding cloud backlogs, and demand that still exceeds supply. The debate isn't whether AI is real. It obviously is. The real question is how to evaluate whether the massive investment can generate a realistic return.
-  <div class="translation">翻译：看空者指出今年AI资本支出超过7000亿美元，自由现金流萎缩，估值过高，而看多者则反驳说谷歌云增长了82%，云服务积压订单激增，需求仍超过供给。争论的焦点不在于AI是否真实，它显然是真实的。真正的问题是如何评估这些巨额投资能否产生切实的收益。</div>
-</blockquote>
-<blockquote
-  China begins making homegrown DUV chipmaking tools. The machines are expected to be delivered this year to leading Chinese chipmakers, including Semiconductor Manufacturing International Corp, opens new tab, Hua Hong Semiconductor opens new tab and ChangXin Memory Technologies. Chip stocks dropped after the report.
-  <div class="translation">翻译：中国开始制造本土DUV芯片制造工具。预计这些机器将于今年交付给包括中芯国际、华虹半导体和长鑫存储在内的中国领先芯片制造商。报告发布后，芯片股下跌。</div>
-</blockquote>
+            <!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美股市场情绪分析 (2026年07月28日)</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 960px; margin: 20px auto; background-color: #f4f7f6; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; margin-top: 30px; }
+        .quote { background-color: #e8f4f8; border-left: 5px solid #3498db; margin: 15px 0; padding: 10px 20px; border-radius: 4px; font-style: italic; color: #555; }
+        .quote .translation { font-style: normal; color: #333; margin-top: 8px; padding-top: 8px; border-top: 1px dashed #a0d9f0; }
+        ul { list-style: none; padding: 0; }
+        li { background-color: #ffffff; margin-bottom: 15px; padding: 15px; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.03); }
+        .stock-tag { font-weight: bold; color: #2980b9; margin-bottom: 10px; font-size: 1.1em; }
+        .track-header { font-weight: bold; color: #e67e22; margin-top: 20px; margin-bottom: 10px; font-size: 1.1em; border-bottom: 1px solid #e67e22; padding-bottom: 5px; }
+    </style>
+</head>
+<body>
 
-<h2>2. 热议中的个股和想法</h2>
-<ul>
-  <li>
-    <div class="stock-tag">NVDA (NVIDIA Corporation)</div>
-    <blockquote class="quote">
-      Nvidia in Talks With OpenAI to Guarantee $250 Billion Financing for Data Center
-      <div class="translation">翻译：英伟达与OpenAI就保证2500亿美元数据中心融资进行谈判。</div>
-    </blockquote>
-    <blockquote class="quote">
-      Sk Hynix NVDA partnership
-      <div class="translation">翻译：SK海力士与英伟达建立合作关系。</div>
-    </blockquote>
-  </li>
-  <li>
-    <div class="stock-tag">GOOGL (Alphabet Inc.)</div>
-    <blockquote class="quote">
-      bulls counter with Google Cloud growing 82%, exploding cloud backlogs, and demand that still exceeds supply.
-      <div class="translation">翻译：看多者反驳说谷歌云增长了82%，云服务积压订单激增，需求仍超过供给。</div>
-    </blockquote>
-    <blockquote class="quote">
-      I bought 1000 shares of Google at $319.35, hopefully it goes to $399 in the next few months and I can take 80k profit, if not I will be holding for a while.
-      <div class="translation">翻译：我以319.35美元的价格购买了1000股谷歌股票，希望未来几个月能涨到399美元，这样我就可以获得8万美元的利润，否则我将长期持有。</div>
-    </blockquote>
-    <blockquote class="quote">
-      I put all my money into AAPL, GOOGL, and AMZN when they dropped before they all split and blew up. I earned enough to put a lot of money on an amazing home in a fantastic area.
-      <div class="translation">翻译：在2020年3月，当苹果、谷歌和亚马逊股价下跌时，我把所有的钱都投了进去，在它们拆股并暴涨之前。我赚到的钱足以在一个很棒的地区买一套非常好的房子。</div>
-    </blockquote>
-  </li>
-  <li>
-    <div class="stock-tag">META (Meta Platforms Inc.)</div>
-    <blockquote class="quote">
-      And meta took a big dump this week and is down close to 25% and trading way below its avg price target as people panic over big ai spending spree. I think these are both good stocks, and way oversold, what’s your take?
-      <div class="translation">翻译：Meta本周大跌，下跌近25%，交易价格远低于其平均目标价，因为人们对AI巨额支出狂潮感到恐慌。我认为这两只股票都很好，而且被严重超卖了，你有什么看法？</div>
-    </blockquote>
-    <blockquote class="quote">
-      Meta has big upside selling excess compute and Microsoft just continues to grow.
-      <div class="translation">翻译：Meta在出售过剩计算力方面有巨大潜力，而微软则持续增长。</div>
-    </blockquote>
-  </li>
-  <li>
-    <div class="stock-tag">MSFT (Microsoft Corporation)</div>
-    <blockquote class="quote">
-      Microsoft is down over 25% from its all time high heading into earnings and trading way below its avg price target.
-      <div class="translation">翻译：微软在财报发布前已从历史高点下跌超过25%，交易价格远低于其平均目标价。</div>
-    </blockquote>
-    <blockquote class="quote">
-      I think these are both good stocks, and way oversold, what’s your take?
-      <div class="translation">翻译：我认为这两只股票都很好，而且被严重超卖了，你有什么看法？</div>
-    </blockquote>
-    <blockquote class="quote">
-      Microsoft just continues to grow.
-      <div class="translation">翻译：微软持续增长。</div>
-    </blockquote>
-  </li>
-  <li>
-    <div class="stock-tag">AVGO (Broadcom Inc.)</div>
-    <blockquote class="quote">
-      Samsung Electronics Signs $200 Billion Five Year Semiconductor Supply Agreement with Broadcom.
-      <div class="translation">翻译：三星电子与博通签署了2000亿美元的五年期半导体供应协议。</div>
-    </blockquote>
-    <blockquote class="quote">
-      Encompassing both memory and foundry.
-      <div class="translation">翻译：涵盖了存储和代工业务。</div>
-    </blockquote>
-  </li>
-  <li>
-    <div class="stock-tag">PARA (Paramount Global)</div>
-    <blockquote class="quote">
-      Paramount agrees to delay Warner Bros. merger into 2027
-      <div class="translation">翻译：派拉蒙同意将与华纳兄弟的合并推迟到2027年。</div>
-    </blockquote>
-  </li>
-  <li>
-    <div class="stock-tag">ORCL (Oracle Corporation)</div>
-    <blockquote class="quote">
-      Oracle signs 10-year software contract with Pentagon worth up to $7 billion
-      <div class="translation">翻译：甲骨文与五角大楼签署了一份为期10年、价值高达70亿美元的软件合同。</div>
-    </blockquote>
-  </li>
-</ul>
+    <h1>Reddit 美股情绪概览 (2026年07月28日)</h1>
 
-<h2>3. 小众公司冒泡</h2>
-<p>暂无。</p>
+    <h2>1. 宏观与市场情绪</h2>
+    <blockquote class="quote">
+      Kospi plunges 8% as South Korea halts trading with circuit breaker.
+      <div class="translation">翻译：韩国股市Kospi暴跌8%，触发熔断机制暂停交易。</div>
+    </blockquote>
+    <blockquote class="quote">
+      0DTE SPX Puts 2335% gains on port.
+      <div class="translation">翻译：0DTE标普期权空头带来了2335%的投资组合收益。</div>
+    </blockquote>
+    <blockquote class="quote">
+      Short term options account vs my leaps account over the past year.. LEAPS are supreme.
+      <div class="translation">翻译：短期期权账户和我过去一年的LEAPS账户相比……长期限期权（LEAPS）是王道。</div>
+    </blockquote>
+    <blockquote class="quote">
+      I'm not saying AI isn't overheated. Half the companies slapping "AI" into their earnings calls have about as much actual AI as my toaster.
+      <div class="translation">翻译：我不是说AI没有过热。一半在财报电话会议中随便贴上“AI”标签的公司，其真实的AI含量和我家烤面包机差不多。</div>
+    </blockquote>
 
-<h2>4. AI主线讨论</h2>
-<div class="track-header">模型</div>
-<p>暂无相关讨论。</p>
-<div class="track-header">算</div>
-<blockquote class="quote">
-  Nvidia in Talks With OpenAI to Guarantee $250 Billion Financing for Data Center
-  <div class="translation">翻译：英伟达与OpenAI就保证2500亿美元数据中心融资进行谈判。</div>
-</blockquote>
-<blockquote class="quote">
-  Meta has big upside selling excess compute
-  <div class="translation">翻译：Meta在出售过剩计算力方面有巨大潜力。</div>
-</blockquote>
-<blockquote class="quote">
-  Google Cloud growing 82%, exploding cloud backlogs, and demand that still exceeds supply.
-  <div class="translation">翻译：谷歌云增长了82%，云服务积压订单激增，需求仍超过供给。</div>
-</blockquote>
-<blockquote class="quote">
-  Big Tech will spend $1 trillion next year building AI infrastructure. What's a realistic ROI on that investment?
-  <div class="translation">翻译：大型科技公司明年将花费1万亿美元建设AI基础设施。这项投资的实际投资回报率是多少？</div>
-</blockquote>
-<div class="track-header">光</div>
-<p>暂无相关讨论。</p>
-<div class="track-header">存</div>
-<blockquote class="quote">
-  Memory chip maker CXMT debuts in Shanghai, up 470% at open and becomes the largest listed company in China. The IPO offer was 8.66 CNY. Instantly jumped 470% over high Dram demand. The company has said it plans to use most of the proceeds from the initial public offering (IPO) to boost production of memory chips and carry out more research and developments.
-  <div class="translation">翻译：存储芯片制造商长鑫存储在上海首次亮相，开盘上涨470%，成为中国最大的上市公司。IPO发行价为8.66元人民币。由于DRAM需求旺盛，股价瞬间上涨470%。该公司表示，计划将首次公开募股（IPO）所得大部分收益用于提高存储芯片产量并进行更多研发。</div>
-</blockquote>
-<blockquote class="quote">
-  Samsung Electronics Signs $200 Billion Five Year Semiconductor Supply Agreement with Broadcom. Encompassing both memory and foundry.
-  <div class="translation">翻译：三星电子与博通签署了2000亿美元的五年期半导体供应协议。涵盖了存储和代工业务。</div>
-</blockquote>
-<blockquote class="quote">
-  Sk Hynix NVDA partnership
-  <div class="translation">翻译：SK海力士与英伟达建立合作关系。</div>
-</blockquote>
-<div class="track-header">电</div>
-<p>暂无相关讨论。</p>
-<div class="track-header">板</div>
-<blockquote class="quote">
-  China begins making homegrown DUV chipmaking tools. The machines are expected to be delivered this year to leading Chinese chipmakers, including Semiconductor Manufacturing International Corp, opens new tab, Hua Hong Semiconductor opens new tab and ChangXin Memory Technologies. Chip stocks dropped after the report.
-  <div class="translation">翻译：中国开始制造本土DUV芯片制造工具。预计这些机器将于今年交付给包括中芯国际、华虹半导体和长鑫存储在内的中国领先芯片制造商。报告发布后，芯片股下跌。</div>
-</blockquote>
-<blockquote class="quote">
-  Samsung Electronics Signs $200 Billion Five Year Semiconductor Supply Agreement with Broadcom. Encompassing both memory and foundry.
-  <div class="translation">翻译：三星电子与博通签署了2000亿美元的五年期半导体供应协议。涵盖了存储和代工业务。</div>
-</blockquote>
-<div class="track-header">云</div>
-<blockquote class="quote">
-  Google Cloud growing 82%, exploding cloud backlogs, and demand that still exceeds supply.
-  <div class="translation">翻译：谷歌云增长了82%，云服务积压订单激增，需求仍超过供给。</div>
-</blockquote>
-<blockquote class="quote">
-  Meta has big upside selling excess compute
-  <div class="translation">翻译：Meta在出售过剩计算力方面有巨大潜力。</div>
-</blockquote>
-<div class="track-header">AI应用</div>
-<blockquote class="quote">
-  Qualcomm's AI robot presentation
-  <div class="translation">翻译：高通的AI机器人演示。</div>
-</blockquote>
-<blockquote class="quote">
-  since Eli Lilly’s buyout of AtaiBeckley, it feels like this Psychedelic industry might finally be up to bat. I’ve been following MAPS -Rick Doblin for 10+ years since I was in college, long before any of this was getting mainstream attention. Whether it’s psilocybin, MDMA, LSD, ketamine, DMT, ibogaine, or ayahuasca, I’ve always believed these are eventually going to change the way we treat ourselves. Obviously they’re all different compounds with different regulatory paths, but I think the overall direction is pretty clear. I don’t own any stocks yet, but I’m looking to change that. I’ve got a good bit of capital I’d like to invest over the long term and this is an industry I believe could grow into something massive.
-  <div class="translation">翻译：自从礼来公司收购AtaiBeckley以来，感觉这个迷幻药产业可能终于要迎来发展了。我从大学时起就关注MAPS的Rick Doblin十年多了，远在这一切受到主流关注之前。无论是裸盖菇素、MDMA、LSD、氯胺酮、DMT、伊博加因还是死藤水，我一直相信它们最终会改变我们治疗自己的方式。显然，它们都是不同的化合物，有不同的监管路径，但我认为总体方向非常明确。我还没有持有任何股票，但我正打算改变这种状况。我有一笔可观的资金希望长期投资，我相信这是一个可能发展成巨大规模的行业。</div>
-</blockquote>
+    <h2>2. 热议中的个股和想法</h2>
+    <ul>
+      <li>
+        <div class="stock-tag">1. AAPL (Apple Inc.)</div>
+        <blockquote class="quote">
+          Apple ends day as world's most valuable company, passing Nvidia.
+          <div class="translation">翻译：苹果公司收盘时成为全球市值最高的公司，超越了英伟达。</div>
+        </blockquote>
+        <blockquote class="quote">
+          AAPL is currently hitting ATHs, is up 57% in the past year, and has the highest market cap in the market right now. I understand that Apple is a great stock that prints tons of money every year but why the fuck are they printing so much more money this year than in the previous years? I don’t think had much growth in phone and Mac sales and as far as AI they aren’t exactly a leader in new AI growth. So why are they growing like they’ve never grown before? I’d think that they will have a solid pullback soon because the pump seems a little ridiculous.
+          <div class="translation">翻译：苹果目前正创下历史新高，过去一年上涨了57%，目前市值在市场上最高。我明白苹果是一支每年都能赚大钱的优秀股票，但为什么今年他们比往年赚得更多？我不认为他们在手机和Mac销量方面有很大增长，而且在AI方面他们也不是新AI增长的领导者。那么为什么他们会以前所未有的速度增长？我认为他们很快就会出现一次大幅回调，因为这次上涨看起来有点荒谬。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">2. NVDA (NVIDIA Corporation)</div>
+        <blockquote class="quote">
+          Michael Burry has been shorting NVDA since November, stock is up 30% since then. At what point do we stop treating this guy like a prophet? Every quarter it's the same thing. Burry files his 13-F showing he's doubling down on puts against NVDA and PLTR. Financial media runs the headline "Big Short investor warns of collapse." We all panic for about 45 minutes. Then earnings drop, guidance gets raised again, and the stock rips another 8%.
+          <div class="translation">翻译：迈克尔·伯里自11月以来一直在做空英伟达，但该股票自那时以来已经上涨了30%。我们什么时候才能停止将这个人视为先知？每个季度都是如此。伯里提交13-F文件，显示他正在加倍买入针对英伟达和Palantir的看跌期权。财经媒体发布“大空头投资者警告崩盘”的头条新闻。我们所有人会恐慌大约45分钟。然后财报公布，指引再次上调，股票又上涨8%。</div>
+        </blockquote>
+        <blockquote class="quote">
+          Nvidia and OpenAI in talks for up to $250 billion dollar backstop to fund AI infrastructure plans.
+          <div class="translation">翻译：英伟达和OpenAI正在商谈高达2500亿美元的资金支持，以资助AI基础设施建设计划。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">3. AZN (AstraZeneca PLC)</div>
+        <blockquote class="quote">
+          AZN reported $2.63 eps this morning (.13 beat) and beat on revenue with just past $15 billion for the quarter. More important they reiterated guidance of $80 billion for 2030. 33% higher than 2026. They also reported a positive readout on some cancer drug with $5 billion annual potential. So I’m betting we get some upgrades tomorrow with August $155 calls. I also like sector rotation. AZN has lagged the other premier pharma companies.
+          <div class="translation">翻译：阿斯利康今天早上公布的每股收益为2.63美元（超出预期0.13美元），季度营收略超150亿美元，超出预期。更重要的是，他们重申了2030年800亿美元的业绩指引，比2026年高出33%。他们还报告了一项潜在年销售额达50亿美元的癌症药物的积极数据。因此，我打赌我们明天会看到一些评级上调，我持有8月155美元的看涨期权。我也喜欢板块轮动。阿斯利康一直落后于其他顶尖制药公司。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">4. RDDT (Reddit Inc.)</div>
+        <blockquote class="quote">
+          What a great day to own Reddit calls. Still time to load up before earnings after the close on Thursday! Trend is pointing up!
+          <div class="translation">翻译：持有Reddit看涨期权真是美好的一天。在周四收盘后财报发布之前还有时间加仓！趋势正在向上！</div>
+        </blockquote>
+      </li>
+    </ul>
+
+    <h2>3. 小众公司冒泡</h2>
+    <ul>
+      <li>
+        <div class="stock-tag">1. CXMT (ChangXin Memory Technologies)</div>
+        <blockquote class="quote">
+          Memory chip maker CXMT debuts in Shanghai, up 470% at open and becomes the largest listed company in China. The IPO offer was 8.66 CNY. Instantly jumped 470% over high Dram demand. The company has said it plans to use most of the proceeds from the initial public offering (IPO) to boost production of memory chips and carry out more research and developments.
+          <div class="translation">翻译：存储芯片制造商长鑫存储在上海首次亮相，开盘上涨470%，成为中国最大的上市公司。IPO发行价为8.66元人民币。由于DRAM需求旺盛，股价立即上涨470%。该公司表示，计划将首次公开募股（IPO）的大部分收益用于提高内存芯片产量并进行更多研发。</div>
+        </blockquote>
+        <blockquote class="quote">
+          China has begun manufacturing domestically (DUV) lithography machines, The Information ‌reported on Monday. The machines are expected to be delivered this year to leading Chinese chipmakers, including Semiconductor Manufacturing International Corp, Hua Hong Semiconductor and ChangXin Memory Technologies.
+          <div class="translation">翻译：《The Information》周一报道称，中国已开始制造国产深紫外（DUV）光刻机。预计这些机器将于今年交付给包括中芯国际、华虹半导体和长鑫存储在内的中国主要芯片制造商。</div>
+        </blockquote>
+        <blockquote class="quote">
+          As far as Im aware, it was assigned to CXMT for RAM production rather than NAND, even though we all saw the SNDK sell-off while MU showed somewhat strong resistance.
+          <div class="translation">翻译：据我所知，它被分配给长鑫存储用于RAM生产而不是NAND，尽管我们都看到了SanDisk的抛售，而美光则表现出了一定的抵抗力。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">2. SNDK (SanDisk)</div>
+        <blockquote class="quote">
+          How come DUV lithography hurt SNDK the most? As far as Im aware, it was assigned to CXMT for RAM production rather than NAND, even though we all saw the SNDK sell-off while MU showed somewhat strong resistance. What does this imply regarding tomorrow’s open?
+          <div class="translation">翻译：为什么DUV光刻对SanDisk的伤害最大？据我所知，它被分配给长鑫存储用于RAM生产而不是NAND，尽管我们都看到了SanDisk的抛售，而美光则表现出了一定的抵抗力。这对于明天的开盘意味着什么？</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">3. MU (Micron Technology Inc.)</div>
+        <blockquote class="quote">
+          As far as Im aware, it was assigned to CXMT for RAM production rather than NAND, even though we all saw the SNDK sell-off while MU showed somewhat strong resistance.
+          <div class="translation">翻译：据我所知，它被分配给长鑫存储用于RAM生产而不是NAND，尽管我们都看到了SanDisk的抛售，而美光则表现出了一定的抵抗力。</div>
+        </blockquote>
+      </li>
+    </ul>
+
+    <h2>4. AI主线讨论</h2>
+    <div class="track-header">算 (Compute)</div>
+    <blockquote class="quote">
+      Half the companies slapping "AI" into their earnings calls have about as much actual AI as my toaster.
+      <div class="translation">翻译：一半在财报电话会议中随便贴上“AI”标签的公司，其真实的AI含量和我家烤面包机差不多。</div>
+    </blockquote>
+    <blockquote class="quote">
+      Nvidia and OpenAI in talks for up to $250 billion dollar backstop to fund AI infrastructure plans.
+      <div class="translation">翻译：英伟达和OpenAI正在商谈高达2500亿美元的资金支持，以资助AI基础设施建设计划。</div>
+    </blockquote>
+    <blockquote class="quote">
+      Burry files his 13-F showing he's doubling down on puts against NVDA and PLTR. Then earnings drop, guidance gets raised again, and the stock rips another 8%.
+      <div class="translation">翻译：伯里提交13-F文件，显示他正在加倍买入针对英伟达和Palantir的看跌期权。然后财报公布，指引再次上调，股票又上涨8%。</div>
+    </blockquote>
+
+    <div class="track-header">存 (Storage)</div>
+    <blockquote class="quote">
+      Memory chip maker CXMT debuts in Shanghai, up 470% at open and becomes the largest listed company in China. Instantly jumped 470% over high Dram demand.
+      <div class="translation">翻译：存储芯片制造商长鑫存储在上海首次亮相，开盘上涨470%，成为中国最大的上市公司。由于DRAM需求旺盛，股价立即上涨470%。</div>
+    </blockquote>
+    <blockquote class="quote">
+      The company has said it plans to use most of the proceeds from the initial public offering (IPO) to boost production of memory chips and carry out more research and developments.
+      <div class="translation">翻译：该公司表示，计划将首次公开募股（IPO）的大部分收益用于提高内存芯片产量并进行更多研发。</div>
+    </blockquote>
+    <blockquote class="quote">
+      China has begun manufacturing domestically (DUV) lithography machines. The machines are expected to be delivered this year to leading Chinese chipmakers, including Semiconductor Manufacturing International Corp, Hua Hong Semiconductor and ChangXin Memory Technologies.
+      <div class="translation">翻译：中国已开始制造国产深紫外（DUV）光刻机。预计这些机器将于今年交付给包括中芯国际、华虹半导体和长鑫存储在内的中国主要芯片制造商。</div>
+    </blockquote>
+
+    <div class="track-header">AI应用 (AI Applications)</div>
+    <blockquote class="quote">
+      Burry files his 13-F showing he's doubling down on puts against NVDA and PLTR.
+      <div class="translation">翻译：伯里提交13-F文件，显示他正在加倍买入针对英伟达和Palantir的看跌期权。</div>
+    </blockquote>
+    <blockquote class="quote">
+      as far as AI they aren’t exactly a leader in new AI growth.
+      <div class="translation">翻译：就AI而言，他们（苹果）在新AI增长方面并非领导者。</div>
+    </blockquote>
+
+</body>
+</html>
         </div>
         <script>
             var myChart = echarts.init(document.getElementById('gauge'));
@@ -223,7 +201,7 @@
                     axisLine: { lineStyle: { width: 45, color: [[0.25, '#ef4444'], [0.45, '#f97316'], [0.55, '#d1d5db'], [0.75, '#84cc16'], [1, '#22c55e']] } },
                     pointer: { length: '60%', width: 8, itemStyle: { color: '#fff' } },
                     detail: { fontSize: 40, fontWeight: 'bold', offsetCenter: [0, '25%'], formatter: '{value}\n恐慌', color: '#fff' },
-                    data: [{ value: 40 }]
+                    data: [{ value: 39 }]
                 }]
             });
         </script>
