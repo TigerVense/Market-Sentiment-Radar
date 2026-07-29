@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>07月28日 情报终端</title>
+        <title>07月29日 情报终端</title>
         <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
         <style>
             :root { --bg: #0f172a; --text: #f1f5f9; --accent: #38bdf8; --border: #334155; }
@@ -36,80 +36,118 @@
     </head>
     <body>
         <div class="container">
-            <h1>🎯 07月28日 市场情报透视</h1>
-            <p style="color:#94a3b8">情报最后更新: 2026-07-28 22:58:08 (北京时间)</p>
+            <h1>🎯 07月29日 市场情报透视</h1>
+            <p style="color:#94a3b8">情报最后更新: 2026-07-29 11:48:48 (北京时间)</p>
             <div class="dashboard-card"><div id="gauge" class="gauge-container"></div></div>
             <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>美股市场情绪报告 (2026年07月28日)</title>
+    <title>美股市场情绪分析 (2026年07月29日)</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 20px auto; padding: 0 15px; background-color: #f9f9f9; }
-        h1, h2, h3 { color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 30px; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 20px auto; padding: 0 15px; background-color: #f9f9f9; }
+        h1, h2 { color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 30px; }
+        h2 { font-size: 1.8em; }
+        .track-header { font-size: 1.4em; color: #34495e; margin-top: 20px; margin-bottom: 10px; padding-left: 10px; border-left: 4px solid #3498db; }
         ul { list-style: none; padding: 0; }
-        li { background-color: #fff; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 15px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-        .stock-tag { font-weight: bold; color: #007bff; margin-bottom: 10px; font-size: 1.1em; }
-        .quote { background-color: #e9f7ef; border-left: 4px solid #28a745; margin: 10px 0; padding: 10px 15px; font-style: italic; color: #555; }
-        .translation { margin-top: 8px; font-style: normal; color: #34495e; font-size: 0.95em; }
-        .track-header { font-weight: bold; margin-top: 20px; margin-bottom: 10px; padding: 8px 12px; background-color: #f0f8ff; border-left: 5px solid #007bff; color: #2c3e50; }
-        .quote.macro { background-color: #ffe0b2; border-left: 4px solid #ff9800; }
-        .quote.ai { background-color: #e0f2f7; border-left: 4px solid #00bcd4; }
+        li { background-color: #fff; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 15px; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .stock-tag { font-weight: bold; color: #e74c3c; font-size: 1.1em; margin-bottom: 10px; }
+        .quote { margin: 10px 0 0 0; padding: 15px; background-color: #ecf0f1; border-left: 5px solid #bdc3c7; border-radius: 4px; font-style: italic; }
+        .translation { margin-top: 10px; font-size: 0.9em; color: #555; font-style: normal; }
+        .general-sentiment-quote { margin: 15px 0; padding: 15px; background-color: #ecf0f1; border-left: 5px solid #95a5a6; border-radius: 4px; font-style: italic; }
+        .general-sentiment-quote .translation { font-style: normal; }
     </style>
 </head>
 <body>
-    <h1>美股市场情绪报告 (2026年07月28日)</h1>
+
+    <h1>美股市场情绪分析 (2026年07月29日)</h1>
 
     <h2>1. 宏观与市场情绪</h2>
-    <p>市场情绪在乐观与担忧之间波动。虽然有观点认为市场只会上涨，但也有交易者将市场比作赌场，强调其固有的风险和波动性。国际市场方面，韩国股市KOSPI指数大幅下跌，触发熔断，显示出全球经济存在不确定性。在微观层面，期权交易带来了极端盈亏，例如SPX看跌期权获得超高回报，但也有人因看涨期权而蒙受巨额损失，呼吁警惕期权交易的风险。此外，围绕人工智能（AI）领域的资金流向和泡沫化担忧也逐渐浮现。</p>
-    <blockquote class="quote macro">
-        Market only goes up!
-        <div class="translation">翻译：市场只会上涨！</div>
+    <p>今日Reddit社区充斥着对市场下行风险的担忧，尤其是科技和高贝塔动量股表现不佳。国际市场动荡（如韩国股市熔断）加剧了全球经济不确定性。投资者普遍认为市场波动性高企，并预计美联储将加息。此外，地缘政治风险（如也门胡塞武装袭击沙特油轮）也为市场带来了额外的不确定性。</p>
+    <blockquote class="general-sentiment-quote">
+        Goldman's high beta momentum basket on track for worst monthly performance in history, worse than 2000 and 2009
+        <div class="translation">翻译：高盛的高贝塔动量股票组合本月有望创下史上最差表现，甚至比2000年和2009年更糟糕。</div>
     </blockquote>
-    <blockquote class="quote macro">
-        Welcome to the Casino.
-        <div class="translation">翻译：欢迎来到赌场。</div>
+    <blockquote class="general-sentiment-quote">
+        Kospi plunges 8% as South Korea halts trading with circuit breaker
+        <div class="translation">翻译：韩国综合股价指数暴跌8%，韩国股市触发熔断暂停交易。</div>
     </blockquote>
-    <blockquote class="quote macro">
-        Kospi plunges 8% as South Korea halts trading with circuit breaker.
-        <div class="translation">翻译：韩国股市KOSPI指数暴跌8%，韩国暂停交易并触发熔断。</div>
+    <blockquote class="general-sentiment-quote">
+        Tech stocks are all crashing but I'm choosing to believe in them one more time. Tech is getting absolutely crushed across the board.
+        <div class="translation">翻译：科技股全线暴跌，但我选择再相信它们一次。科技股正遭遇全面重创。</div>
     </blockquote>
-    <blockquote class="quote macro">
-        This loss was thanks to options. Decided to do Sandisk options calls and the dip kept dipping :( Self made &amp; life savings.
-        <div class="translation">翻译：这次亏损是期权造成的。决定做Sandisk看涨期权，结果股价持续下跌 :( 这是我自食其果，赔上了毕生积蓄。</div>
+    <blockquote class="general-sentiment-quote">
+        Kevin Warsh laughing when he hikes rates tomorrow
+        <div class="translation">翻译：凯文·沃什明天加息时会笑出声来。</div>
     </blockquote>
-    <blockquote class="quote macro">
-        Nvidia and OpenAI in talks for up to $250 billion dollar backstop to fund AI infrastructure plans. AI bubble running out of funding?
-        <div class="translation">翻译：英伟达和OpenAI正在商谈高达2500亿美元的担保资金，以资助人工智能基础设施计划。人工智能泡沫资金耗尽了吗？</div>
+    <blockquote class="general-sentiment-quote">
+        Houthis Claim Strike on Another Saudi Oil Tanker
+        <div class="translation">翻译：胡塞武装声称袭击了另一艘沙特油轮。</div>
+    </blockquote>
+    <blockquote class="general-sentiment-quote">
+        Market tomorrow. Welcome to the Casino
+        <div class="translation">翻译：明天的市场。欢迎来到赌场。</div>
     </blockquote>
 
     <h2>2. 热议中的个股和想法</h2>
     <ul>
       <li>
-        <div class="stock-tag">1. AAPL (苹果公司)</div>
+        <div class="stock-tag">AAPL (Apple Inc.)</div>
         <blockquote class="quote">
-          Apple ends day as world's most valuable company, passing Nvidia.
-          <div class="translation">翻译：苹果公司当天收盘成为全球市值最高的公司，超越了英伟达。</div>
+          Apple ends day as world's most valuable company, passing Nvidia
+          <div class="translation">翻译：苹果公司收盘时成为全球市值最高的公司，超越了英伟达。</div>
         </blockquote>
         <blockquote class="quote">
-          AAPL is currently hitting ATHs, is up 57% in the past year, and has the highest market cap in the market right now. I understand that Apple is a great stock that prints tons of money every year but why the fuck are they printing so much more money this year than in the previous years? I don’t think had much growth in phone and Mac sales and as far as AI they aren’t exactly a leader in new AI growth. So why are they growing like they’ve never grown before? I’d think that they will have a solid pullback soon because the pump seems a little ridiculous.
-          <div class="translation">翻译：苹果公司目前正创下历史新高，过去一年上涨了57%，目前市场市值最高。我明白苹果一直是一只好股票，每年都赚很多钱，但为什么今年赚的钱比往年多这么多？我认为手机和Mac的销量并没有大幅增长，而在AI方面，他们也不是新AI增长的领导者。那么为什么他们会以前所未有的速度增长呢？我认为他们很快就会有一次大幅回调，因为这次上涨看起来有点荒谬。</div>
+          Investing seems easy: Step 1: Buy a few hundred bucks worth of a stock nobody else likes. Step 2: Wait 30 years. Step 3: Cash out at 100,000% gains.
+          <div class="translation">翻译：投资看起来很简单：第一步：买入几百美元没人喜欢的股票。第二步：等待30年。第三步：以100,000%的收益套现。</div>
         </blockquote>
       </li>
       <li>
-        <div class="stock-tag">2. NVDA (英伟达)</div>
+        <div class="stock-tag">NVDA (NVIDIA Corporation)</div>
         <blockquote class="quote">
-          Apple ends day as world's most valuable company, passing Nvidia.
-          <div class="translation">翻译：苹果公司当天收盘成为全球市值最高的公司，超越了英伟达。</div>
+          Never trust Jensen Huang. He told me this was a trillion dollar company.
+          <div class="translation">翻译：永远不要相信黄仁勋。他告诉我这是一家万亿美元市值的公司。</div>
         </blockquote>
         <blockquote class="quote">
-          Look, I get it. The man called 2008, made a billion dollars, got a movie made about him with Christian Bale. Legendary stuff. But can we talk about how this dude has been screaming "beginning of the end" for AI stocks for the better part of a year now while Jensen keeps printing money. Every quarter it's the same thing. Burry files his 13-F showing he's doubling down on puts against NVDA and PLTR. Financial media runs the headline "Big Short investor warns of collapse." We all panic for about 45 minutes. Then earnings drop, guidance gets raised again, and the stock rips another 8%. I'm not saying AI isn't overheated.
-          <div class="translation">翻译：瞧，我明白了。这个人预测了2008年的危机，赚了十亿美元，还有克里斯蒂安·贝尔主演的电影。传奇般的人物。但是，我们能谈谈这个人一年多来一直在叫嚣人工智能股票“末日将至”，而黄仁勋却一直在赚钱的事吗？每个季度都一样。伯里提交他的13-F文件，显示他正在加倍做空英伟达和Palantir。财经媒体就会刊登“大空头投资者警告崩盘”的头条。我们都会恐慌大约45分钟。然后财报公布，指引再次上调，股价又上涨8%。我不是说人工智能没有过热。</div>
+          Michael Burry has been shorting NVDA since November, stock is up 30% since then. At what point do we stop treating this guy like a prophet? Every quarter it's the same thing. Burry files his 13-F showing he's doubling down on puts against NVDA and PLTR. Financial media runs the headline "Big Short investor warns of collapse." We all panic for about 45 minutes. Then earnings drop, guidance gets raised again, and the stock rips another 8%.
+          <div class="translation">翻译：迈克尔·伯里自11月以来一直在做空英伟达，但其股价自那时以来上涨了30%。我们什么时候才能停止把他当成先知？每个季度都是同样的情况。伯里提交13-F文件，显示他正在加倍做空英伟达和Palantir。财经媒体发布头条新闻“大空头投资者警告市场崩溃”。我们都会恐慌大约45分钟。然后财报发布，业绩指引再次上调，股价又上涨了8%。</div>
         </blockquote>
         <blockquote class="quote">
-          Nvidia and OpenAI in talks for up to $250 billion dollar backstop to fund AI infrastructure plans. AI bubble running out of funding?
-          <div class="translation">翻译：英伟达和OpenAI正在商谈高达2500亿美元的担保资金，以资助人工智能基础设施计划。人工智能泡沫资金耗尽了吗？</div>
+          Apple ends day as world's most valuable company, passing Nvidia
+          <div class="translation">翻译：苹果公司收盘时成为全球市值最高的公司，超越了英伟达。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">META (Meta Platforms, Inc.)</div>
+        <blockquote class="quote">
+          Meta is reporting tomorrow. What do you think? Will it crash and burn due to capex? Considering their deal with AMD it's impossible that capex will be low. I think it's GONNA BE BAD
+          <div class="translation">翻译：Meta明天将发布财报。你认为它会因为资本支出而暴跌吗？考虑到他们与AMD的交易，资本支出不可能低。我认为情况会很糟糕。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">BE (Bloom Energy Corporation)</div>
+        <blockquote class="quote">
+          Bloom keeps blooming. CEO expects 2026 revenue to double from 2025
+          <div class="translation">翻译：Bloom Energy持续增长。CEO预计2026年营收将比2025年翻一番。</div>
+        </blockquote>
+        <blockquote class="quote">
+          Tech stocks are all crashing but I'm choosing to believe in them one more time. I'm trusting BE to surprise me after hours. Wish me luck boys
+          <div class="translation">翻译：科技股全线暴跌，但我选择再相信它们一次。我寄希望于Bloom Energy在盘后给我带来惊喜。祝我好运。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">STX (Seagate Technology Holdings)</div>
+        <blockquote class="quote">
+          Seagate Profit Soars as AI Boom Drives Data Storage Demand
+          <div class="translation">翻译：希捷利润飙升，AI繁荣推动数据存储需求。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">SNDK (SanDisk)</div>
+        <blockquote class="quote">
+          Sandisk (SNDK) continues its crash after hours, down almost -20% on the day, and -60% off its highs in just over 1 month.
+          <div class="translation">翻译：SanDisk (SNDK) 盘后继续暴跌，当天跌幅近20%，在一个多月内从高点下跌了60%。</div>
         </blockquote>
       </li>
     </ul>
@@ -117,67 +155,57 @@
     <h2>3. 小众公司冒泡</h2>
     <ul>
       <li>
-        <div class="stock-tag">1. NBIS (NBIS公司)</div>
+        <div class="stock-tag">CAVA (Cava Group Inc.)</div>
         <blockquote class="quote">
-          HOLY... NBIS PUTS (+100K). This baby do go lower.
-          <div class="translation">翻译：天啊……NBIS看跌期权（+10万美元）。这玩意儿会跌得更低。</div>
+          Cava Group Inc.'s founders and financial backers dumped billions of dollars in stock at prices inflated by hype about the company’s supposedly soaring trajectory, an unsealed lawsuit said Tuesday. A pension fund hit Cava’s corporate leaders with insider trading claims, saying they helped affiliates of the Belgian billionaire Eric Wittouck unload shares worth nearly $1.8 billion while selling the public a bogus narrative about accelerating growth. Two of Cava’s directors are linked to Invus Group LLC, a New York firm that manages investments for Artal Group SA, a Wittouck family holding company, according to the Delaware Chancery Court filing.
+          <div class="translation">翻译：一份解封的诉讼文件周二称，Cava Group Inc.的创始人及财务支持者以被炒作的公司 якобы 飙升的轨迹所抬高的价格，抛售了数十亿美元的股票。一家养老基金对Cava的公司领导层提出了内幕交易指控，称他们协助比利时亿万富翁Eric Wittouck的关联公司出售了近18亿美元的股票，同时向公众兜售加速增长的虚假叙述。根据特拉华州衡平法院的备案文件，Cava的两名董事与Invus Group LLC相关，后者是一家为Wittouck家族控股公司Artal Group SA管理投资的纽约公司。</div>
         </blockquote>
       </li>
       <li>
-        <div class="stock-tag">2. SNXX (SNXX公司)</div>
+        <div class="stock-tag">PLTR (Palantir Technologies Inc.)</div>
         <blockquote class="quote">
-          I thought I bought the dip when it fell below 20 :( (SNXX shares).
-          <div class="translation">翻译：我以为它跌破20美元时我抄底了，结果不是 :( (SNXX股票)。</div>
-        </blockquote>
-      </li>
-      <li>
-        <div class="stock-tag">3. CXMT (长鑫存储)</div>
-        <blockquote class="quote">
-          Memory chip maker CXMT debuts in Shanghai, up 470% at open and becomes the largest listed company in China. ChangXin Memory Technologies opens at Shanghai Stock Exchange. The IPO offer was 8.66 CNY. Instantly jumped 470% over high Dram demand. The company has said it plans to use most of the proceeds from the initial public offering (IPO) to boost production of memory chips and carry out more research and developments.
-          <div class="translation">翻译：存储芯片制造商长鑫存储（CXMT）在上海首次亮相，开盘上涨470%，成为中国市值最大的上市公司。长鑫存储在上海证券交易所上市。首次公开发行价格为8.66元人民币。由于DRAM需求旺盛，股价立即上涨470%。该公司表示，计划将首次公开发行（IPO）的大部分收益用于提高存储芯片产量并开展更多研发。</div>
-        </blockquote>
-        <blockquote class="quote">
-          China begins making homegrown DUV chipmaking tools. The machines are expected to be delivered this year to leading Chinese chipmakers, including Semiconductor Manufacturing International Corp, Hua Hong Semiconductor and ChangXin Memory Technologies. Chip stocks dropped after the report. Chip stocks about get cooked if they scale the production.
-          <div class="translation">翻译：中国开始制造国产DUV芯片制造工具。预计这些设备将于今年交付给包括中芯国际、华虹半导体和长鑫存储在内的中国领先芯片制造商。报道发布后，芯片股下跌。如果他们扩大生产，芯片股将面临困境。</div>
+          Michael Burry has been shorting NVDA since November, stock is up 30% since then. Burry files his 13-F showing he's doubling down on puts against NVDA and PLTR.
+          <div class="translation">翻译：迈克尔·伯里自11月以来一直在做空英伟达，但其股价自那时以来上涨了30%。伯里提交13-F文件，显示他正在加倍做空英伟达和Palantir。</div>
         </blockquote>
       </li>
     </ul>
 
     <h2>4. AI主线讨论</h2>
-    <div class="track-header">算 (Compute)</div>
-    <blockquote class="quote ai">
-        Look, I get it. The man called 2008, made a billion dollars, got a movie made about him with Christian Bale. Legendary stuff. But can we talk about how this dude has been screaming "beginning of the end" for AI stocks for the better part of a year now while Jensen keeps printing money. Every quarter it's the same thing. Burry files his 13-F showing he's doubling down on puts against NVDA and PLTR. Financial media runs the headline "Big Short investor warns of collapse." We all panic for about 45 minutes. Then earnings drop, guidance gets raised again, and the stock rips another 8%. I'm not saying AI isn't overheated.
-        <div class="translation">翻译：瞧，我明白了。这个人预测了2008年的危机，赚了十亿美元，还有克里斯蒂安·贝尔主演的电影。传奇般的人物。但是，我们能谈谈这个人一年多来一直在叫嚣人工智能股票“末日将至”，而黄仁勋却一直在赚钱的事吗？每个季度都一样。伯里提交他的13-F文件，显示他正在加倍做空英伟达和Palantir。财经媒体就会刊登“大空头投资者警告崩盘”的头条。我们都会恐慌大约45分钟。然后财报公布，指引再次上调，股价又上涨8%。我不是说人工智能没有过热。</div>
-    </blockquote>
-    <blockquote class="quote ai">
-        Nvidia and OpenAI in talks for up to $250 billion dollar backstop to fund AI infrastructure plans. AI bubble running out of funding?
-        <div class="translation">翻译：英伟达和OpenAI正在商谈高达2500亿美元的担保资金，以资助人工智能基础设施计划。人工智能泡沫资金耗尽了吗？</div>
-    </blockquote>
-    <div class="track-header">存 (Storage)</div>
-    <blockquote class="quote ai">
-        Memory chip maker CXMT debuts in Shanghai, up 470% at open and becomes the largest listed company in China. ChangXin Memory Technologies opens at Shanghai Stock Exchange. The IPO offer was 8.66 CNY. Instantly jumped 470% over high Dram demand. The company has said it plans to use most of the proceeds from the initial public offering (IPO) to boost production of memory chips and carry out more research and developments.
-        <div class="translation">翻译：存储芯片制造商长鑫存储（CXMT）在上海首次亮相，开盘上涨470%，成为中国市值最大的上市公司。长鑫存储在上海证券交易所上市。首次公开发行价格为8.66元人民币。由于DRAM需求旺盛，股价立即上涨470%。该公司表示，计划将首次公开发行（IPO）的大部分收益用于提高存储芯片产量并开展更多研发。</div>
-    </blockquote>
-    <blockquote class="quote ai">
-        China begins making homegrown DUV chipmaking tools. The machines are expected to be delivered this year to leading Chinese chipmakers, including Semiconductor Manufacturing International Corp, Hua Hong Semiconductor and ChangXin Memory Technologies. Chip stocks dropped after the report. Chip stocks about get cooked if they scale the production.
-        <div class="translation">翻译：中国开始制造国产DUV芯片制造工具。预计这些设备将于今年交付给包括中芯国际、华虹半导体和长鑫存储在内的中国领先芯片制造商。报道发布后，芯片股下跌。如果他们扩大生产，芯片股将面临困境。</div>
-    </blockquote>
-    <div class="track-header">AI应用 (AI Applications)</div>
-    <blockquote class="quote ai">
-        Half the companies slapping "AI" into their earnings calls have about as much actual AI as my toaster.
-        <div class="translation">翻译：一半在财报电话会议中大谈“AI”的公司，其AI含量可能和我的烤面包机差不多。</div>
+    <div class="track-header">模型</div>
+    <!-- 未发现相关高质量讨论 -->
+
+    <div class="track-header">算</div>
+    <blockquote class="quote">
+        Michael Burry has been shorting NVDA since November, stock is up 30% since then. At what point do we stop treating this guy like a prophet? Every quarter it's the same thing. Burry files his 13-F showing he's doubling down on puts against NVDA and PLTR. Then earnings drop, guidance gets raised again, and the stock rips another 8%.
+        <div class="translation">翻译：迈克尔·伯里自11月以来一直在做空英伟达，但其股价自那时以来上涨了30%。我们什么时候才能停止把他当成先知？每个季度都是同样的情况。伯里提交13-F文件，显示他正在加倍做空英伟达和Palantir。然后财报发布，业绩指引再次上调，股价又上涨了8%。</div>
     </blockquote>
 
-    <div class="track-header">模型 (Models)</div>
-    <p>没有符合条件的公司或讨论。</p>
-    <div class="track-header">光 (Optics)</div>
-    <p>没有符合条件的公司或讨论。</p>
-    <div class="track-header">电 (Power)</div>
-    <p>没有符合条件的公司或讨论。</p>
-    <div class="track-header">板 (Boards/PCBs)</div>
-    <p>没有符合条件的公司或讨论。</p>
-    <div class="track-header">云 (Cloud)</div>
-    <p>没有符合条件的公司或讨论。</p>
+    <div class="track-header">光</div>
+    <!-- 未发现相关高质量讨论 -->
+
+    <div class="track-header">存</div>
+    <blockquote class="quote">
+        Seagate Profit Soars as AI Boom Drives Data Storage Demand
+        <div class="translation">翻译：希捷利润飙升，AI繁荣推动数据存储需求。</div>
+    </blockquote>
+
+    <div class="track-header">电</div>
+    <!-- 未发现相关高质量讨论 -->
+
+    <div class="track-header">板</div>
+    <blockquote class="quote">
+        Never trust Jensen Huang. He told me this was a trillion dollar company.
+        <div class="translation">翻译：永远不要相信黄仁勋。他告诉我这是一家万亿美元市值的公司。</div>
+    </blockquote>
+
+    <div class="track-header">云</div>
+    <!-- 未发现相关高质量讨论 -->
+
+    <div class="track-header">AI应用</div>
+    <blockquote class="quote">
+        I'm not saying AI isn't overheated. Half the companies slapping "AI" into their earnings calls have about as much actual AI as my toaster.
+        <div class="translation">翻译：我并不是说人工智能没有过热。一半在财报电话会议中“贴上AI标签”的公司，其AI含量和我家烤面包机差不多。</div>
+    </blockquote>
 
 </body>
 </html>
@@ -190,7 +218,7 @@
                     axisLine: { lineStyle: { width: 45, color: [[0.25, '#ef4444'], [0.45, '#f97316'], [0.55, '#d1d5db'], [0.75, '#84cc16'], [1, '#22c55e']] } },
                     pointer: { length: '60%', width: 8, itemStyle: { color: '#fff' } },
                     detail: { fontSize: 40, fontWeight: 'bold', offsetCenter: [0, '25%'], formatter: '{value}\n恐慌', color: '#fff' },
-                    data: [{ value: 36 }]
+                    data: [{ value: 38 }]
                 }]
             });
         </script>
