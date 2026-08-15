@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>08月14日 情报终端</title>
+        <title>08月15日 情报终端</title>
         <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
         <style>
             :root { --bg: #0f172a; --text: #f1f5f9; --accent: #38bdf8; --border: #334155; }
@@ -36,163 +36,189 @@
     </head>
     <body>
         <div class="container">
-            <h1>🎯 08月14日 市场情报透视</h1>
-            <p style="color:#94a3b8">情报最后更新: 2026-08-14 21:51:27 (北京时间)</p>
+            <h1>🎯 08月15日 市场情报透视</h1>
+            <p style="color:#94a3b8">情报最后更新: 2026-08-15 09:55:38 (北京时间)</p>
             <div class="dashboard-card"><div id="gauge" class="gauge-container"></div></div>
-            <h2>1. 宏观与市场情绪</h2>
-<p>市场情绪在多重信号中呈现复杂态势。一方面，美国30年期债券的借贷成本达到2001年以来的最高点，这表明融资环境趋紧，可能对市场构成压力。但同时，7月份批发价格持平，低于市场预期的0.2%增长，这为通胀压力缓解提供了积极信号。在个股层面，Reddit因被纳入S&P 500指数而股价飙升，反映了指数调整对个股的显著提振作用。此外，投资者在特定高波动性美股和杠杆半导体ETF中进行日内交易，并取得巨额盈利，显示出市场中存在强烈的风险偏好和投机活动，尽管一些交易者也提及了7月份的“抛售潮”以及在快速获利后过早离场的遗憾。</p>
-<blockquote class="quote">
-  US sells 30-year bonds at highest borrowing costs since 2001
-  <div class="translation">翻译：美国30年期债券以2001年以来的最高借贷成本售出。</div>
-</blockquote>
-<blockquote class="quote">
-  Wholesale prices were flat in July, below expectations for 0.2% increase
-  <div class="translation">翻译：7月份批发价格持平，低于0.2%的预期增长。</div>
-</blockquote>
-<blockquote class="quote">
-  Reddit to join S&P 500 index on Aug. 18, shares soar
-  <div class="translation">翻译：Reddit将于8月18日加入标普500指数，股价飙升。</div>
-</blockquote>
-<blockquote class="quote">
-  Decided to try out day trading after years of being a buy and hold investor of blue chips and few ETFs (SPY, QQQ) My portfolio had $700k of available margin space and decided to tip toe into day trading into high beta US stocks Started off with SpaceX then went deep once I made my first $900 within a few minutes Ventured into Google, PLTR, MSFT during the sell off in July...then went full tilt into 2x leveraged ETFs of semi conductors such as SNDK, SKHY, MU...etc. Strategy was buy large volumes ($100k+ ) and set up stop losses so I wouldn't lose my shirt. Let winners ride but get out quickly. Unfortunately I sold PLTR and MSFT once I was 10% but they quickly went to +30% the next day. After 400+ trades and $375k realized profit, decided to call it quits for the time being.
-  <div class="translation">翻译：在多年买入并持有蓝筹股和少量ETF（SPY、QQQ）后，我决定尝试日内交易。我的投资组合有70万美元的可用保证金空间，所以我决定小心翼翼地进入高贝塔美股的日内交易。从SpaceX开始，在几分钟内赚到第一个900美元后，我深入其中。在7月份的抛售潮中，我冒险进入了谷歌、PLTR、微软，然后全力投入到半导体行业的2倍杠杆ETF，例如SNDK、SKHY、MU等。我的策略是大量买入（10万美元以上）并设置止损，以免亏损惨重。让赢家继续跑，但要快速出局。不幸的是，我在盈利10%时卖出了PLTR和微软，但它们第二天很快就上涨了30%。在400多次交易和37.5万美元的已实现利润后，我决定暂时退出。</div>
-</blockquote>
+            <!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reddit美股市场情绪 (2026年08月15日)</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; margin: 20px; color: #333; background-color: #f4f7f6; }
+        h1, h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; margin-top: 30px; }
+        h2 { font-size: 1.8em; }
+        ul { list-style: none; padding: 0; }
+        li { background-color: #fff; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 15px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .stock-tag { font-weight: bold; color: #e74c3c; font-size: 1.2em; margin-bottom: 10px; }
+        .quote { background-color: #ecf0f1; border-left: 5px solid #3498db; margin: 10px 0; padding: 10px 15px; font-style: italic; color: #555; }
+        .translation { font-size: 0.9em; color: #7f8c8d; margin-top: 5px; }
+        .track-header { font-weight: bold; color: #2980b9; margin-top: 20px; margin-bottom: 10px; font-size: 1.1em; }
+    </style>
+</head>
+<body>
 
-<h2>2. 热议中的个股和想法</h2>
-<ul>
-  <li>
-    <div class="stock-tag">RDDT (Reddit Inc.)</div>
-    <blockquote class="quote">
-      Reddit to join S&P 500 index on Aug. 18, shares soar
-      <div class="translation">翻译：Reddit将于8月18日加入标普500指数，股价飙升。</div>
-    </blockquote>
-    <blockquote class="quote">
-      I might finally recoup the 50k loss I had from earnings, so far up +11% AH. NEW YORK, August 13, 2026: S&amp;P Dow Jones Indices will make the following changes to the S&amp;P 500 and S&amp;P MidCap 400: • Reddit Inc. (NYSE: RDDT) will replace AvalonBay Communities Inc. (NYSE: AVB) in the S&amp;P 500 effective prior to the opening of trading on Tuesday, August 18.
-      <div class="translation">翻译：我可能终于能弥补财报造成的5万美元亏损了，盘后已经上涨了11%。纽约，2026年8月13日：标普道琼斯指数将对标普500和标普中盘400指数进行以下调整：• Reddit公司（纽约证券交易所代码：RDDT）将在8月18日周二开盘前生效，取代AvalonBay Communities公司（纽约证券交易所代码：AVB）进入标普500指数。</div>
-    </blockquote>
-    <blockquote class="quote">
-      Reddit 420 gain
-      <div class="translation">翻译：Reddit上涨420%。</div>
-    </blockquote>
-  </li>
-  <li>
-    <div class="stock-tag">ONDS (Ondas Holdings Inc.)</div>
-    <blockquote class="quote">
-      Congratulations, UMAC and ONDS holders.
-      <div class="translation">翻译：恭喜UMAC和ONDS的持有者。</div>
-    </blockquote>
-    <blockquote class="quote">
-      Crazy over reaction by the market today. Easy money
-      <div class="translation">翻译：今天市场反应过度了。轻松赚钱。</div>
-    </blockquote>
-    <blockquote class="quote">
-      Ondas Posts Record Q2 2026 Revenue of $83.8 Million on Strong Bookings and Backlog Growth; Raises Full-Year Outlook
-      <div class="translation">翻译：Ondas公布2026年第二季度营收达创纪录的8380万美元，得益于强劲的订单和积压业务增长；上调全年展望。</div>
-    </blockquote>
-  </li>
-  <li>
-    <div class="stock-tag">PLTR (Palantir Technologies Inc.)</div>
-    <blockquote class="quote">
-      Ventured into Google, PLTR, MSFT during the sell off in July...
-      <div class="translation">翻译：在7月份的抛售潮中，冒险进入了谷歌、PLTR、微软……</div>
-    </blockquote>
-    <blockquote class="quote">
-      Pltr going 200 EOW. To the moon
-      <div class="translation">翻译：PLTR本周末将达到200美元。要飞涨了。</div>
-    </blockquote>
-  </li>
-  <li>
-    <div class="stock-tag">DELL (Dell Technologies Inc.)</div>
-    <blockquote class="quote">
-      Dell Gains 500k
-      <div class="translation">翻译：戴尔获得50万美元。</div>
-    </blockquote>
-    <blockquote class="quote">
-      Finally, Dell hit 500 after 2 months of sideways action.
-      <div class="translation">翻译：终于，戴尔在两个月的横盘整理后达到了500。</div>
-    </blockquote>
-  </li>
-</ul>
+    <h1>Reddit美股市场情绪概览 (2026年08月15日)</h1>
 
-<h2>3. 小众公司冒泡</h2>
-<ul>
-  <li>
-    <div class="stock-tag">UMAC (Unmanned Systems Corporation)</div>
-    <blockquote class="quote">
-      Congratulations, UMAC and ONDS holders.
-      <div class="translation">翻译：恭喜UMAC和ONDS的持有者。</div>
-    </blockquote>
-  </li>
-  <li>
-    <div class="stock-tag">ADBE (Adobe Inc.)</div>
-    <blockquote class="quote">
-      Long ADBE @ $227.69 for $53,279, up $9,586 (+18%)
-      <div class="translation">翻译：长期持有ADBE，成本227.69美元，价值53,279美元，上涨9,586美元（+18%）。</div>
-    </blockquote>
-  </li>
-  <li>
-    <div class="stock-tag">ASTS (AST SpaceMobile, Inc.)</div>
-    <blockquote class="quote">
-      I moved everything to ASTS at $71.59
-      <div class="translation">翻译：我以71.59美元的价格将所有资金都转入了ASTS。</div>
-    </blockquote>
-  </li>
-  <li>
-    <div class="stock-tag">SMCI (Super Micro Computer, Inc.)</div>
-    <blockquote class="quote">
-      The real loss was selling my smci calls way too early -____-
-      <div class="translation">翻译：真正的损失是太早卖掉了我的SMCI看涨期权。</div>
-    </blockquote>
-  </li>
-  <li>
-    <div class="stock-tag">WDAY (Workday Inc.)</div>
-    <blockquote class="quote">
-      Workday to be acquired ?
-      <div class="translation">翻译：Workday将被收购？</div>
-    </blockquote>
-  </li>
-  <li>
-    <div class="stock-tag">GOOGL (Alphabet Inc.)</div>
-    <blockquote class="quote">
-      I think $GOOGL up soon
-      <div class="translation">翻译：我认为谷歌股价很快会上涨。</div>
-    </blockquote>
-    <blockquote class="quote">
-      I'm only down around $40k
-      <div class="translation">翻译：我只亏损了大约4万美元。</div>
-    </blockquote>
-  </li>
-  <li>
-    <div class="stock-tag">MSFT (Microsoft Corp)</div>
-    <blockquote class="quote">
-      Unfortunately I sold PLTR and MSFT once I was 10% but they quickly went to +30% the next day.
-      <div class="translation">翻译：不幸的是，我在盈利10%时卖出了PLTR和微软，但它们第二天很快就上涨了30%。</div>
-    </blockquote>
-  </li>
-  <li>
-    <div class="stock-tag">MSTR (MicroStrategy Incorporated)</div>
-    <blockquote class="quote">
-      maybe even pressure MSTR into selling BTC, pushing the price down and making mining even less profitable.
-      <div class="translation">翻译：甚至可能迫使MSTR出售比特币，从而压低价格，并使挖矿的利润更低。</div>
-    </blockquote>
-  </li>
-</ul>
+    <h2>1. 宏观与市场情绪</h2>
+    <ul>
+      <li>
+        <blockquote class="quote">
+          I still believe in the core thesis: oil shortage -> short term inflation surge -> long duration treasury bond yield surge -> demand destruction and liquidity drain aka recession. However, in terms of the correct market play, shorting the broad index is not the best idea. I realized that the broad market refuses to fall because software and hardware stocks have been inverse each other, thus balancing gains and losses in the index. Therefore, the more direct play for my thesis would be to go long oil.
+          <div class="translation">翻译：我仍然相信核心论点：石油短缺 -> 短期通胀飙升 -> 长期国债收益率飙升 -> 需求破坏和流动性枯竭，即经济衰退。然而，就正确的市场操作而言，做空大盘指数不是最佳选择。我意识到大盘不愿下跌，因为软件和硬件股票相互反向，从而平衡了指数的涨跌。因此，我这个论点更直接的玩法是做多石油。</div>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote class="quote">
+          Not only are we not even close to an ai bubble, but we are still very early to the AI boom. Don't let the youtube thumbnails scare you.
+          <div class="translation">翻译：我们不仅离AI泡沫还很远，而且我们仍然处于AI繁荣的早期。不要让YouTube的缩略图吓到你。</div>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote class="quote">
+          Jane Street took $15 billion hit in July tied to Situational Awareness, AI selloff, sources say.
+          <div class="translation">翻译：消息人士称，Jane Street在7月因“情境感知”和AI抛售遭受了150亿美元的损失。</div>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote class="quote">
+          Rare Earth is national security, we’re starting to rely less on China, all these tech stocks that have big gains need rare earth. So why not rare earth.
+          <div class="translation">翻译：稀土是国家安全问题，我们开始减少对中国的依赖，所有这些获得巨大收益的科技股都需要稀土。所以为什么不投资稀土呢。</div>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote class="quote">
+          President Trump Bolsters National Security and Strengthens U.S. Supply Chains by Imposing Tariffs on Drones and Their Parts and Components.
+          <div class="translation">翻译：特朗普总统通过对无人机及其零部件征收关税，以加强国家安全和美国供应链。</div>
+        </blockquote>
+      </li>
+    </ul>
 
-<h2>4. AI主线讨论</h2>
-<div class="track-header">电 (Power)</div>
-<blockquote class="quote">
-  I’ve been thinking about whether the AI boom will eventually force Bitcoin miners out of the best power sites as AI data centers take over.
-  <div class="translation">翻译：我一直在思考，随着AI数据中心接管，AI热潮是否最终会迫使比特币矿工离开最佳电力场地。</div>
-</blockquote>
-<blockquote class="quote">
-  Could miners then get heavily shorted, crushed, and bought up cheap for their power infrastructure?
-  <div class="translation">翻译：那么矿工们会不会被大量做空、打压，然后他们的电力基础设施被廉价收购呢？</div>
-</blockquote>
-<div class="track-header">AI应用 (AI Applications)</div>
-<blockquote class="quote">
-  I’ve been thinking about whether the AI boom will eventually force Bitcoin miners out of the best power sites as AI data centers take over.
-  <div class="translation">翻译：我一直在思考，随着AI数据中心接管，AI热潮是否最终会迫使比特币矿工离开最佳电力场地。</div>
-</blockquote>
+    <h2>2. 热议中的个股和想法</h2>
+    <ul>
+      <li>
+        <div class="stock-tag">RDDT (Reddit, Inc.)</div>
+        <blockquote class="quote">
+          Wrote some $4M of Cash Secured RDDT Puts to collect some premiums. I don't mind being assigned if it comes to that.
+          <div class="translation">翻译：卖出了一些价值400万美元的现金担保RDDT看跌期权来收取期权费。如果被行权，我也不介意。</div>
+        </blockquote>
+        <blockquote class="quote">
+          My DD is I use Reddit, and if you're reading this, you do too.
+          <div class="translation">翻译：我的尽职调查是我使用Reddit，如果你正在阅读此内容，你也是。</div>
+        </blockquote>
+        <blockquote class="quote">
+          Also - some Harvard Big Brain alum Sarah Farrell bought earlier this year, so if they think if it's a good idea, I do too.
+          <div class="translation">翻译：此外，今年早些时候，一些哈佛高智商校友Sarah Farrell买入了，所以如果他们认为这是一个好主意，我也认为。</div>
+        </blockquote>
+        <blockquote class="quote">
+          Reddit to join S&P 500 index on Aug. 18, shares soar.
+          <div class="translation">翻译：Reddit将于8月18日加入标普500指数，股价飙升。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">IOVA (Iovance Biotherapeutics, Inc.)</div>
+        <blockquote class="quote">
+          Some regard in the comments told me about this biotech that cures cancer that his pharmacist wife was excited about.
+          <div class="translation">翻译：评论里有人告诉我，这是一家治愈癌症的生物科技公司，他的药剂师妻子对此很兴奋。</div>
+        </blockquote>
+        <blockquote class="quote">
+          Around the same time as my buddy with stage 4 melanoma was treated by them and is now cancer free, giving me a high conviction.
+          <div class="translation">翻译：大约在同一时间，我患有四期黑色素瘤的朋友接受了他们的治疗，现在已经痊愈，这让我有了很高的信念。</div>
+        </blockquote>
+        <blockquote class="quote">
+          I kept buying the dip. Today I hit 100% gain.
+          <div class="translation">翻译：我持续逢低买入。今天我实现了100%的收益。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">PYPL (PayPal Holdings, Inc.)</div>
+        <blockquote class="quote">
+          Stripe, Advent in Talks to Buy PayPal.
+          <div class="translation">翻译：Stripe和Advent正在洽谈收购PayPal。</div>
+        </blockquote>
+      </li>
+    </ul>
+
+    <h2>3. 小众公司冒泡</h2>
+    <ul>
+      <li>
+        <div class="stock-tag">MU (Micron Technology, Inc.)</div>
+        <blockquote class="quote">
+          Same guy that did 400k MU calls to 2mil 2 weeks ago, cashed 1mil out, and sent 1mil.
+          <div class="translation">翻译：两周前将40万美元美光科技（MU）看涨期权变成200万美元的同一个人，套现了100万美元，并转走了100万美元。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">BRK.B (Berkshire Hathaway Inc.)</div>
+        <blockquote class="quote">
+          Dumped my earlier Berkshire faster than an overpriced See's candy.
+          <div class="translation">翻译：我抛售早期持有的伯克希尔的速度比处理一块 overpriced 的See's糖果还快。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">UMAC (UAV Corp)</div>
+        <blockquote class="quote">
+          President Trump Bolsters National Security and Strengthens U.S. Supply Chains by Imposing Tariffs on Drones and Their Parts and Components.
+          <div class="translation">翻译：特朗普总统通过对无人机及其零部件征收关税，以加强国家安全和美国供应链。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">ONDS (Ondas Holdings Inc.)</div>
+        <blockquote class="quote">
+          President Trump Bolsters National Security and Strengthens U.S. Supply Chains by Imposing Tariffs on Drones and Their Parts and Components.
+          <div class="translation">翻译：特朗普总统通过对无人机及其零部件征收关税，以加强国家安全和美国供应链。</div>
+        </blockquote>
+      </li>
+    </ul>
+
+    <h2>4. AI主线讨论</h2>
+    <ul>
+      <li>
+        <div class="track-header">模型</div>
+        <blockquote class="quote">
+          Anthropic Targets Record IPO Valuation Amid Profitability Questions.
+          <div class="translation">翻译：Anthropic在盈利能力存疑的情况下，目标创纪录的IPO估值。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="track-header">算</div>
+        <!-- 数据池中未发现相关高质量内容 -->
+      </li>
+      <li>
+        <div class="track-header">光</div>
+        <!-- 数据池中未发现相关高质量内容 -->
+      </li>
+      <li>
+        <div class="track-header">存</div>
+        <blockquote class="quote">
+          Same guy that did 400k MU calls to 2mil 2 weeks ago, cashed 1mil out, and sent 1mil.
+          <div class="translation">翻译：两周前将40万美元美光科技（MU）看涨期权变成200万美元的同一个人，套现了100万美元，并转走了100万美元。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="track-header">电</div>
+        <!-- 数据池中未发现相关高质量内容 -->
+      </li>
+      <li>
+        <div class="track-header">板</div>
+        <!-- 数据池中未发现相关高质量内容 -->
+      </li>
+      <li>
+        <div class="track-header">云</div>
+        <!-- 数据池中未发现相关高质量内容 -->
+      </li>
+      <li>
+        <div class="track-header">AI应用</div>
+        <blockquote class="quote">
+          Not only are we not even close to an ai bubble, but we are still very early to the AI boom. Don't let the youtube thumbnails scare you.
+          <div class="translation">翻译：我们不仅离AI泡沫还很远，而且我们仍然处于AI繁荣的早期。不要让YouTube的缩略图吓到你。</div>
+        </blockquote>
+      </li>
+    </ul>
+
+</body>
+</html>
         </div>
         <script>
             var myChart = echarts.init(document.getElementById('gauge'));
@@ -202,7 +228,7 @@
                     axisLine: { lineStyle: { width: 45, color: [[0.25, '#ef4444'], [0.45, '#f97316'], [0.55, '#d1d5db'], [0.75, '#84cc16'], [1, '#22c55e']] } },
                     pointer: { length: '60%', width: 8, itemStyle: { color: '#fff' } },
                     detail: { fontSize: 40, fontWeight: 'bold', offsetCenter: [0, '25%'], formatter: '{value}\n贪婪', color: '#fff' },
-                    data: [{ value: 66 }]
+                    data: [{ value: 64 }]
                 }]
             });
         </script>
