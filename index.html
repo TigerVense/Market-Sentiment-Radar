@@ -37,204 +37,180 @@
     <body>
         <div class="container">
             <h1>🎯 08月19日 市场情报透视</h1>
-            <p style="color:#94a3b8">情报最后更新: 2026-08-19 09:58:44 (北京时间)</p>
+            <p style="color:#94a3b8">情报最后更新: 2026-08-19 21:24:17 (北京时间)</p>
             <div class="dashboard-card"><div id="gauge" class="gauge-container"></div></div>
-            <div class="market-sentiment-report">
-  <h2>1. 宏观与市场情绪</h2>
-  <p>市场情绪显示出对市场效率、利率走向以及特定外汇干预动机的深刻探讨，同时关注交易结构的变化和国际零售投资者的动态。</p>
-  <ul>
-    <li>
-      <blockquote class="quote">
-        I knew Hyperliquid was scaring CBOE when they announced extended option hours but did not see this one coming.
-        <div class="translation">翻译：我知道Hyperliquid宣布延长期权交易时间时吓坏了CBOE，但没想到会是这个。</div>
-      </blockquote>
-    </li>
-    <li>
-      <blockquote class="quote">
-        Whatever you’re thinking about, the market thought about it three quarters ago.
-        <div class="translation">翻译：无论你在想什么，市场在三个季度前就已经想到了。</div>
-      </blockquote>
-    </li>
-    <li>
-      <blockquote class="quote">
-        The market knows.
-        <div class="translation">翻译：市场知道。</div>
-      </blockquote>
-    </li>
-    <li>
-      <blockquote class="quote">
-        It knew you were going to read this post before you opened Reddit.
-        <div class="translation">翻译：在你打开Reddit之前，它就知道你会读到这个帖子。</div>
-      </blockquote>
-    </li>
-    <li>
-      <blockquote class="quote">
-        So you get levered to the tits borrowing yen, exchange for USD, buy US treasuries (not that it has to be T-bills but historically its low risk), pocket the difference.
-        <div class="translation">翻译：所以你通过借入日元大举杠杆，兑换成美元，购买美国国债（不一定是短期国库券，但历史上风险较低），然后从中赚取差价。</div>
-      </blockquote>
-    </li>
-    <li>
-      <blockquote class="quote">
-        Japan starts raising rates (from 0% in 2024 now 1% and climbing.)
-        <div class="translation">翻译：日本开始加息（从2024年的0%到现在1%且还在攀升）。</div>
-      </blockquote>
-    </li>
-    <li>
-      <blockquote class="quote">
-        Scott Bessent basically has the whole US government's debt strategy leaning on one bet: rates go down soon been funding the government mostly with short term bills instead of locking in 30 year bonds right now.
-        <div class="translation">翻译：斯科特·贝森特基本上让美国政府的整个债务策略都押宝在一个赌注上：利率很快就会下降，一直以来政府主要通过短期票据融资，而不是现在就锁定30年期债券。</div>
-      </blockquote>
-    </li>
-    <li>
-      <blockquote class="quote">
-        problem is rates aren't dropping.
-        <div class="translation">翻译：问题是利率并没有下降。</div>
-      </blockquote>
-    </li>
-    <li>
-      <blockquote class="quote">
-        30 year auction this week priced at 5.22%, highest since 2001.
-        <div class="translation">翻译：本周30年期国债拍卖利率为5.22%，创2001年以来新高。</div>
-      </blockquote>
-    </li>
-    <li>
-      <blockquote class="quote">
-        South Korean retail investors net bought $4.5 billion of U.S. stocks in July as their home market corrected
-        <div class="translation">翻译：随着韩国国内市场回调，韩国散户投资者在7月份净买入了45亿美元的美国股票。</div>
-      </blockquote>
-    </li>
-  </ul>
+            <!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美股市场情绪报告 - 2026年08月19日</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f8f9fa; }
+        h1, h2 { color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 30px; }
+        h2 { font-size: 1.8em; }
+        h3 { font-size: 1.4em; color: #34495e; margin-top: 20px; }
+        ul { list-style: none; padding: 0; }
+        li { background-color: #fff; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 15px; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .stock-tag { font-weight: bold; font-size: 1.1em; color: #007bff; margin-bottom: 10px; }
+        .quote { background-color: #fefefe; border-left: 4px solid #007bff; margin: 10px 0; padding: 10px 15px; color: #555; font-style: italic; }
+        .translation { font-size: 0.9em; color: #666; margin-top: 5px; }
+        .track-header { font-weight: bold; font-size: 1.2em; color: #34495e; margin-top: 15px; margin-bottom: 5px; padding-left: 10px; border-bottom: 1px dashed #ccc; padding-bottom: 5px;}
+        .macro-quote { background-color: #e9f7ef; border-left: 4px solid #28a745; margin: 10px 0; padding: 10px 15px; color: #444; }
+    </style>
+</head>
+<body>
 
-  <h2>2. 热议中的个股和想法</h2>
-  <ul>
-    <li>
-      <div class="stock-tag">RDDT (Reddit)</div>
-      <blockquote class="quote">
-        Turns out he just described the problem to AI, the AI pointed him to a Reddit thread, and that thread led him to the Microsoft advisory.
-        <div class="translation">翻译：结果他只是向AI描述了问题，AI将他指向了一个Reddit帖子，那个帖子又引导他找到了微软的建议。</div>
-      </blockquote>
-      <blockquote class="quote">
-        Reddit has 20 years of people describing weird, specific problems in normal human language and other people figuring them out.
-        <div class="translation">翻译：Reddit拥有20年的人们用普通人类语言描述奇怪、具体问题，并由其他人解决这些问题的历史。</div>
-      </blockquote>
-      <blockquote class="quote">
-        Makes me think the Google licensing deal could be a much bigger deal over time than people give it credit for.
-        <div class="translation">翻译：这让我觉得谷歌的许可协议随着时间的推移可能比人们想象的要大得多。</div>
-      </blockquote>
-      <blockquote class="quote">
-        Reddit earns zero dollars on all that degenerate traffic.
-        <div class="translation">翻译：Reddit从所有那些堕落的流量中分文不赚。</div>
-      </blockquote>
-    </li>
-    <li>
-      <div class="stock-tag">BIDU (百度)</div>
-      <blockquote class="quote">
-        The Chinese search-engine provider posted a dismal set of second-quarter results on Tuesday, piling on more misery for a stock that was already down 20% for the year.
-        <div class="translation">翻译：这家中国搜索引擎提供商周二公布了惨淡的第二季度业绩，这让今年以来已经下跌20%的股价雪上加霜。</div>
-      </blockquote>
-      <blockquote class="quote">
-        Baidu’s net income for the period slumped 68% from a year ago to 2.3 billion yuan ($344 million).
-        <div class="translation">翻译：百度该季度的净收入同比暴跌68%，至23亿元人民币（3.44亿美元）。</div>
-      </blockquote>
-      <blockquote class="quote">
-        Revenue dropped 4% from a year ago to 31.3 billion yuan.
-        <div class="translation">翻译：营收同比下降4%，至313亿元人民币。</div>
-      </blockquote>
-    </li>
-    <li>
-      <div class="stock-tag">NVDA (英伟达)</div>
-      <blockquote class="quote">
-        Nvidia to provide up to $105 billion guarantee for OpenAI's Ohio data center
-        <div class="translation">翻译：英伟达将为OpenAI的俄亥俄数据中心提供高达1050亿美元的担保。</div>
-      </blockquote>
-    </li>
-  </ul>
+    <h1>美股市场情绪报告 - 2026年08月19日</h1>
 
-  <h2>3. 小众公司冒泡</h2>
-  <ul>
-    <li>
-      <div class="stock-tag">ASTS (AST SpaceMobile)</div>
-      <blockquote class="quote">
-        Space is on a serious slump and AST is definitely trailing behind the recovery the sector has had recently, but with beta service coming up, 3 batch launches going great and T Mobile about to sign I could easily see this hitting $200 early next year
-        <div class="translation">翻译：太空板块正经历严重低迷，AST无疑落后于该板块最近的复苏，但随着测试服务即将推出，三次批量发射进展顺利，T-Mobile即将签约，我很容易就能看到它明年年初达到200美元。</div>
-      </blockquote>
-    </li>
-    <li>
-      <div class="stock-tag">CNDL (Cardinal Infrastructure)</div>
-      <blockquote class="quote">
-        $8.2 million of insider buying on a $1.86 billion market cap infrastructure company in the last week.
-        <div class="translation">翻译：在过去一周内，这家市值18.6亿美元的基础设施公司发生了820万美元的内部人购买。</div>
-      </blockquote>
-      <blockquote class="quote">
-        fueled by the acquisition of A.L. Grading Contractors (ALGC), which expanded Cardinal into Georgia and added a higher-margin site-development business.
-        <div class="translation">翻译：这得益于对A.L. Grading Contractors (ALGC)的收购，该收购将Cardinal的业务扩展到佐治亚州，并增加了利润率更高的场地开发业务。</div>
-      </blockquote>
-      <blockquote class="quote">
-        FY results in March: 45% revenue growth, $682m revenue (up 33%) May results: 105% YOY revenue growth, 64% organic.
-        <div class="translation">翻译：3月份的财年业绩：营收增长45%，达到6.82亿美元（增长33%）；5月份业绩：同比营收增长105%，其中有机增长64%。</div>
-      </blockquote>
-    </li>
-    <li>
-      <div class="stock-tag">SpaceX (SpaceX)</div>
-      <blockquote class="quote">
-        1058 contracts weighted average 1 dollar per share 290/300 call debit spread expiring jan 2028, easiest one million of my life
-        <div class="translation">翻译：1058份合约，加权平均每股1美元，290/300看涨借方价差期权，将于2028年1月到期，这是我人生中最轻松的一百万美元。</div>
-      </blockquote>
-    </li>
-  </ul>
+    <h2>1. 宏观与市场情绪</h2>
+    <blockquote class="macro-quote">
+      NASDAQ plans to have 23 hour trading, 5 days a week by December 6th. I knew Hyperliquid was scaring CBOE when they announced extended option hours but did not see this one coming.
+      <div class="translation">翻译：纳斯达克计划从12月6日起每周5天，每天交易23小时。我知道Hyperliquid宣布延长期权交易时间时让CBOE感到担忧，但我没想到会发生这样的事情。</div>
+    </blockquote>
+    <blockquote class="macro-quote">
+      Don’t bother asking. Whatever you’re thinking about, the market thought about it three quarters ago.
+      <div class="translation">翻译：别费心问了。无论你在想什么，市场在三个季度前就已经想到了。</div>
+    </blockquote>
+    <blockquote class="macro-quote">
+      By any historical metric, rapidly increasing volatility in a sector has never been a good sign. It has most often pointed to signs of a bubble on the verge of bursting, whipsawing back and forth with crazy up and down swings, eventually culminating in a drop far off its highs that it ultimately never recovers from. Now we're seeing it again today, in particular among memory stocks.
+      <div class="translation">翻译：根据任何历史指标，一个板块的波动性迅速增加从来都不是一个好兆头。它最常预示着泡沫即将破裂的迹象，剧烈地上下波动，最终导致股价从高点大幅下跌，而且再也无法恢复。今天，我们再次在内存股票中看到这种情况。</div>
+    </blockquote>
+    <blockquote class="macro-quote">
+      So you get levered to the tits borrowing yen, exchange for USD, buy US treasuries. Japan starts raising rates (from 0% in 2024 now 1% and climbing.) still a decent gap between the yen interest rates but the yen’s weak AF, gotta rethink the strat.
+      <div class="translation">翻译：所以你借入日元大举加杠杆，兑换成美元，购买美国国债。日本开始加息（从2024年的0%到现在1%并持续上升）。日元利率之间仍有不错的差距，但日元太弱了，必须重新考虑策略。</div>
+    </blockquote>
+    <blockquote class="macro-quote">
+      Scott Bessent basically has the whole US government's debt strategy leaning on one bet: rates go down soon been funding the government mostly with short term bills instead of locking in 30 year bonds right now. problem is rates aren't dropping. they're going up. 30 year auction this week priced at 5.22%, highest since 2001. 10 year went off at highest yield since 2007.
+      <div class="translation">翻译：斯科特·贝森特的整个美国政府债务策略基本上都押注于一个赌注：利率很快就会下降，目前政府主要通过短期票据而不是锁定30年期债券来融资。问题是利率并未下降，反而正在上升。本周30年期国债拍卖定价为5.22%，创2001年以来新高。10年期国债收益率创2007年以来新高。</div>
+    </blockquote>
+    <blockquote class="macro-quote">
+      South Korean retail investors net bought $4.5 billion of U.S. stocks in July as their home market corrected.
+      <div class="translation">翻译：韩国散户投资者在7月份净买入了45亿美元的美国股票，因为他们本国的市场出现了调整。</div>
+    </blockquote>
+    <blockquote class="macro-quote">
+      I was mad so put it all into spy puts.
+      <div class="translation">翻译：我很生气，所以把所有的钱都投入到SPY看跌期权中。</div>
+    </blockquote>
 
-  <h2>4. AI主线讨论</h2>
-  <div class="track-header">模型</div>
-  <ul>
-    <li>
-      <blockquote class="quote">
-        OpenAI Is Slowing Down Its AI Training
-        <div class="translation">翻译：OpenAI正在放缓其AI训练</div>
-      </blockquote>
-    </li>
-  </ul>
-  <div class="track-header">算</div>
-  <ul>
-    <li>
-      <blockquote class="quote">
-        Nvidia to provide up to $105 billion guarantee for OpenAI's Ohio data center
-        <div class="translation">翻译：英伟达将为OpenAI的俄亥俄数据中心提供高达1050亿美元的担保。</div>
-      </blockquote>
-    </li>
-  </ul>
-  <div class="track-header">光</div>
-  <!-- 数据池中没有相关内容 -->
-  <div class="track-header">存</div>
-  <!-- 数据池中没有相关内容 -->
-  <div class="track-header">电</div>
-  <!-- 数据池中没有相关内容 -->
-  <div class="track-header">板</div>
-  <!-- 数据池中没有相关内容 -->
-  <div class="track-header">云</div>
-  <ul>
-    <li>
-      <blockquote class="quote">
-        Nvidia to provide up to $105 billion guarantee for OpenAI's Ohio data center
-        <div class="translation">翻译：英伟达将为OpenAI的俄亥俄数据中心提供高达1050亿美元的担保。</div>
-      </blockquote>
-    </li>
-  </ul>
-  <div class="track-header">AI应用</div>
-  <ul>
-    <li>
-      <blockquote class="quote">
-        Turns out he just described the problem to AI, the AI pointed him to a Reddit thread, and that thread led him to the Microsoft advisory.
-        <div class="translation">翻译：结果他只是向AI描述了问题，AI将他指向了一个Reddit帖子，那个帖子又引导他找到了微软的建议。</div>
-      </blockquote>
-    </li>
-    <li>
-      <blockquote class="quote">
-        Baidu Earnings Show the Perils of Going All-In on AI. The Stock Slumps.
-        <div class="translation">翻译：百度财报显示全力押注AI的风险，股价大跌。</div>
-      </blockquote>
-    </li>
-  </ul>
-</div>
+    <h2>2. 热议中的个股和想法</h2>
+    <ul>
+      <li>
+        <div class="stock-tag">1. MRNA (Moderna)</div>
+        <blockquote class="quote">
+          Moderna, Merck cancer vaccine shows promise in late-stage trial; Moderna stock soars 50%
+          <div class="translation">翻译：Moderna和默克公司的癌症疫苗在后期试验中显示出前景；Moderna股价飙升50%。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">2. SK Hynix (SK Hynix Inc.)</div>
+        <blockquote class="quote">
+          SK Hynix will acquire treasury shares worth 40 trillion Korean won and cancel them entirely.
+          <div class="translation">翻译：SK海力士将收购价值40万亿韩元的库存股并全部注销。</div>
+        </blockquote>
+        <blockquote class="quote">
+          Additionally, it plans to allocate over 50% of cumulative free cash flow (FCF) to shareholder returns by next year.
+          <div class="translation">翻译：此外，它计划在明年将超过50%的累计自由现金流（FCF）分配给股东回报。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">3. RDDT (Reddit)</div>
+        <blockquote class="quote">
+          Turns out he just described the problem to AI, the AI pointed him to a Reddit thread, and that thread led him to the Microsoft advisory.
+          <div class="translation">翻译：结果他只是向AI描述了问题，AI指引他到一个Reddit帖子，那个帖子又让他找到了微软的建议。</div>
+        </blockquote>
+        <blockquote class="quote">
+          Google already has the whole internet, but Reddit has 20 years of people describing weird, specific problems in normal human language and other people figuring them out.
+          <div class="translation">翻译：谷歌已经拥有了整个互联网，但Reddit拥有20年来人们用普通人类语言描述奇怪、具体问题的记录，以及其他人解决这些问题的过程。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">4. NKE (Nike)</div>
+        <blockquote class="quote">
+          I thought I saw a post on here today from someone that guaranteed that Nike stock wasn't going to close below 40 today or else he would do something stupid.
+          <div class="translation">翻译：我以为我今天在这里看到一个帖子，有人保证耐克股票今天不会收于40美元以下，否则他会做一些愚蠢的事情。</div>
+        </blockquote>
+        <blockquote class="quote">
+          Did he delete the post after it indeed closed below 40?
+          <div class="translation">翻译：在股价确实收于40美元以下后，他是否删除了帖子？</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">5. ASTS (AST SpaceMobile)</div>
+        <blockquote class="quote">
+          Space is on a serious slump and AST is definitely trailing behind the recovery the sector has had recently, but with beta service coming up, 3 batch launches going great and T Mobile about to sign I could easily see this hitting $200 early next year.
+          <div class="translation">翻译：太空板块正处于严重低迷，而ASTS肯定落后于该板块最近的复苏，但随着测试服务的推出，3批次的发射进展顺利，T-Mobile即将签约，我很容易就能看到它明年年初达到200美元。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">6. BIDU (Baidu)</div>
+        <blockquote class="quote">
+          Baidu Earnings Show the Perils of Going All-In on AI. The Stock Slumps.
+          <div class="translation">翻译：百度财报显示全力投入AI的风险。股价暴跌。</div>
+        </blockquote>
+        <blockquote class="quote">
+          The Chinese search-engine provider posted a dismal set of second-quarter results on Tuesday, piling on more misery for a stock that was already down 20% for the year.
+          <div class="translation">翻译：这家中国搜索引擎提供商周二公布了惨淡的第二季度业绩，为今年已下跌20%的股价雪上加霜。</div>
+        </blockquote>
+        <blockquote class="quote">
+          Baidu’s net income for the period slumped 68% from a year ago to 2.3 billion yuan ($344 million). Revenue dropped 4% from a year ago to 31.3 billion yuan. Both figures missed expectations.
+          <div class="translation">翻译：百度该期净利润同比暴跌68%至23亿元人民币（3.44亿美元）。营收同比下降4%至313亿元人民币。这两项数据均未达到预期。</div>
+        </blockquote>
+      </li>
+    </ul>
+
+    <h2>3. 小众公司冒泡</h2>
+    <!-- 根据数据池和核心规则，未找到符合条件的0-10只冷门美股公司，因此此部分留空。 -->
+    <p>根据数据池和核心规则，未发现符合条件的冷门美股公司。</p>
+
+    <h2>4. AI主线讨论</h2>
+    <div class="track-header">模型</div>
+    <blockquote class="quote">
+      Turns out he just described the problem to AI, the AI pointed him to a Reddit thread, and that thread led him to the Microsoft advisory.
+      <div class="translation">翻译：结果他只是向AI描述了问题，AI指引他到一个Reddit帖子，那个帖子又让他找到了微软的建议。</div>
+    </blockquote>
+    <blockquote class="quote">
+      Google already has the whole internet, but Reddit has 20 years of people describing weird, specific problems in normal human language and other people figuring them out.
+      <div class="translation">翻译：谷歌已经拥有了整个互联网，但Reddit拥有20年来人们用普通人类语言描述奇怪、具体问题的记录，以及其他人解决这些问题的过程。</div>
+    </blockquote>
+
+    <div class="track-header">算</div>
+    <p>无相关高质量讨论。</p>
+
+    <div class="track-header">光</div>
+    <p>无相关高质量讨论。</p>
+
+    <div class="track-header">存</div>
+    <blockquote class="quote">
+      By any historical metric, rapidly increasing volatility in a sector has never been a good sign. It has most often pointed to signs of a bubble on the verge of bursting, whipsawing back and forth with crazy up and down swings, eventually culminating in a drop far off its highs that it ultimately never recovers from. Now we're seeing it again today, in particular among memory stocks.
+      <div class="translation">翻译：根据任何历史指标，一个板块的波动性迅速增加从来都不是一个好兆头。它最常预示着泡沫即将破裂的迹象，剧烈地上下波动，最终导致股价从高点大幅下跌，而且再也无法恢复。今天，我们再次在内存股票中看到这种情况。</div>
+    </blockquote>
+
+    <div class="track-header">电</div>
+    <p>无相关高质量讨论。</p>
+
+    <div class="track-header">板</div>
+    <p>无相关高质量讨论。</p>
+
+    <div class="track-header">云</div>
+    <p>无相关高质量讨论。</p>
+
+    <div class="track-header">AI应用</div>
+    <blockquote class="quote">
+      Baidu Earnings Show the Perils of Going All-In on AI. The Stock Slumps.
+      <div class="translation">翻译：百度财报显示全力投入AI的风险。股价暴跌。</div>
+    </blockquote>
+    <blockquote class="quote">
+      The Chinese search-engine provider posted a dismal set of second-quarter results on Tuesday, piling on more misery for a stock that was already down 20% for the year.
+      <div class="translation">翻译：这家中国搜索引擎提供商周二公布了惨淡的第二季度业绩，为今年已下跌20%的股价雪上加霜。</div>
+    </blockquote>
+    <blockquote class="quote">
+      Baidu’s net income for the period slumped 68% from a year ago to 2.3 billion yuan ($344 million). Revenue dropped 4% from a year ago to 31.3 billion yuan. Both figures missed expectations.
+      <div class="translation">翻译：百度该期净利润同比暴跌68%至23亿元人民币（3.44亿美元）。营收同比下降4%至313亿元人民币。这两项数据均未达到预期。</div>
+    </blockquote>
+
+</body>
+</html>
         </div>
         <script>
             var myChart = echarts.init(document.getElementById('gauge'));
@@ -244,7 +220,7 @@
                     axisLine: { lineStyle: { width: 45, color: [[0.25, '#ef4444'], [0.45, '#f97316'], [0.55, '#d1d5db'], [0.75, '#84cc16'], [1, '#22c55e']] } },
                     pointer: { length: '60%', width: 8, itemStyle: { color: '#fff' } },
                     detail: { fontSize: 40, fontWeight: 'bold', offsetCenter: [0, '25%'], formatter: '{value}\n中立', color: '#fff' },
-                    data: [{ value: 54 }]
+                    data: [{ value: 53 }]
                 }]
             });
         </script>
