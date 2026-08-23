@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>08月22日 情报终端</title>
+        <title>08月23日 情报终端</title>
         <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
         <style>
             :root { --bg: #0f172a; --text: #f1f5f9; --accent: #38bdf8; --border: #334155; }
@@ -36,210 +36,296 @@
     </head>
     <body>
         <div class="container">
-            <h1>🎯 08月22日 市场情报透视</h1>
-            <p style="color:#94a3b8">情报最后更新: 2026-08-22 21:09:05 (北京时间)</p>
+            <h1>🎯 08月23日 市场情报透视</h1>
+            <p style="color:#94a3b8">情报最后更新: 2026-08-23 10:08:13 (北京时间)</p>
             <div class="dashboard-card"><div id="gauge" class="gauge-container"></div></div>
             <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reddit市场情绪分析 (2026年08月22日)</title>
+    <title>Reddit美股情绪分析 (2026年08月23日)</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 20px auto; padding: 0 15px; background-color: #f9f9f9; }
-        h1, h2 { color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 30px; }
-        ul { list-style: none; padding: 0; }
-        li { margin-bottom: 20px; border: 1px solid #e0e0e0; border-radius: 8px; background-color: #fff; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .stock-tag { font-weight: bold; color: #34495e; font-size: 1.1em; margin-bottom: 10px; }
-        .quote { background-color: #f5f5f5; border-left: 4px solid #3498db; margin: 15px 0; padding: 10px 15px; font-style: italic; color: #555; }
-        .translation { font-size: 0.9em; color: #777; margin-top: 10px; }
-        .track-header { font-weight: bold; color: #2980b9; margin-top: 20px; margin-bottom: 10px; font-size: 1.1em; border-bottom: 1px dashed #c0d9ed; padding-bottom: 5px; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 20px auto; background-color: #f9f9f9; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h1, h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; margin-top: 30px; }
+        h2 { font-size: 1.8em; }
+        ul { list-style-type: none; padding: 0; }
+        li { background-color: #fff; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 15px; padding: 15px; }
+        .stock-tag { font-weight: bold; color: #e74c3c; margin-bottom: 10px; font-size: 1.1em; }
+        .quote { font-style: italic; margin-left: 20px; border-left: 4px solid #f39c12; padding-left: 15px; color: #555; }
+        .translation { margin-top: 10px; font-size: 0.9em; color: #777; }
+        .track-header { font-weight: bold; color: #2980b9; margin-top: 20px; margin-bottom: 10px; font-size: 1.1em; }
+        p { margin-bottom: 15px; }
     </style>
 </head>
 <body>
-    <h1>Reddit美股量化分析：市场情绪提炼 (2026年08月22日)</h1>
+    <h1>Reddit美股市场情绪 (2026年08月23日)</h1>
 
     <h2>1. 宏观与市场情绪</h2>
-    <p>市场当前正经历复杂局面，对能源市场和整体经济态势的担忧与日俱增。交易员们观察到市场波动性加大，有人将其描述为“袋鼠市场”。在风险偏好方面，一些投资者在面临亏损时选择削减持仓，而另一些则在特定板块中寻找大幅增长的机会，尤其是在被认为被低估或具有AI转型潜力的公司中。</p>
+    <p>Reddit社区在2026年8月23日对市场表现出复杂情绪，既有对特定股票的强烈看多或看空观点，也有对宏观经济因素的探讨。市场整体波动性被形容为“袋鼠市场”（Kangaroo Market），即价格围绕某个点位频繁波动，缺乏明确方向。</p>
     <ul>
-        <li>
-            <blockquote class="quote">
-                As many of you know, we are in backwardation, a barrel of oil today costs more than oil in the future. This happens when there's an immediate disruption. Like the one we've experienced in the Strait of Hormuz, a strait that has been closed for a very long time. I don't personally see the supply. What I do see is a world burning it's reserves as fast as they possibly can in refiners running at full capacity. Diesel is soaring. The SPR is down to 293.4 Million barrels of oil. That sounds like a lot.
-                <div class="translation">翻译：正如大家所知，我们正处于现货溢价状态，今天的原油价格高于期货价格。当出现即时供应中断时，就会发生这种情况。就像我们在霍尔木兹海峡所经历的那样，这个海峡已经关闭了很长时间。我个人看不到供应。我所看到的是一个世界正在以最快的速度消耗其储备，炼油厂也以满负荷运转。柴油价格飙升。战略石油储备（SPR）已降至2.934亿桶。这听起来很多。</div>
-            </blockquote>
-        </li>
-        <li>
-            <blockquote class="quote">
-                First of all, I'm not a trader, but I was watching the news and have seen multiple times the business pundits describe the recent trading as a yo-yo or a whipsaw (?), but never another animal like the Bull or Bear? My completely outside take, I present the Camel Market! Edit: My bad it's called a 'Kangaroo Market'.
-                <div class="translation">翻译：首先，我不是一个交易员，但我一直在看新闻，并且多次看到商业评论员将最近的交易描述为“溜溜球”或“鞭打式波动”（？），但从未用过像牛市或熊市这样的动物来形容？我完全是外行人的看法，我提出了“骆驼市场”！修正：我的错，它叫做“袋鼠市场”。</div>
-            </blockquote>
-        </li>
+      <li>
+        <blockquote class="quote">
+          I was reading a reddit post where the author shared this analysis.
+          <div class="translation">翻译：我当时在读一篇Reddit帖子，作者分享了这个分析。</div>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote class="quote">
+          The author posed a question about selling calls, and - to my surprise - nobody talked about the periodic repetition shown in the column.
+          <div class="translation">翻译：作者提出了一个关于卖出看涨期权的问题，令我惊讶的是，没有人谈论表格中显示的周期性重复。</div>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote class="quote">
+          I've been thinking on it, and I can't think of a good reason why there are these nearly-periodic contractions of volatility at price points.
+          <div class="translation">翻译：我一直在思考，想不出一个好理由，为什么在这些价位点会出现这些近乎周期性的波动性收缩。</div>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote class="quote">
+          Looking to anyone who may have some insight -- why are there volatility contractions dependent upon the price of SPY?
+          <div class="translation">翻译：希望有人能提供一些见解——为什么波动性收缩会依赖于SPY的价格？</div>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote class="quote">
+          My bad it's called a 'Kangaroo Market'.
+          <div class="translation">翻译：我的错，那叫“袋鼠市场”。</div>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote class="quote">
+          As many of you know, we are in backwardation, a barrel of oil today costs more than oil in the future.
+          <div class="translation">翻译：正如你们很多人所知，我们正处于现货溢价状态，今天的每桶石油比未来的石油更贵。</div>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote class="quote">
+          This happens when there's an immediate disruption.
+          <div class="translation">翻译：这发生在出现即时供应中断时。</div>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote class="quote">
+          Like the one we've experienced in the Strait of Hormuz, a strait that has been closed for a very long time.
+          <div class="translation">翻译：就像我们在霍尔木兹海峡所经历的那样，那个海峡已经关闭了很长时间。</div>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote class="quote">
+          What I do see is a world burning it's reserves as fast as they possibly can in refiners running at full capacity.
+          <div class="translation">翻译：我看到的是一个世界正在以炼油厂全速运转的最高速度消耗其储备。</div>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote class="quote">
+          Diesel is soaring.
+          <div class="translation">翻译：柴油价格正在飙升。</div>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote class="quote">
+          The SPR is down to 293.4 Million barrels of oil.
+          <div class="translation">翻译：战略石油储备已降至2.934亿桶。</div>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote class="quote">
+          Whenever gold spikes, publicly traded pawnbrokers usually get a sympathy spike.
+          <div class="translation">翻译：每当黄金飙升时，上市的典当行通常会随之上涨。</div>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote class="quote">
+          What else usually spikes pawnbroker stocks? Interest rates.
+          <div class="translation">翻译：还有什么通常会刺激典当行股票上涨？利率。</div>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote class="quote">
+          Fridays are generally considered a "risk off" day where stocks considered moderate to high risk are sold.
+          <div class="translation">翻译：周五通常被认为是“避险”日，中高风险股票会被抛售。</div>
+        </blockquote>
+      </li>
     </ul>
 
     <h2>2. 热议中的个股和想法</h2>
     <ul>
-        <li>
-            <div class="stock-tag">MRNA (Moderna, Inc.)</div>
-            <blockquote class="quote">
-                I'm quaking in my boots seeing an 8% loss because my dumbass bought MRNA a bit too late. Do I sell now or hold just in case it goes through the roof?
-                <div class="translation">翻译：我看到8%的损失后吓得发抖，因为我这个笨蛋买MRNA买得太晚了。我现在卖出还是持有，以防它一飞冲天？</div>
-            </blockquote>
-            <blockquote class="quote">
-                TLDR: The stock is going to 300.
-                <div class="translation">翻译：总结：这只股票将涨到300美元。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Short interest is still high so one can only assume that the Wednesday pump was a gamma squeeze instead of short. Meaning that a bigger pump is coming.
-                <div class="translation">翻译：空头兴趣仍然很高，所以人们只能猜测周三的上涨是伽马挤压，而不是空头平仓。这意味着会有更大的上涨。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Even after all the pumping the market cap is STILL small and undervalued. 60 billion as of this. My initialize estimates were based on Keytruda's revenue which is 20 billion/yr. Even with the profit sharing agreement with merck moderna is still undervalued by at least 50%.
-                <div class="translation">翻译：即使经过所有的炒作，市值仍然很小且被低估。目前为600亿美元。我最初的估算基于Keytruda每年200亿美元的收入。即使与默克有利润分成协议，Moderna仍被低估至少50%。</div>
-            </blockquote>
-        </li>
-        <li>
-            <div class="stock-tag">META (Meta Platforms, Inc.)</div>
-            <blockquote class="quote">
-                Long term I’m super confident in my position, short term it’s a kangaroo cycle with meta. Which not surprised I’m expecting meta to crash again following earnings, excited for flipping my shares before earnings.
-                <div class="translation">翻译：长期来看我对我的持仓非常有信心，短期来看Meta正处于“袋鼠市场”周期。我并不惊讶地预计Meta在财报公布后会再次下跌，我很高兴能在财报前翻转我的股票。</div>
-            </blockquote>
-            <blockquote class="quote">
-                I do not believe the idea that ai investments lead to increased ad conversions and top line growth, but rather it’s a function of an already engaging platform that captures the world’s attention.
-                <div class="translation">翻译：我并不认为人工智能投资会带来广告转化率的提高和营收增长，相反，这更多是一个已经具有吸引力的平台捕捉世界注意力的结果。</div>
-            </blockquote>
-            <blockquote class="quote">
-                On top of them incinerating cash to make CAPEX providers rich (Cuckerberg style),reality labs is a permanent tax on their FCF.
-                <div class="translation">翻译：除了他们烧钱让资本支出提供商致富（Zuckerberg风格），Reality Labs是他们自由现金流的永久性负担。</div>
-            </blockquote>
-            <blockquote class="quote">
-                They are also likely to lose the lawsuits paving the way for more eager bloodthirsty attorney generals to steal their FCF. No share buy backs either, it’s fucking over man.
-                <div class="translation">翻译：他们也很可能输掉诉讼，为更多渴望嗜血的检察长窃取他们的自由现金流铺平道路。也没有股票回购，伙计，一切都完了。</div>
-            </blockquote>
-        </li>
+      <li>
+        <div class="stock-tag">NVDA (NVIDIA)</div>
+        <blockquote class="quote">
+          NVIDIA customers notified about AI-related price hikes above 15%, Bloomberg News reports.
+          <div class="translation">翻译：据彭博新闻报道，NVIDIA客户已收到关于AI相关产品价格上涨超过15%的通知。</div>
+        </blockquote>
+        <blockquote class="quote">
+          News released over weekend.
+          <div class="translation">翻译：周末发布的新闻。</div>
+        </blockquote>
+        <blockquote class="quote">
+          Interestingly right before their upcoming earnings on Wednesday.
+          <div class="translation">翻译：有意思的是，这恰好在他们周三即将公布财报之前。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">CRM (Salesforce)</div>
+        <blockquote class="quote">
+          Salesforce partners not seeing meaningful revenue from Agentforce AI platform, report says.
+          <div class="translation">翻译：报告称，Salesforce的合作伙伴没有从Agentforce AI平台获得有意义的收入。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">MRNA (Moderna)</div>
+        <blockquote class="quote">
+          The stock is going to 300.
+          <div class="translation">翻译：这只股票要涨到300美元。</div>
+        </blockquote>
+        <blockquote class="quote">
+          Short interest is still high so one can only assume that the Wednesday pump was a gamma squeeze instead of short.
+          <div class="translation">翻译：空头兴趣仍然很高，所以人们只能猜测周三的上涨是伽马挤压而不是空头平仓。</div>
+        </blockquote>
+        <blockquote class="quote">
+          Even after all the pumping the market cap is STILL small and undervalued.
+          <div class="translation">翻译：即使经过所有炒作，其市值仍然很小且被低估。</div>
+        </blockquote>
+        <blockquote class="quote">
+          Even with the profit sharing agreement with merck moderna is still undervalued by at least 50%.
+          <div class="translation">翻译：即使与默沙东达成了利润分享协议，Moderna的估值仍被低估至少50%。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">META (Meta Platforms)</div>
+        <blockquote class="quote">
+          Long term I’m super confident in my position, short term it’s a kangaroo cycle with meta.
+          <div class="translation">翻译：长期来看我对我的持仓非常有信心，短期内Meta则处于袋鼠行情。</div>
+        </blockquote>
+        <blockquote class="quote">
+          I’m expecting meta to crash again following earnings.
+          <div class="translation">翻译：我预计Meta在财报后会再次暴跌。</div>
+        </blockquote>
+        <blockquote class="quote">
+          Reality labs is a permanent tax on their FCF.
+          <div class="translation">翻译：Reality Labs是他们自由现金流的永久性税费。</div>
+        </blockquote>
+        <blockquote class="quote">
+          They are also likely to lose the lawsuits paving the way for more eager bloodthirsty attorney generals to steal their FCF.
+          <div class="translation">翻译：他们还很可能输掉官司，这将为更多渴望吸血的总检察官窃取他们的自由现金流铺平道路。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">IREN (Iris Energy)</div>
+        <blockquote class="quote">
+          Microsoft formally accepted Horizon 1, triggering the first billing under IREN's $9.7 billion contract.
+          <div class="translation">翻译：微软正式接受了Horizon 1，触发了IREN 97亿美元合同下的首次结算。</div>
+        </blockquote>
+        <blockquote class="quote">
+          NVIDIA certified IREN's Childress campus with Exemplar Cloud status after GB300 testing.
+          <div class="translation">翻译：NVIDIA在GB300测试后，授予IREN的Childress园区模范云（Exemplar Cloud）认证。</div>
+        </blockquote>
+        <blockquote class="quote">
+          More than a quarter of IREN's shares are still sold short, and much of that position assumes the AI pivot fails or the debt load overwhelms the company.
+          <div class="translation">翻译：IREN超过四分之一的股票仍被做空，其中大部分头寸假定其AI转型失败或债务负担压垮公司。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">WMT (Walmart)</div>
+        <blockquote class="quote">
+          Walmart stock drops as sales growth slows, customers make 'trade-offs' amid high fuel costs.
+          <div class="translation">翻译：沃尔玛股价下跌，原因是销售增长放缓，客户在高燃料成本下进行“权衡取舍”。</div>
+        </blockquote>
+      </li>
     </ul>
 
     <h2>3. 小众公司冒泡</h2>
     <ul>
-        <li>
-            <div class="stock-tag">APP (AppLovin Corporation)</div>
-            <blockquote class="quote">
-                Over 800k placed on applovin
-                <div class="translation">翻译：超过80万美元投入AppLovin。</div>
-            </blockquote>
-        </li>
-        <li>
-            <div class="stock-tag">SOUN (SoundHound AI, Inc.)</div>
-            <blockquote class="quote">
-                I’m not selling and buying more. They just beat earnings
-                <div class="translation">翻译：我不会卖出，还会买入更多。他们刚刚超出了盈利预期。</div>
-            </blockquote>
-        </li>
-        <li>
-            <div class="stock-tag">WMT (Walmart Inc.)</div>
-            <blockquote class="quote">
-                Walmart stock drops as sales growth slows, customers make 'trade-offs' amid high fuel costs
-                <div class="translation">翻译：沃尔玛股价下跌，原因是销售增长放缓，顾客在高燃料成本下“进行权衡”。</div>
-            </blockquote>
-        </li>
-        <li>
-            <div class="stock-tag">SKHYY (SK Hynix Inc.)</div>
-            <blockquote class="quote">
-                Further Dilution of $SKHynix stock by bonus payment 60% in stocks. Average payment per worker $547,000 for 2026
-                <div class="translation">翻译：SK Hynix股票因奖金支付（60%以股票形式支付）而进一步稀释。2026年每位员工平均支付54.7万美元。</div>
-            </blockquote>
-        </li>
-        <li>
-            <div class="stock-tag">MAAS (Maas Group Holdings Limited)</div>
-            <blockquote class="quote">
-                $MAAS is a company I've been bullish on for a while because I believe it's going through a meaningful AI transformation.
-                <div class="translation">翻译：我一直看好$MAAS这家公司，因为我相信它正在经历有意义的AI转型。</div>
-            </blockquote>
-            <blockquote class="quote">
-                Yes, the current financials don't look great. But I have my own thesis for why I think the market may be underestimating the story here.
-                <div class="translation">翻译：是的，目前的财务状况看起来不佳。但我有自己的论点，说明为什么我认为市场可能低估了这里的故事情节。</div>
-            </blockquote>
-            <blockquote class="quote">
-                One thing I've noticed recently is that a surprising number of ETFs have been increasing their positions in $MAAS, including a well-known China-focused ETF, the Invesco Golden Dragon China ETF ($PGJ).
-                <div class="translation">翻译：最近我注意到一件事，令人惊讶的是，许多ETF都在增加$MAAS的持仓，其中包括一支著名的中国主题ETF——景顺金龙中国ETF（$PGJ）。</div>
-            </blockquote>
-        </li>
-        <li>
-            <div class="stock-tag">IREN (Iris Energy Limited)</div>
-            <blockquote class="quote">
-                Microsoft formally accepted Horizon 1, triggering the first billing under IREN's $9.7 billion contract.
-                <div class="translation">翻译：微软正式接受了Horizon 1项目，触发了Iris Energy 97亿美元合同下的首次计费。</div>
-            </blockquote>
-            <blockquote class="quote">
-                NVIDIA certified IREN's Childress campus with Exemplar Cloud status after GB300 testing
-                <div class="translation">翻译：英伟达在GB300测试后，授予Iris Energy的Childress园区“模范云”状态认证。</div>
-            </blockquote>
-            <blockquote class="quote">
-                More than a quarter of IREN's shares are still sold short, and much of that position assumes the AI pivot fails or the debt load overwhelms the company.
-                <div class="translation">翻译：Iris Energy超过四分之一的股票仍被做空，其中大部分空头头寸假设其AI转型失败或债务负担压垮公司。</div>
-            </blockquote>
-        </li>
-        <li>
-            <div class="stock-tag">CRM (Salesforce, Inc.)</div>
-            <blockquote class="quote">
-                Salesforce partners not seeing meaningful revenue from Agentforce AI platform, report says
-                <div class="translation">翻译：报告称，Salesforce合作伙伴并未从Agentforce AI平台获得可观收入。</div>
-            </blockquote>
-        </li>
+      <li>
+        <div class="stock-tag">FCFS (FirstCash)</div>
+        <blockquote class="quote">
+          Whenever gold spikes, publicly traded pawnbrokers usually get a sympathy spike.
+          <div class="translation">翻译：每当黄金飙升时，上市的典当行通常会随之上涨。</div>
+        </blockquote>
+        <blockquote class="quote">
+          What else usually spikes pawnbroker stocks? Interest rates.
+          <div class="translation">翻译：还有什么通常会刺激典当行股票上涨？利率。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">EZPW (EZCorp)</div>
+        <blockquote class="quote">
+          Whenever gold spikes, publicly traded pawnbrokers usually get a sympathy spike.
+          <div class="translation">翻译：每当黄金飙升时，上市的典当行通常会随之上涨。</div>
+        </blockquote>
+        <blockquote class="quote">
+          What else usually spikes pawnbroker stocks? Interest rates.
+          <div class="translation">翻译：还有什么通常会刺激典当行股票上涨？利率。</div>
+        </blockquote>
+      </li>
+      <li>
+        <div class="stock-tag">BRK.A (Berkshire Hathaway)</div>
+        <blockquote class="quote">
+          Warren Buffett in the retirement home watching Berkshire Hathaway gamble the $400B cash pile he spent the last 3 years building.
+          <div class="translation">翻译：沃伦·巴菲特在养老院里看着伯克希尔哈撒韦公司赌博性地动用他在过去3年里积累的4000亿美元现金储备。</div>
+        </blockquote>
+      </li>
     </ul>
 
     <h2>4. AI主线讨论</h2>
-    <div class="track-header">模型</div>
-    <p>目前数据池中没有直接关于AI模型创新或性能的讨论。</p>
+    <div class="track-header">算 (Compute)</div>
+    <ul>
+      <li>
+        <blockquote class="quote">
+          NVIDIA customers notified about AI-related price hikes above 15%, Bloomberg News reports.
+          <div class="translation">翻译：据彭博新闻报道，NVIDIA客户已收到关于AI相关产品价格上涨超过15%的通知。</div>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote class="quote">
+          NVIDIA certified IREN's Childress campus with Exemplar Cloud status after GB300 testing.
+          <div class="translation">翻译：NVIDIA在GB300测试后，授予IREN的Childress园区模范云（Exemplar Cloud）认证。</div>
+        </blockquote>
+      </li>
+    </ul>
 
-    <div class="track-header">算</div>
-    <blockquote class="quote">
-        NVIDIA certified IREN's Childress campus with Exemplar Cloud status after GB300 testing
-        <div class="translation">翻译：英伟达在GB300测试后，授予Iris Energy的Childress园区“模范云”状态认证。</div>
-    </blockquote>
+    <div class="track-header">板 (Boards/GPUs)</div>
+    <ul>
+      <li>
+        <blockquote class="quote">
+          NVIDIA certified IREN's Childress campus with Exemplar Cloud status after GB300 testing.
+          <div class="translation">翻译：NVIDIA在GB300测试后，授予IREN的Childress园区模范云（Exemplar Cloud）认证。</div>
+        </blockquote>
+      </li>
+    </ul>
 
-    <div class="track-header">光</div>
-    <p>目前数据池中没有直接关于AI光模块或光学器件的讨论。</p>
+    <div class="track-header">云 (Cloud)</div>
+    <ul>
+      <li>
+        <blockquote class="quote">
+          NVIDIA certified IREN's Childress campus with Exemplar Cloud status after GB300 testing.
+          <div class="translation">翻译：NVIDIA在GB300测试后，授予IREN的Childress园区模范云（Exemplar Cloud）认证。</div>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote class="quote">
+          Microsoft formally accepted Horizon 1, triggering the first billing under IREN's $9.7 billion contract.
+          <div class="translation">翻译：微软正式接受了Horizon 1，触发了IREN 97亿美元合同下的首次结算。</div>
+        </blockquote>
+      </li>
+    </ul>
 
-    <div class="track-header">存</div>
-    <blockquote class="quote">
-        Further Dilution of $SKHynix stock by bonus payment 60% in stocks. Average payment per worker $547,000 for 2026
-        <div class="translation">翻译：SK Hynix股票因奖金支付（60%以股票形式支付）而进一步稀释。2026年每位员工平均支付54.7万美元。</div>
-    </blockquote>
-
-    <div class="track-header">电</div>
-    <p>目前数据池中没有直接关于AI电力基础设施的讨论。</p>
-
-    <div class="track-header">板</div>
-    <p>目前数据池中没有直接关于AI服务器主板或PCB的讨论。</p>
-
-    <div class="track-header">云</div>
-    <blockquote class="quote">
-        Microsoft formally accepted Horizon 1, triggering the first billing under IREN's $9.7 billion contract.
-        <div class="translation">翻译：微软正式接受了Horizon 1项目，触发了Iris Energy 97亿美元合同下的首次计费。</div>
-    </blockquote>
-    <blockquote class="quote">
-        NVIDIA certified IREN's Childress campus with Exemplar Cloud status after GB300 testing
-        <div class="translation">翻译：英伟达在GB300测试后，授予Iris Energy的Childress园区“模范云”状态认证。</div>
-    </blockquote>
-
-    <div class="track-header">AI应用</div>
-    <blockquote class="quote">
-        Salesforce partners not seeing meaningful revenue from Agentforce AI platform, report says
-        <div class="translation">翻译：报告称，Salesforce合作伙伴并未从Agentforce AI平台获得可观收入。</div>
-    </blockquote>
-    <blockquote class="quote">
-        I do not believe the idea that ai investments lead to increased ad conversions and top line growth, but rather it’s a function of an already engaging platform that captures the world’s attention.
-        <div class="translation">翻译：我并不认为人工智能投资会带来广告转化率的提高和营收增长，相反，这更多是一个已经具有吸引力的平台捕捉世界注意力的结果。</div>
-    </blockquote>
-    <blockquote class="quote">
-        $MAAS is a company I've been bullish on for a while because I believe it's going through a meaningful AI transformation.
-        <div class="translation">翻译：我一直看好$MAAS这家公司，因为我相信它正在经历有意义的AI转型。</div>
-    </blockquote>
-    <blockquote class="quote">
-        I’m not selling and buying more. They just beat earnings
-        <div class="translation">翻译：我不会卖出，还会买入更多。他们刚刚超出了盈利预期。</div>
-    </blockquote>
-
+    <div class="track-header">AI应用 (AI Applications)</div>
+    <ul>
+      <li>
+        <blockquote class="quote">
+          Salesforce partners not seeing meaningful revenue from Agentforce AI platform, report says.
+          <div class="translation">翻译：报告称，Salesforce的合作伙伴没有从Agentforce AI平台获得有意义的收入。</div>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote class="quote">
+          I do not believe the idea that ai investments lead to increased ad conversions and top line growth, but rather it’s a function of an already engaging platform that captures the world’s attention.
+          <div class="translation">翻译：我并不认为AI投资能够带来广告转化率的提高和营收增长，相反，这更多是一个已经很具吸引力并抓住全球注意力的平台的功能。</div>
+        </blockquote>
+      </li>
+    </ul>
 </body>
 </html>
         </div>
