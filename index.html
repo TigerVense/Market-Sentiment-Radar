@@ -37,7 +37,7 @@
     <body>
         <div class="container">
             <h1>🎯 08月31日 市场情报透视</h1>
-            <p style="color:#94a3b8">情报最后更新: 2026-08-31 00:53:02 (北京时间)</p>
+            <p style="color:#94a3b8">情报最后更新: 2026-08-31 13:53:01 (北京时间)</p>
             <div class="dashboard-card"><div id="gauge" class="gauge-container"></div></div>
             <!DOCTYPE html>
 <html lang="zh">
@@ -46,237 +46,206 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reddit市场情绪分析 (2026年08月31日)</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 20px auto; padding: 0 15px; background-color: #f8f9fa; }
-        h1 { color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 30px; }
-        h2 { color: #34495e; margin-top: 25px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
-        ul { list-style-type: none; padding: 0; }
-        li { background-color: #fff; border: 1px solid #e1e4e8; border-radius: 6px; margin-bottom: 15px; padding: 15px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
-        .stock-tag { font-weight: bold; color: #0366d6; margin-bottom: 10px; font-size: 1.1em; }
-        .quote { background-color: #f6f8fa; border-left: 4px solid #d0d0d0; padding: 10px 15px; margin-top: 10px; border-radius: 4px; font-style: italic; color: #586069; }
-        .translation { margin-top: 8px; font-size: 0.9em; color: #6a737d; }
-        .track-header { font-weight: bold; margin-top: 15px; margin-bottom: 5px; color: #34495e; font-size: 1.05em; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 20px auto; padding: 0 15px; background-color: #f9f9f9; }
+        h1, h2, h3 { color: #2c3e50; margin-top: 30px; margin-bottom: 15px; }
+        h2 { border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        ul { list-style: none; padding-left: 0; }
+        li { background-color: #fff; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 15px; padding: 15px 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .stock-tag { font-weight: bold; font-size: 1.1em; color: #0056b3; margin-bottom: 10px; }
+        .quote { background-color: #eef7ff; border-left: 4px solid #007bff; padding: 12px 15px; margin: 10px 0; border-radius: 4px; font-style: italic; color: #34495e; }
+        .translation { font-style: normal; font-size: 0.9em; color: #555; margin-top: 8px; padding-top: 8px; border-top: 1px dashed #cfe2ff; }
+        .track-header { font-weight: bold; font-size: 1.1em; color: #28a745; margin-top: 20px; margin-bottom: 10px; padding-bottom: 5px; border-bottom: 1px solid #e0ffe0; }
         p { margin-bottom: 10px; }
     </style>
 </head>
 <body>
-    <h1>Reddit美股量化分析报告 (2026年08月31日)</h1>
+    <h1>Reddit市场情绪分析 (2026年08月31日)</h1>
+    <p>以下是根据2026年08月31日Reddit数据池提炼出的市场情绪概览。</p>
 
     <h2>1. 宏观与市场情绪</h2>
-    <p>市场情绪喜忧参半。一方面，“Magnificent 7”公司报告了强劲的盈利增长，得益于投资收益的提振。另一方面，凯文·沃什在杰克逊霍尔会议上提出的鹰派通胀警告，推高了9月份加息的预期，导致纳斯达克指数下跌。地缘政治方面，与委内瑞拉达成确保石油储备的协议也备受关注。季节性模式表明，8月至10月初市场可能出现回调，随后在年底前显著反弹，但预计波动性将增加。在科技领域，内存作为AI支出的主要组成部分，目前已占50%，同时，对半导体板块存在普遍的看跌情绪。</p>
     <ul>
-      <li>
-        <blockquote class="quote">
-          Mag 7 Companies Reported Earnings Growth Above 100% Boosted by Investment Gains
-          <div class="translation">翻译：大型科技七巨头公司报告的盈利增长超过100%，这得益于投资收益的提振。</div>
-        </blockquote>
-      </li>
-      <li>
-        <blockquote class="quote">
-          Analysis: Kevin Warsh sharpens inflation warning at Jackson Hole, signaling possible rate hike
-          <div class="translation">翻译：分析：凯文·沃什在杰克逊霍尔会议上加剧了通胀警告，预示可能加息。</div>
-        </blockquote>
-      </li>
-      <li>
-        <blockquote class="quote">
-          The Nasdaq was down ~0.5% after Kevin Warsh’s Jackson Hole speech came across more hawkish and pushed September rate-hike expectations higher.
-          <div class="translation">翻译：凯文·沃什在杰克逊霍尔会议上的讲话显得更为鹰派，推高了9月份加息的预期，纳斯达克指数因此下跌了约0.5%。</div>
-        </blockquote>
-      </li>
-      <li>
-        <blockquote class="quote">
-          Trump announces deal with Venezuela to secure more than 65 billion barrels of oil reserves
-          <div class="translation">翻译：特朗普宣布与委内瑞拉达成协议，以确保超过650亿桶石油储备。</div>
-        </blockquote>
-      </li>
-      <li>
-        <blockquote class="quote">
-          The chart shows the historical seasonal pattern of the S&P Equal-Weight (SPW) during U.S. midterm election years (1990–2022). Historically, after the current point, the index tends to experience a stronger correction from August through early October, followed by a significant recovery starting in late October and gaining momentum into November.
-          <div class="translation">翻译：图表显示了美国中期选举年（1990-2022年）标普等权重指数（SPW）的历史季节性模式。历史上，从目前来看，该指数倾向于在8月到10月初经历一次更强烈的调整，随后从10月底开始显著反弹，并在11月加速上涨。</div>
-        </blockquote>
-      </li>
-      <li>
-        <blockquote class="quote">
-          Memory is now 50% of AI spending.
-          <div class="translation">翻译：内存现在占人工智能支出的50%。</div>
-        </blockquote>
-      </li>
-      <li>
-        <blockquote class="quote">
-          If ya'll could stop dumping semi's before end of day, that'd be great. You didn't stop, these went to 0.
-          <div class="translation">翻译：如果你们能在收盘前停止抛售半导体，那就太好了。你们没有停止，它们跌到了0。</div>
-        </blockquote>
-      </li>
+        <li>
+            <div class="stock-tag">市场情绪概览</div>
+            <blockquote class="quote">
+                The chart shows the historical seasonal pattern of the S&P Equal-Weight (SPW) during U.S. midterm election years (1990–2022). Historically, after the current point, the index tends to experience a stronger correction from August through early October, followed by a significant recovery starting in late October and gaining momentum into November. While seasonality is not a forecast, the historical pattern suggests that the market may still be approaching a period of greater volatility before a potential year-end rebound.
+                <div class="translation">翻译：图表显示了美国中期选举年（1990-2022年）中标普等权重指数（SPW）的历史季节性模式。从历史来看，在当前时点之后，该指数往往会在8月至10月初经历更强的调整，随后从10月下旬开始显著复苏并持续到11月。尽管季节性并非预测，但历史模式表明市场可能仍在接近一个波动性更大的时期，然后才能迎来潜在的年底反弹。</div>
+            </blockquote>
+            <blockquote class="quote">
+                Analysis: Kevin Warsh sharpens inflation warning at Jackson Hole, signaling possible rate hike
+                <div class="translation">翻译：分析：凯文·沃尔什在杰克逊霍尔会议上发出更严厉的通胀警告，预示可能加息。</div>
+            </blockquote>
+            <blockquote class="quote">
+                Yen weakens past ¥160 per dollar, eroding intervention gains
+                <div class="translation">翻译：日元兑美元汇率跌破160日元，侵蚀了干预措施带来的收益。</div>
+            </blockquote>
+            <blockquote class="quote">
+                Mag 7 Companies Reported Earnings Growth Above 100% Boosted by Investment Gains
+                <div class="translation">翻译：七巨头公司报告盈利增长超过100%，得益于投资收益的提振。</div>
+            </blockquote>
+            <blockquote class="quote">
+                Trump announces deal with Venezuela to secure more than 65 billion barrels of oil reserves
+                <div class="translation">翻译：特朗普宣布与委内瑞拉达成协议，以确保超过650亿桶石油储备。</div>
+            </blockquote>
+        </li>
     </ul>
 
     <h2>2. 热议中的个股和想法</h2>
     <ul>
-      <li>
-        <div class="stock-tag">1. DELL (Dell Technologies)</div>
-        <blockquote class="quote">
-          DELL just got smoked ~3.4% today to close around $456, but this wasn’t really a Dell-specific collapse.
-          <div class="translation">翻译：戴尔今天暴跌约3.4%，收盘价在456美元左右，但这并非戴尔特有的崩盘。</div>
-        </blockquote>
-        <blockquote class="quote">
-          Dell’s AI server business is the monster here — management has been targeting roughly $60B in FY27 AI server revenue.
-          <div class="translation">翻译：戴尔的人工智能服务器业务是这里的重头戏——管理层已将2027财年的人工智能服务器收入目标定在约600亿美元。</div>
-        </blockquote>
-        <blockquote class="quote">
-          Analysts are expecting roughly $45B revenue, >50% YoY growth, and ~$4.91 adjusted EPS.
-          <div class="translation">翻译：分析师预计其营收约为450亿美元，同比增长超过50%，调整后每股收益约为4.91美元。</div>
-        </blockquote>
-        <blockquote class="quote">
-          JPM reportedly expects Dell to raise FY27 guidance.
-          <div class="translation">翻译：据报道，摩根大通预计戴尔将上调2027财年业绩指引。</div>
-        </blockquote>
-      </li>
-      <li>
-        <div class="stock-tag">2. ORCL (Oracle Corporation)</div>
-        <blockquote class="quote">
-          Why I think the market is mispricing Oracle.
-          <div class="translation">翻译：我为什么认为市场对甲骨文的定价有误。</div>
-        </blockquote>
-        <blockquote class="quote">
-          Oracle trades at roughly 13.8x forward earnings while sitting on $638B of contracted revenue (RPO).
-          <div class="translation">翻译：甲骨文目前的市盈率约为13.8倍远期收益，同时拥有6380亿美元的合同收入（RPO）。</div>
-        </blockquote>
-        <blockquote class="quote">
-          Oracle says customers are prepaying for or supplying $75B of computing hardware tied to large AI contracts.
-          <div class="translation">翻译：甲骨文表示，客户正在预付或提供与大型人工智能合同相关的750亿美元计算硬件。</div>
-        </blockquote>
-        <blockquote class="quote">
-          Oracle is effectively combining landlord capital, customer capital and its own capex.
-          <div class="translation">翻译：甲骨文正在有效地结合房东资本、客户资本和自身的资本支出。</div>
-        </blockquote>
-      </li>
-      <li>
-        <div class="stock-tag">3. IREN (Iris Energy Limited)</div>
-        <blockquote class="quote">
-          Initially, I was really sold on Iren, but gradually I’m starting to think there might be quite a bit of downside after all.
-          <div class="translation">翻译：最初我非常看好Iren，但逐渐我开始觉得它可能存在相当大的下行空间。</div>
-        </blockquote>
-        <blockquote class="quote">
-          Even if the $4 billion ARR is realized, the company still needs to become profitable, and secondly, that would still imply a P/S ratio of ~4.
-          <div class="translation">翻译：即使实现了40亿美元的年度经常性收入，该公司仍需实现盈利，其次，这仍然意味着市销率约为4。</div>
-        </blockquote>
-        <blockquote class="quote">
-          Chinese models are getting better and better, despite having less compute at their disposal.
-          <div class="translation">翻译：中国模型正在变得越来越好，尽管它们可用的计算资源较少。</div>
-        </blockquote>
-        <blockquote class="quote">
-          Significant dilution.
-          <div class="translation">翻译：严重的稀释。</div>
-        </blockquote>
-      </li>
+        <li>
+            <div class="stock-tag">1. CI (Cigna)</div>
+            <blockquote class="quote">
+                Fellas, I’ve been looking at Cigna after the recent decline and the valuation seems interesting.
+                <div class="translation">翻译：伙计们，最近Cigna下跌后我一直在关注它，它的估值看起来很有趣。</div>
+            </blockquote>
+            <blockquote class="quote">
+                At ~$279/share: 2026 adjusted EPS guidance: ≥$30.45 Forward P/E: ~9.2x Q2 revenue: $71.7B, +7% YoY Q2 adjusted operating income: $2.05B, +6% YoY 2025 operating cash flow: ~$9.6B Remaining share repurchase authorization: ~$6.5B Shares outstanding: ~264M
+                <div class="translation">翻译：目前股价约为279美元/股：2026年调整后每股收益指引：≥30.45美元；远期市盈率：约9.2倍；第二季度营收：717亿美元，同比增长7%；第二季度调整后营业收入：20.5亿美元，同比增长6%；2025年经营现金流：约96亿美元；剩余股票回购授权：约65亿美元；流通股数量：约2.64亿股。</div>
+            </blockquote>
+            <blockquote class="quote">
+                I also ran a conservative owner-earnings DCF using ~$7.5B normalized earnings, ~5% initial growth declining toward 2%, and a 10.5% discount rate. I get roughly $390/share.
+                <div class="translation">翻译：我还进行了一项保守的业主收益DCF（现金流折现）分析，使用约75亿美元的标准化收益，初始增长率约5%逐渐降至2%，以及10.5%的折现率。我得出的估值约为每股390美元。</div>
+            </blockquote>
+            <blockquote class="quote">
+                Obviously PBM regulation/Evernorth is a major risk and probably explains part of the multiple. But at ~9x forward earnings, it seems like quite a bit of pessimism is already priced in.
+                <div class="translation">翻译：显然，PBM（药品福利管理）监管/Evernorth是一个主要风险，可能解释了部分估值倍数。但在约9倍的远期市盈率下，似乎相当多的悲观情绪已被消化。</div>
+            </blockquote>
+        </li>
+        <li>
+            <div class="stock-tag">2. ORCL (Oracle)</div>
+            <blockquote class="quote">
+                Oracle trades at roughly 13.8x forward earnings while sitting on $638B of contracted revenue (RPO).
+                <div class="translation">翻译：甲骨文目前以约13.8倍的远期市盈率进行交易，同时拥有6380亿美元的合同收入（RPO）。</div>
+            </blockquote>
+            <blockquote class="quote">
+                The obvious concern is that fulfilling those contracts requires an extraordinary amount of capital.
+                <div class="translation">翻译：显而易见的担忧是，履行这些合同需要巨额资本。</div>
+            </blockquote>
+            <blockquote class="quote">
+                Oracle is effectively combining landlord capital, customer capital and its own capex.
+                <div class="translation">翻译：甲骨文正在有效地结合房东资本、客户资本和其自身资本支出。</div>
+            </blockquote>
+            <blockquote class="quote">
+                Meanwhile, Oracle says customers are prepaying for or supplying $75B of computing hardware tied to large AI contracts.
+                <div class="translation">翻译：同时，甲骨文表示客户正在预付或提供750亿美元的计算硬件，这些硬件与大型AI合同相关。</div>
+            </blockquote>
+        </li>
+        <li>
+            <div class="stock-tag">3. DELL (Dell Technologies)</div>
+            <blockquote class="quote">
+                DELL just got smoked ~3.4% today to close around $456, but this wasn’t really a Dell-specific collapse.
+                <div class="translation">翻译：戴尔今天暴跌约3.4%，收盘价在456美元左右，但这并非戴尔特有的崩盘。</div>
+            </blockquote>
+            <blockquote class="quote">
+                The Nasdaq was down ~0.5% after Kevin Warsh’s Jackson Hole speech came across more hawkish and pushed September rate-hike expectations higher.
+                <div class="translation">翻译：在凯文·沃尔什的杰克逊霍尔讲话听起来更鹰派并推高了9月份加息预期后，纳斯达克指数下跌了约0.5%。</div>
+            </blockquote>
+            <blockquote class="quote">
+                Analysts are expecting roughly $45B revenue, &gt;50% YoY growth, and ~$4.91 adjusted EPS.
+                <div class="translation">翻译：分析师预计营收约为450亿美元，同比增长超过50%，调整后每股收益约为4.91美元。</div>
+            </blockquote>
+            <blockquote class="quote">
+                Dell’s AI server business is the monster here — management has been targeting roughly $60B in FY27 AI server revenue.
+                <div class="translation">翻译：戴尔的AI服务器业务是这里的亮点——管理层一直将27财年的AI服务器收入目标定在约600亿美元。</div>
+            </blockquote>
+        </li>
     </ul>
 
     <h2>3. 小众公司冒泡</h2>
     <ul>
-      <li>
-        <div class="stock-tag">1. GOOGL (Alphabet Inc.)</div>
-        <blockquote class="quote">
-          Was down about 50k near the end of july and made it all back and more mostly from Google at first, biggest wins and current holdings for next week listed, all shares no options.
-          <div class="translation">翻译：7月底时亏损了大约5万美元，但主要通过谷歌的股票很快就全部赚回来了，甚至更多，这是最大的盈利和目前的持仓，全部是股票，没有期权。</div>
-        </blockquote>
-      </li>
-      <li>
-        <div class="stock-tag">2. VSCO (Victoria's Secret & Co.)</div>
-        <blockquote class="quote">
-          Despite a 280% gain in the last year, I think there is still room to run in Victoria’s Secret with the release of GTA VI.
-          <div class="translation">翻译：尽管维多利亚的秘密在去年上涨了280%，但我认为随着《侠盗猎车手VI》的发布，它仍有上涨空间。</div>
-        </blockquote>
-      </li>
-      <li>
-        <div class="stock-tag">3. ONON (On Holding AG)</div>
-        <blockquote class="quote">
-          It is being rumored that $ONON may strike a deal that involves an equity stake partnership with Mbappe, after his 19 year deal with Nike ended in July.
-          <div class="translation">翻译：有传闻称，在姆巴佩与耐克的19年合约于7月结束后，$ONON可能会与他达成一项涉及股权合作的交易。</div>
-        </blockquote>
-      </li>
-      <li>
-        <div class="stock-tag">4. MCD (McDonald's Corporation)</div>
-        <blockquote class="quote">
-          Slowly increasing long term McDonald's leaps.
-          <div class="translation">翻译：正在缓慢增加麦当劳的长期深度价外看涨期权。</div>
-        </blockquote>
-      </li>
-      <li>
-        <div class="stock-tag">5. MRVL (Marvell Technology, Inc.)</div>
-        <blockquote class="quote">
-          On August 26 I saw MRVL’s MACD starting to weaken so I bought 19 $240 put contracts Today I closed the entire position for a $14,896 profit.
-          <div class="translation">翻译：8月26日，我看到Marvell的MACD开始走弱，于是我购买了19份240美元的看跌期权合约。今天我平仓了所有头寸，获利14,896美元。</div>
-        </blockquote>
-      </li>
-      <li>
-        <div class="stock-tag">6. NVDA (NVIDIA Corporation)</div>
-        <blockquote class="quote">
-          Just Buy NVDA at $12/share.
-          <div class="translation">翻译：只管以每股12美元的价格买入英伟达。</div>
-        </blockquote>
-      </li>
+        <li>
+            <div class="stock-tag">1. VSXY (Victoria's Secret)</div>
+            <blockquote class="quote">
+                Despite a 280% gain in the last year, I think there is still room to run in Victoria’s Secret with the release of GTA VI.
+                <div class="translation">翻译：尽管过去一年上涨了280%，我认为随着《侠盗猎车手VI》的发布，维多利亚的秘密仍有上涨空间。</div>
+            </blockquote>
+            <blockquote class="quote">
+                After extensive research, I identified it as the V-String black thong on Victoria’s Secret website.
+                <div class="translation">翻译：经过广泛研究，我确认它是维多利亚的秘密网站上的V字黑色丁字裤。</div>
+            </blockquote>
+            <blockquote class="quote">
+                On the last earnings call, mgmt has highlighted a majority of their comp sales growth was seen in the “panties”.
+                <div class="translation">翻译：在上次财报电话会议上，管理层强调其大部分可比销售增长出现在“内裤”品类。</div>
+            </blockquote>
+        </li>
+        <li>
+            <div class="stock-tag">2. CRM (Salesforce)</div>
+            <blockquote class="quote">
+                Bought at yesterday’s closing after ~20% spike.
+                <div class="translation">翻译：在昨日收盘后约20%的涨幅下买入。</div>
+            </blockquote>
+            <blockquote class="quote">
+                I couldn’t miss the rally more, so I gotta hop on the train.
+                <div class="translation">翻译：我再也无法错过这波上涨了，所以我必须上车。</div>
+            </blockquote>
+        </li>
+        <li>
+            <div class="stock-tag">3. IREN (Iris Energy Limited)</div>
+            <blockquote class="quote">
+                Today, I'm down over $8k on an extremely risky and regarded bet on IREN Stock, but without losses like this, I will not learn the important decision-making skills for the future.
+                <div class="translation">翻译：今天，我在Iris Energy股票上亏损了超过8000美元，这是一次极其冒险且被视为愚蠢的押注，但如果没有这样的亏损，我将无法学到未来重要的决策技能。</div>
+            </blockquote>
+            <blockquote class="quote">
+                I got greedy and I put too much money into a bet that was very risky that I did not have high certainty on because I didn't fully understand it.
+                <div class="translation">翻译：我变得贪婪，投入了过多的资金进行了一次非常冒险的押注，我对它没有很高的确定性，因为我没有完全理解它。</div>
+            </blockquote>
+        </li>
+        <li>
+            <div class="stock-tag">4. GOOGL (Alphabet)</div>
+            <blockquote class="quote">
+                Was down about 50k near the end of july and made it all back and more mostly from Google at first, biggest wins and current holdings for next week listed, all shares no options.
+                <div class="translation">翻译：7月底一度亏损约5万美元，但主要通过谷歌的股票，我把所有亏损都赚回来了，甚至更多，这是最大的盈利和目前持仓，全部是股票，没有期权。</div>
+            </blockquote>
+        </li>
     </ul>
 
     <h2>4. AI主线讨论</h2>
+    <div class="track-header">算 (Compute)</div>
     <ul>
-      <li>
-        <div class="track-header">模型</div>
-        <blockquote class="quote">
-          Chinese models are getting better and better, despite having less compute at their disposal.
-          <div class="translation">翻译：中国模型正在变得越来越好，尽管它们可用的计算资源较少。</div>
-        </blockquote>
-      </li>
-      <li>
-        <div class="track-header">算</div>
-        <blockquote class="quote">
-          Chinese models are getting better and better, despite having less compute at their disposal.
-          <div class="translation">翻译：中国模型正在变得越来越好，尽管它们可用的计算资源较少。</div>
-        </blockquote>
-      </li>
-      <li>
-        <div class="track-header">光</div>
-        <blockquote class="quote">
-          <!-- 数据池中未发现相关高质量讨论 -->
-          <div class="translation">翻译：[数据池中未发现相关高质量讨论]</div>
-        </blockquote>
-      </li>
-      <li>
-        <div class="track-header">存</div>
-        <blockquote class="quote">
-          Memory is now 50% of AI spending.
-          <div class="translation">翻译：内存现在占人工智能支出的50%。</div>
-        </blockquote>
-      </li>
-      <li>
-        <div class="track-header">电</div>
-        <blockquote class="quote">
-          <!-- 数据池中未发现相关高质量讨论 -->
-          <div class="translation">翻译：[数据池中未发现相关高质量讨论]</div>
-        </blockquote>
-      </li>
-      <li>
-        <div class="track-header">板</div>
-        <blockquote class="quote">
-          If ya'll could stop dumping semi's before end of day, that'd be great.
-          <div class="translation">翻译：如果你们能在收盘前停止抛售半导体，那就太好了。</div>
-        </blockquote>
-      </li>
-      <li>
-        <div class="track-header">云</div>
-        <blockquote class="quote">
-          <!-- 数据池中未发现相关高质量讨论 -->
-          <div class="translation">翻译：[数据池中未发现相关高质量讨论]</div>
-        </blockquote>
-      </li>
-      <li>
-        <div class="track-header">AI应用</div>
-        <blockquote class="quote">
-          Dell’s AI server business is the monster here.
-          <div class="translation">翻译：戴尔的人工智能服务器业务是这里的重头戏。</div>
-        </blockquote>
-        <blockquote class="quote">
-          Oracle says customers are prepaying for or supplying $75B of computing hardware tied to large AI contracts.
-          <div class="translation">翻译：甲骨文表示，客户正在预付或提供与大型人工智能合同相关的750亿美元计算硬件。</div>
-        </blockquote>
-      </li>
+        <li>
+            <blockquote class="quote">
+                Dell’s AI server business is the monster here — management has been targeting roughly $60B in FY27 AI server revenue.
+                <div class="translation">翻译：戴尔的AI服务器业务是这里的亮点——管理层一直将27财年的AI服务器收入目标定在约600亿美元。</div>
+            </blockquote>
+        </li>
+        <li>
+            <blockquote class="quote">
+                Meanwhile, Oracle says customers are prepaying for or supplying $75B of computing hardware tied to large AI contracts.
+                <div class="translation">翻译：同时，甲骨文表示客户正在预付或提供750亿美元的计算硬件，这些硬件与大型AI合同相关。</div>
+            </blockquote>
+        </li>
+    </ul>
+    <div class="track-header">存 (Storage)</div>
+    <ul>
+        <li>
+            <blockquote class="quote">
+                Memory is now 50% of AI spending.
+                <div class="translation">翻译：内存现在占AI总支出的50%。</div>
+            </blockquote>
+        </li>
+    </ul>
+    <div class="track-header">云 (Cloud)</div>
+    <ul>
+        <li>
+            <blockquote class="quote">
+                The new $16B data-center campus is being developed by Related Digital with outside equity and debt; Oracle is the tenant.
+                <div class="translation">翻译：新的160亿美元数据中心园区正在由Related Digital与外部股权和债务共同开发；甲骨文是租户。</div>
+            </blockquote>
+        </li>
+        <li>
+            <blockquote class="quote">
+                Across its pipeline, Oracle has committed to roughly $260B of future data-center lease payments, generally over 15–19 years.
+                <div class="translation">翻译：在其业务管线中，甲骨文已承诺支付约2600亿美元的未来数据中心租赁款项，通常期限为15-19年。</div>
+            </blockquote>
+        </li>
+    </ul>
+    <div class="track-header">AI应用 (AI Application)</div>
+    <ul>
+        <li>
+            <blockquote class="quote">
+                Oracle says customers are prepaying for or supplying $75B of computing hardware tied to large AI contracts.
+                <div class="translation">翻译：甲骨文表示客户正在预付或提供750亿美元的计算硬件，这些硬件与大型AI合同相关。</div>
+            </blockquote>
+        </li>
     </ul>
 </body>
 </html>
