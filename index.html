@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>09月02日 情报终端</title>
+        <title>09月03日 情报终端</title>
         <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
         <style>
             :root { --bg: #0f172a; --text: #f1f5f9; --accent: #38bdf8; --border: #334155; }
@@ -36,285 +36,155 @@
     </head>
     <body>
         <div class="container">
-            <h1>🎯 09月02日 市场情报透视</h1>
-            <p style="color:#94a3b8">情报最后更新: 2026-09-02 12:52:00 (北京时间)</p>
+            <h1>🎯 09月03日 市场情报透视</h1>
+            <p style="color:#94a3b8">情报最后更新: 2026-09-03 00:45:31 (北京时间)</p>
             <div class="dashboard-card"><div id="gauge" class="gauge-container"></div></div>
-            <!DOCTYPE html>
-<html lang="zh">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reddit 美股市场情绪分析 (2026年09月02日)</title>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; line-height: 1.6; margin: 0 auto; max-width: 900px; padding: 20px; color: #333; background-color: #f9f9f9; }
-        h1, h2 { color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 30px; }
-        h2 { font-size: 1.8em; }
-        h3 { color: #34495e; margin-top: 20px; }
-        ul { list-style: none; padding: 0; }
-        li { background-color: #fff; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 15px; padding: 15px 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .stock-tag { font-size: 1.1em; font-weight: bold; color: #007bff; margin-bottom: 10px; }
-        .quote { background-color: #f0f8ff; border-left: 4px solid #007bff; margin: 10px 0; padding: 10px 15px; font-style: italic; color: #555; }
-        .translation { margin-top: 8px; font-size: 0.95em; color: #333; border-top: 1px dashed #e0e0e0; padding-top: 5px; }
-        .track-header { font-size: 1.2em; font-weight: bold; color: #28a745; margin-top: 20px; margin-bottom: 10px; padding-bottom: 5px; border-bottom: 1px solid #28a745; }
-        .macro-point { margin-bottom: 10px; padding: 10px 15px; background-color: #e9f7ef; border-left: 4px solid #28a745; border-radius: 4px; }
-        .macro-point strong { color: #28a745; }
-    </style>
-</head>
-<body>
-    <h1>Reddit 美股市场情绪分析 (2026年09月02日)</h1>
+            <h2>1. 宏观与市场情绪</h2>
+<blockquote class="quote">
+  As I expect some sort of deascalation/ good news from the Middle East, I have opened a short position in heating oil as it offers qutie a bit more downside if the energy complex begins to unwind.
+  <div class="translation">翻译：由于我预计中东地区将出现某种缓和/利好消息，我已在取暖油上建立了空头头寸，因为如果能源综合体开始松动，它会带来相当大的下行空间。</div>
+</blockquote>
+<blockquote class="quote">
+  The physical crude market remains remarkably soft in the context of the disruption across Iran and Russia and I expect any de-escalation headlines around Hormuz to remove part of the geopolitical premium from oil.
+  <div class="translation">翻译：在伊朗和俄罗斯面临干扰的背景下，实物原油市场仍然异常疲软，我预计任何围绕霍尔木兹海峡的缓和消息都将消除部分原油的地缘政治溢价。</div>
+</blockquote>
+<blockquote 流水线上的原油分析师 >
+  Heating oil has more room to the downside as on top of the crude price correlation it is carrying an exceptionally large refining premium caused by lost Russian capacity, restricted product flows and extremely low diesel inventories.
+  <div class="translation">翻译：取暖油有更大的下行空间，因为除了与原油价格的相关性外，它还由于俄罗斯产能损失、产品流量受限和柴油库存极低而带有一个异常大的炼油溢价。</div>
+</blockquote>
+<blockquote class="quote">
+  SEC Preps Plan to Widen Investor Access to Private Markets
+  <div class="translation">翻译：美国证券交易委员会准备扩大投资者进入私募市场的计划</div>
+</blockquote>
+<blockquote class="quote">
+  South Korea proposes record $597 billion 2027 budget to supercharge AI investment 🔥
+  <div class="translation">翻译：韩国提议创纪录的5970亿美元2027年预算以大力推动人工智能投资 🔥</div>
+</blockquote>
+<blockquote class="quote">
+  DRAM fundamentals still look bullish: massive capex, tight supply, and strong AI/HBM demand. Yet Micron, SK Hynix keep trading sideways. My copium is that Iran war is weighing on sentiment. Otherwise, is the supercycle already priced in with memory cycle peaking and market now expects nothing less than actual returns on AI?
+  <div class="translation">翻译：DRAM基本面仍看涨：巨额资本支出、供应紧张以及强劲的AI/HBM需求。然而，美光和SK海力士却持续横盘交易。我安慰自己伊朗战争正在压制市场情绪。否则，记忆周期见顶，市场现在期望AI带来实际回报，超级周期是否已经完全定价了？</div>
+</blockquote>
 
-    <h2>1. 宏观与市场情绪</h2>
-    <div class="macro-point">
-        <strong>私募市场准入扩大：</strong>
-        <blockquote class="quote">
-            SEC Preps Plan to Widen Investor Access to Private Markets
-            <div class="translation">翻译：SEC准备扩大投资者进入私募市场的计划。</div>
-        </blockquote>
-    </div>
-    <div class="macro-point">
-        <strong>全球AI投资激增：</strong>
-        <blockquote class="quote">
-            South Korea proposes record $597 billion 2027 budget to supercharge AI investment
-            <div class="translation">翻译：韩国提议创纪录的5970亿美元2027年预算以大力推动AI投资。</div>
-        </blockquote>
-        <blockquote class="quote">
-            Here comes the AI capex shocker, Goldman Sachs says
-            <div class="translation">翻译：高盛表示，AI资本支出冲击即将到来。</div>
-        </blockquote>
-    </div>
-    <div class="macro-point">
-        <strong>AI创新与巨头地位的辩论：</strong> 市场对AI的真实创新和实用性存在分歧，但普遍认为科技巨头（Mag7）因其用户基础和整合能力而占据优势。
-        <blockquote class="quote">
-            Altman, Musk, and Amodei are selling you a Lambo chassis with the engine of a 1998 Fiat Cinquecento. Calls on the casino, puts on your attention span.
-            <div class="translation">翻译：奥特曼、马斯克和阿莫迪正在向你推销一个配备1998年菲亚特Cinquecento发动机的兰博基尼底盘。买赌场的看涨期权，买你注意力的看跌期权。</div>
-        </blockquote>
-        <blockquote class="quote">
-            Remember when Gmail introduced the "suggested reply" buttons? Peak innovation. Billions of hours saved just so middle managers can reply "Sounds good, thanks!" faster. Have you ever tried using a search bar without autocomplete? You’d sacrifice your firstborn behind a Wendy's dumpster just to get it back. Mag7 owns the user base.
-            <div class="translation">翻译：还记得Gmail推出“建议回复”按钮的时候吗？那是创新的顶峰。节省了数十亿小时，只为了让中层管理者能更快地回复“好的，谢谢！”。你有没有尝试过使用没有自动完成功能的搜索栏？你宁愿在温迪餐厅的垃圾箱后面献出你的长子来换回它。七巨头拥有用户基础。</div>
-        </blockquote>
-    </div>
-    <div class="macro-point">
-        <strong>外汇市场动态：</strong>
-        <blockquote class="quote">
-            Yen weakens past ¥160 per dollar, eroding intervention gains
-            <div class="translation">翻译：日元兑美元汇率跌破160，侵蚀了干预措施带来的收益。</div>
-        </blockquote>
-    </div>
+<h2>2. 热议中的个股和想法</h2>
+<li>
+  <div class="stock-tag">1. GOOG (Alphabet Inc.)</div>
+  <blockquote class="quote">
+    Up to about 325k in GOOG. Been building for a little over a year. Loading a bit more heavily at current levels.
+    <div class="translation">翻译：在GOOG上投入了大约32.5万美元。已经建仓一年多了。目前正在更重仓位地加仓。</div>
+  </blockquote>
+</li>
+<li>
+  <div class="stock-tag">2. SPOT (Spotify Technology S.A.)</div>
+  <blockquote class="quote">
+    Spotify is still being valued like a mature music-streaming app when it’s increasingly becoming the dominant global audio platform.
+    <div class="translation">翻译：Spotify 仍然被当作一个成熟的音乐流媒体应用来估值，而它正日益成为全球主导的音频平台。</div>
+  </blockquote>
+  <blockquote class="quote">
+    Pricing power is finally showing up, margins have inflected hard, FCF is scaling, and they still have multiple under-monetized levers across ads, audiobooks, video/podcasts, and higher-priced tiers.
+    <div class="translation">翻译：定价权终于显现，利润率已大幅好转，自由现金流正在扩大，而且他们仍在广告、有声读物、视频/播客以及更高价位套餐等多个未充分货币化的领域拥有潜在增长点。</div>
+  </blockquote>
+  <blockquote class="quote">
+    I think the market is still underestimating what normalized earnings power looks like here.
+    <div class="translation">翻译：我认为市场仍然低估了这里正常的盈利能力会是怎样。</div>
+  </blockquote>
+  <blockquote class="quote">
+    My bull case is ~$1,200 within the next year.
+    <div class="translation">翻译：我的牛市目标是在未来一年内达到约1200美元。</div>
+  </blockquote>
+</li>
+<li>
+  <div class="stock-tag">3. DELL (Dell Technologies Inc.)</div>
+  <blockquote class="quote">
+    Dell surges 10% after lifting fiscal 2027 forecast on AI server strength
+    <div class="translation">翻译：戴尔上调2027财年预测，得益于AI服务器强劲表现，股价飙升10%</div>
+  </blockquote>
+  <blockquote class="quote">
+    At the market open today, I had a feeling Dell would drop before its earnings report. It turned out exactly as I expected. I’m currently sitting on a profit of $149k
+    <div class="translation">翻译：今天开盘时，我感觉戴尔会在其财报发布前下跌。结果正如我所预料。我现在账面盈利14.9万美元。</div>
+  </blockquote>
+</li>
+<li>
+  <div class="stock-tag">4. AVGO (Broadcom Inc.)</div>
+  <blockquote class="quote">
+    Buying before ER. Debt issue is overblown.
+    <div class="translation">翻译：在财报前买入。债务问题被夸大了。</div>
+  </blockquote>
+</li>
+<li>
+  <div class="stock-tag">5. AAPL (Apple Inc.)</div>
+  <blockquote class="quote">
+    Salute to Tim Apple for turning a $349 billion company into a $4.5 trillion one 🫡
+    <div class="translation">翻译：向蒂姆·库克致敬，他将一家3490亿美元的公司变成了4.5万亿美元的巨头🫡</div>
+  </blockquote>
+</li>
+<li>
+  <div class="stock-tag">6. TTWO (Take-Two Interactive Software, Inc.)</div>
+  <blockquote class="quote">
+    In GTA VI and Chris Camillo’s social arbitrage we Trust!
+    <div class="translation">翻译：我们相信《GTA VI》和克里斯·卡米洛的社会套利理论！</div>
+  </blockquote>
+</li>
 
-    <h2>2. 热议中的个股和想法</h2>
-    <ul>
-      <li>
-        <div class="stock-tag">1. DELL (Dell Technologies Inc.)</div>
-        <blockquote class="quote">
-          Dell surges 10% after lifting fiscal 2027 forecast on AI server strength
-          <div class="translation">翻译：戴尔在提升2027财年预期后飙升10%，得益于AI服务器的强劲表现。</div>
-        </blockquote>
-        <blockquote class="quote">
-          Dell is printing money
-          <div class="translation">翻译：戴尔正在印钞。</div>
-        </blockquote>
-        <blockquote class="quote">
-          At the market open today, I had a feeling Dell would drop before its earnings report. It turned out exactly as I expected.
-          <div class="translation">翻译：今天开盘时，我感觉戴尔会在其财报公布前下跌。结果正如我所料。</div>
-        </blockquote>
-        <blockquote class="quote">
-          Dell Calls lets ride
-          <div class="translation">翻译：戴尔看涨期权，冲啊。</div>
-        </blockquote>
-      </li>
-      <li>
-        <div class="stock-tag">2. NVDA (NVIDIA Corporation)</div>
-        <blockquote class="quote">
-          NVDA is going to rip higher all week I’m sure of it. $25k expiring Friday
-          <div class="translation">翻译：我确信英伟达本周会大涨。2.5万美元的期权将在周五到期。</div>
-        </blockquote>
-        <blockquote class="quote">
-          This thing will rip as the market continues to digest its blockbuster earnings.
-          <div class="translation">翻译：随着市场继续消化其轰动性的财报，这支股票将会飙升。</div>
-        </blockquote>
-        <blockquote class="quote">
-          NVIDIA holds the lease on the HUT capacity. Lambda will install NVIDIA GPUs and provide the compute to Anthropic.
-          <div class="translation">翻译：英伟达持有HUT的数据中心容量租约。Lambda将安装英伟达GPU并向Anthropic提供计算能力。</div>
-        </blockquote>
-      </li>
-      <li>
-        <div class="stock-tag">3. AAPL (Apple Inc.)</div>
-        <blockquote class="quote">
-          Salute to Tim Apple for turning a $349 billion company into a $4.5 trillion one 🫡
-          <div class="translation">翻译：向蒂姆·苹果致敬，他将一家3490亿美元的公司变成了4.5万亿美元的公司🫡。</div>
-        </blockquote>
-        <blockquote class="quote">
-          Apple always support the bear day :)
-          <div class="translation">翻译：苹果总是在熊市中提供支撑 :)</div>
-        </blockquote>
-      </li>
-      <li>
-        <div class="stock-tag">4. DXYZ (Destiny Tech100 Inc.)</div>
-        <blockquote class="quote">
-          It currently trades for less than its NAV when it usually trades at a premium well above the NAV.
-          <div class="translation">翻译：它目前的交易价格低于其资产净值，而通常它会以远高于资产净值的溢价交易。</div>
-        </blockquote>
-        <blockquote class="quote">
-          It has about 15% of its NAV invested in Anthropic.
-          <div class="translation">翻译：它约有15%的资产净值投资于Anthropic。</div>
-        </blockquote>
-        <blockquote class="quote">
-          Its value should 2X (maybe 3X, but not likely) when a valuation is specified.
-          <div class="translation">翻译：当其估值确定时，其价值应该翻倍（也许会翻三倍，但可能性不大）。</div>
-        </blockquote>
-        <blockquote class="quote">
-          The fund just invested $169M in OpenAi. That also now represents 17% of the fund.
-          <div class="translation">翻译：该基金刚刚向OpenAI投资了1.69亿美元。这目前也占基金的17%。</div>
-        </blockquote>
-      </li>
-      <li>
-        <div class="stock-tag">5. HUT (Hut 8 Corp)</div>
-        <blockquote class="quote">
-          WSJ reports Anthropic signed a $35B cloud computing deal with Lambda.
-          <div class="translation">翻译：华尔街日报报道Anthropic与Lambda签署了一项350亿美元的云计算协议。</div>
-        </blockquote>
-        <blockquote class="quote">
-          The capacity will run at Hut 8’s Nueces County, Texas data center.
-          <div class="translation">翻译：该容量将在Hut 8位于德克萨斯州努埃塞斯县的数据中心运行。</div>
-        </blockquote>
-        <blockquote class="quote">
-          NVIDIA holds the lease on the HUT capacity. Lambda will install NVIDIA GPUs and provide the compute to Anthropic.
-          <div class="translation">翻译：英伟达持有HUT的数据中心容量租约。Lambda将安装英伟达GPU并向Anthropic提供计算能力。</div>
-        </blockquote>
-        <blockquote class="quote">
-          Separately, HUT’s River Bend project also has an Anthropic/Fluidstack agreement for an initial 245 MW.
-          <div class="translation">翻译：此外，HUT的River Bend项目也与Anthropic/Fluidstack达成了一项初步245兆瓦的协议。</div>
-        </blockquote>
-      </li>
-    </ul>
+<h2>3. 小众公司冒泡</h2>
+<li>
+  <div class="stock-tag">1. ASTS (AST SpaceMobile, Inc.)</div>
+  <blockquote class="quote">
+    For everyone who recommended buying ASTS LEAPS because ‘LEAPS are safer’… I’d like a word. Asts my biggest loser.
+    <div class="translation">翻译：对于那些推荐我购买ASTS的LEAPS期权，说‘LEAPS更安全’的人……我想和你们谈谈。ASTS是我最大的亏损股。</div>
+  </blockquote>
+</li>
+<li>
+  <div class="stock-tag">2. HIMS (Hims & Hers Health, Inc.)</div>
+  <blockquote class="quote">
+    $HIMS 27.5P 10/16 - these guys will single handedly tank the bluepill market this week.
+    <div class="translation">翻译：HIMS 27.5看跌期权，10/16到期——这些家伙本周将独自搞垮蓝色药丸市场。</div>
+  </blockquote>
+</li>
 
-    <h2>3. 小众公司冒泡</h2>
-    <ul>
-      <li>
-        <div class="stock-tag">1. HIMS (Hims & Hers Health, Inc.)</div>
-        <blockquote class="quote">
-          $HIMS 27.5P 10/16 - these guys will single handedly tank the bluepill market this week
-          <div class="translation">翻译：HIMS 10月16日到期27.5看跌期权——这些人本周将独自搞垮“蓝色药丸”市场。</div>
-        </blockquote>
-      </li>
-      <li>
-        <div class="stock-tag">2. TTWO (Take-Two Interactive Software, Inc.)</div>
-        <blockquote class="quote">
-          In GTA VI and Chris Camillo’s social arbitrage we Trust!
-          <div class="translation">翻译：我们相信《GTA VI》和克里斯·卡米洛的社交套利！</div>
-        </blockquote>
-      </li>
-      <li>
-        <div class="stock-tag">3. MU (Micron Technology, Inc.)</div>
-        <blockquote class="quote">
-          DRAM fundamentals still look bullish: massive capex, tight supply, and strong AI/HBM demand.
-          <div class="translation">翻译：DRAM基本面看起来仍然看涨：大规模资本支出、供应紧张以及强劲的AI/HBM需求。</div>
-        </blockquote>
-        <blockquote class="quote">
-          Yet Micron, SK Hynix keep trading sideways. My copium is that Iran war is weighing on sentiment. Otherwise, is the supercycle already priced in with memory cycle peaking and market now expects nothing less than actual returns on AI?
-          <div class="translation">翻译：然而，美光和SK海力士仍旧横盘交易。我的安慰剂是伊朗战争正在影响市场情绪。否则，是不是超级周期已经被计入价格，并且市场现在只期待AI的实际回报？</div>
-        </blockquote>
-      </li>
-    </ul>
+<h2>4. AI主线讨论</h2>
+<div class="track-header">模型</div>
+<blockquote class="quote">
+  Anthropic’s S1 will be publicly disclosed after Labor Day.
+  <div class="translation">翻译：Anthropic的S1文件将在劳动节后公开披露。</div>
+</blockquote>
+<blockquote class="quote">
+  The fund just invested $169M in OpenAi. That also now represents 17% of the fund.
+  <div class="translation">翻译：该基金刚刚向OpenAI投资了1.69亿美元。这现在也占基金的17%。</div>
+</blockquote>
 
-    <h2>4. AI主线讨论</h2>
-    <div class="track-header">模型</div>
-    <ul>
-      <li>
-        <blockquote class="quote">
-          Anthropic’s S1 will be publicly disclosed after Labor Day. Pre-IPO investment choices include: AMZN, GOOGL, ZM, SKM and DXYZ.
-          <div class="translation">翻译：Anthropic的S1文件将在劳动节后公开披露。IPO前投资选择包括：AMZN、GOOGL、ZM、SKM和DXYZ。</div>
-        </blockquote>
-      </li>
-      <li>
-        <blockquote class="quote">
-          The fund just invested $169M in OpenAi.
-          <div class="translation">翻译：该基金刚刚向OpenAI投资了1.69亿美元。</div>
-        </blockquote>
-      </li>
-    </ul>
+<div class="track-header">算</div>
+<blockquote class="quote">
+  Dell surges 10% after lifting fiscal 2027 forecast on AI server strength
+  <div class="translation">翻译：戴尔上调2027财年预测，得益于AI服务器强劲表现，股价飙升10%</div>
+</blockquote>
+<blockquote class="quote">
+  DRAM fundamentals still look bullish: massive capex, tight supply, and strong AI/HBM demand.
+  <div class="translation">翻译：DRAM基本面仍看涨：巨额资本支出、供应紧张以及强劲的AI/HBM需求。</div>
+</blockquote>
 
-    <div class="track-header">算</div>
-    <ul>
-      <li>
-        <blockquote class="quote">
-          Dell surges 10% after lifting fiscal 2027 forecast on AI server strength
-          <div class="translation">翻译：戴尔在提升2027财年预期后飙升10%，得益于AI服务器的强劲表现。</div>
-        </blockquote>
-      </li>
-      <li>
-        <blockquote class="quote">
-          NVIDIA holds the lease on the HUT capacity. Lambda will install NVIDIA GPUs and provide the compute to Anthropic.
-          <div class="translation">翻译：英伟达持有HUT的数据中心容量租约。Lambda将安装英伟达GPU并向Anthropic提供计算能力。</div>
-        </blockquote>
-      </li>
-      <li>
-        <blockquote class="quote">
-          The capacity will run at Hut 8’s Nueces County, Texas data center.
-          <div class="translation">翻译：该容量将在Hut 8位于德克萨斯州努埃塞斯县的数据中心运行。</div>
-        </blockquote>
-      </li>
-    </ul>
+<div class="track-header">光</div>
+<!-- 暂无相关讨论 -->
 
-    <div class="track-header">光</div>
-    <p><em>（数据池中暂无直接相关高质量讨论）</em></p>
+<div class="track-header">存</div>
+<blockquote class="quote">
+  DRAM fundamentals still look bullish: massive capex, tight supply, and strong AI/HBM demand.
+  <div class="translation">翻译：DRAM基本面仍看涨：巨额资本支出、供应紧张以及强劲的AI/HBM需求。</div>
+</blockquote>
 
-    <div class="track-header">存</div>
-    <ul>
-      <li>
-        <blockquote class="quote">
-          DRAM fundamentals still look bullish: massive capex, tight supply, and strong AI/HBM demand.
-          <div class="translation">翻译：DRAM基本面看起来仍然看涨：大规模资本支出、供应紧张以及强劲的AI/HBM需求。</div>
-        </blockquote>
-      </li>
-    </ul>
+<div class="track-header">电</div>
+<!-- 暂无相关讨论 -->
 
-    <div class="track-header">电</div>
-    <p><em>（数据池中暂无直接相关高质量讨论）</em></p>
+<div class="track-header">板</div>
+<!-- 暂无相关讨论 -->
 
-    <div class="track-header">板</div>
-    <ul>
-      <li>
-        <blockquote class="quote">
-          Lambda will install NVIDIA GPUs and provide the compute to Anthropic.
-          <div class="translation">翻译：Lambda将安装英伟达GPU并向Anthropic提供计算能力。</div>
-        </blockquote>
-      </li>
-      <li>
-        <blockquote class="quote">
-          DRAM fundamentals still look bullish: massive capex, tight supply, and strong AI/HBM demand.
-          <div class="translation">翻译：DRAM基本面看起来仍然看涨：大规模资本支出、供应紧张以及强劲的AI/HBM需求。</div>
-        </blockquote>
-      </li>
-    </ul>
+<div class="track-header">云</div>
+<!-- 暂无相关讨论 -->
 
-    <div class="track-header">云</div>
-    <ul>
-      <li>
-        <blockquote class="quote">
-          WSJ reports Anthropic signed a $35B cloud computing deal with Lambda.
-          <div class="translation">翻译：华尔街日报报道Anthropic与Lambda签署了一项350亿美元的云计算协议。</div>
-        </blockquote>
-      </li>
-      <li>
-        <blockquote class="quote">
-          The capacity will run at Hut 8’s Nueces County, Texas data center.
-          <div class="translation">翻译：该容量将在Hut 8位于德克萨斯州努埃塞斯县的数据中心运行。</div>
-        </blockquote>
-      </li>
-    </ul>
-
-    <div class="track-header">AI应用</div>
-    <ul>
-      <li>
-        <blockquote class="quote">
-          Remember when Gmail introduced the "suggested reply" buttons? Peak innovation. Billions of hours saved just so middle managers can reply "Sounds good, thanks!" faster. Have you ever tried using a search bar without autocomplete? You’d sacrifice your firstborn behind a Wendy's dumpster just to get it back. Mag7 owns the user base.
-          <div class="translation">翻译：还记得Gmail推出“建议回复”按钮的时候吗？那是创新的顶峰。节省了数十亿小时，只为了让中层管理者能更快地回复“好的，谢谢！”。你有没有尝试过使用没有自动完成功能的搜索栏？你宁愿在温迪餐厅的垃圾箱后面献出你的长子来换回它。七巨头拥有用户基础。</div>
-        </blockquote>
-      </li>
-    </ul>
-</body>
-</html>
+<div class="track-header">AI应用</div>
+<blockquote class="quote">
+  South Korea proposes record $597 billion 2027 budget to supercharge AI investment 🔥
+  <div class="translation">翻译：韩国提议创纪录的5970亿美元2027年预算以大力推动人工智能投资 🔥</div>
+</blockquote>
         </div>
         <script>
             var myChart = echarts.init(document.getElementById('gauge'));
@@ -324,7 +194,7 @@
                     axisLine: { lineStyle: { width: 45, color: [[0.25, '#ef4444'], [0.45, '#f97316'], [0.55, '#d1d5db'], [0.75, '#84cc16'], [1, '#22c55e']] } },
                     pointer: { length: '60%', width: 8, itemStyle: { color: '#fff' } },
                     detail: { fontSize: 40, fontWeight: 'bold', offsetCenter: [0, '25%'], formatter: '{value}\n恐慌', color: '#fff' },
-                    data: [{ value: 44 }]
+                    data: [{ value: 34 }]
                 }]
             });
         </script>
